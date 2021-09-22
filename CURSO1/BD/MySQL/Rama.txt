@@ -1,0 +1,88 @@
+Create database Rama;
+
+use Rama
+
+	create table EQUIPO(
+		codigo varchar (1),
+		nombre varchar (30),
+		ciudad varchar (20),
+		web varchar (100),
+		puntos integer,
+		primary key (codigo))
+		engine = innoDB;
+		
+	create table JUGADOR(
+		id_jugador varchar (3),
+		nombre varchar (30),
+		apellido varchar (30),
+		puesto varchar (10),
+		id_capitan varchar (3),
+		fecha_alta date,
+		salario float,
+		num_equipo varchar (1),
+		altura float,
+		primary key (id_jugador),
+		foreign key (num_equipo) references EQUIPO (codigo))
+		engine = innoDB;
+		
+	alter table JUGADOR add
+		foreign key (id_capitan) references JUGADOR (id_jugador);
+		
+	create table Partidos(
+		elocal varchar (1),
+		evisitante varchar (1),
+		resultado varchar (10),
+		fecha date,
+		arbitro varchar (1),
+		primary key (elocal, evisitante, fecha),
+		foreign key (elocal) references EQUIPO (codigo),
+		foreign key (evisitante) references EQUIPO (codigo))
+		engine = innoDB;
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+Use Rama
+		
+	insert into EQUIPO
+		values ('1','Regal Barcelona','Barcelona','http://www.fcbarcelona.com/web/index_idiomes.html',10);		
+	insert into EQUIPO
+		values ('2','Real Madrid','Madrid','http://www.realmadrid.com/cs/Satellite/es/1193040472450/SubhomeEquipo/Baloncesto.htm',9);		
+	insert into EQUIPO
+		values ('3','P.E. Valencia','Valencia','http://www.valenciabasket.com/',11);
+	insert into EQUIPO
+		values ('4','Caja Laboral','Vitoria','http://www.baskonia.com/prehomes/prehomes.asp?id_prehome=69',22);
+	insert into EQUIPO
+		values ('5','Gran Canaria','Las Palmas','http://www.acb.com/club.php?id=CLA',14);
+	insert into EQUIPO
+		values ('6','CAI Zaragoza','Zaragoza','http://www.basketzaragoza.net/',23);
+		
+	insert into Partidos
+		values ('1','2','100-100','2011-10-10','4');
+	insert into Partidos
+		values ('2','3','90-91','2011-11-17','5');
+	insert into Partidos
+		values ('3','4','88-77','2011-11-23','6');
+	insert into Partidos
+		values ('1','6','66-78','2011-11-30','6');
+	insert into Partidos
+		values ('2','4','90-90','2012-01-12','7');
+	insert into Partidos
+		values ('4','5','79-83','2012-01-19','3');
+	insert into Partidos
+		values ('3','6','91-88','2012-02-22','3');
+	insert into Partidos
+		values ('5','4','90-66','2012-04-27','2');
+	insert into Partidos
+		values ('6','5','110-70','2012-05-30','1');
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

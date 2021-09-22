@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<TITLE>Ejercicio 3.1</TITLE>
+	</HEAD>
+	<BODY>
+		<script>
+            var n = new Array(8);
+            var suma1 = 0, suma2 = 0, cont = 0;
+            for (var i = 0; i < n.length; i++) {
+                n[i] = parseInt(prompt('Introduce entero número '+(i+1),''));
+                if (n[i] > 36) {
+                    suma2 += n[i];
+                    if (n[i] > 50) cont++;
+                }
+                suma1 += n[i];
+            }
+            document.write('Suma total = '+suma1+'<br>');
+            document.write('Suma elementos > 36 = '+suma2+'<br>');
+            document.write('Número de elementos > 50: '+cont+'<br>');
+		</script>
+	</BODY>
+</HTML>

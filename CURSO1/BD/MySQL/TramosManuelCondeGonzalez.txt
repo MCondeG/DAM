@@ -1,0 +1,101 @@
+/* Manuel Rafael Conde González */
+
+
+/* CREACIÓN DE BD Y TABLAS */ 
+
+
+create database TramosManuelCondeGonzalez;
+
+use TramosManuelCondeGonzalez
+
+	create table PROVINCIAS(
+		Codprov varchar(10),
+		NombreP varchar(30),
+		Comunidad varchar(50),
+		primary key (Codprov))
+		engine = innoDB;
+		
+	create table LOCALIDADES(
+		CodLoc varchar(10),
+		NombreL varchar(30),
+		Habitantes integer,
+		CodProv varchar(10),
+		primary key (CodLoc),
+		foreign key (CodProv) references PROVINCIAS (Codprov))
+		engine = innoDB;
+		
+	create table TRAMOS(
+		CodLocA varchar(10),
+		CodLocB varchar(10),
+		Distancia integer,
+		primary key (CodLocA, CodLocB, Distancia),
+		foreign key (CodLocA) references LOCALIDADES (CodLoc),
+		foreign key (CodLocB) references LOCALIDADES (CodLoc))
+		engine = innoDB;
+		
+	create table TRABAJADORES(
+		CodTrabajador varchar(10),
+		NombreT varchar(30),
+		ApellidosT varchar(50),
+		CodJefe varchar(10),
+		CodTA varchar(10),
+		CodTB varchar(10),
+		DistanciaT integer,
+		primary key (CodTrabajador),
+		foreign key (CodTA) references LOCALIDADES (CodLoc),
+		foreign key (CodTB) references LOCALIDADES (CodLoc),
+		foreign key (CodTA, CodTB, DIstanciaT) references TRAMOS (CodLocA, CodLocB, Distancia))
+		engine = innoDB;
+		
+		
+	alter table TRABAJADORES
+		add foreign key (CodJefe) references TRABAJADORES (CodTrabajador);
+		
+		
+	
+	
+	/* INSERCIÓN DE DATOS NECESARIOS PARA REALIZAR LOS EJERCICIOS */
+	
+	
+	insert into PROVINCIAS
+		values ('1111', 'Asturias', 'Comunidad Asturiana');
+	insert into PROVINCIAS
+		values ('2222', 'Sevilla', 'Andalucia');
+	insert into LOCALIDADES
+		values ('000111', 'Bueu', 5000, '1111');
+	insert into LOCALIDADES
+		values ('000222', 'Cangas', 10000, '1111');
+	insert into LOCALIDADES
+		values ('000333', 'Sevilla', 1000000, '2222');
+	insert into LOCALIDADES
+		values ('000444', 'Coria', 10000, '2222');
+	insert into TRAMOS
+		values ('000333', '000444', 20);
+	
+		
+	
+	/* EJERCICIOS */
+	
+	
+	/* 2 */
+	
+	insert into TRABAJADORES
+		values ('0123', 'Pepa', 'Fernandez', NULL, '000333', '000444', 20);
+		
+	update TRABAJADORES
+		set CodJefe = '0123' where CodTrabajador = '0123';
+		
+		
+	/* 3 */
+	
+	insert into TRAMOS
+		values ('000111', '000222', 10);
+		
+	
+	/* 4 */
+	
+	delete from TRAMOS
+		where CodLocA = '000111';
+	delete from LOCALIDADES
+		where NombreL = 'Bueu';
+

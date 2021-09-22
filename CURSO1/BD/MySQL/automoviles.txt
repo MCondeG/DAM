@@ -1,0 +1,34 @@
+create database Automoviles;
+
+use Automoviles
+
+	create table Clientes(
+		NIF varchar(10),
+		Nombre varchar(30),
+		Direccion varchar(50),
+		Telefono varchar(12),
+		primary key (NIF)) 
+		engine=InnoDB;
+		
+	create table Coches(
+		Matricula varchar(10),
+		Marca varchar(15),
+		Modelo varchar(15),
+		Color varchar(10),
+		Precio float,
+		NIF_Clientes varchar(10),
+		primary key (Matricula),
+		index(NIF_Clientes),
+		foreign key (NIF_Clientes) references Clientes(NIF)) 
+		engine=InnoDB;
+	
+	create table Revisiones(
+		Codigo varchar(10),
+		Filtro char(1),
+		Aceite char(1), 
+		Frenos char(1), 
+		Matricula_Coches varchar(10),
+		primary key (Codigo),
+		index(Matricula_Coches),
+		foreign key(Matricula_Coches) references Coches(Matricula))
+		engine=InnoDB;

@@ -1,0 +1,101 @@
+Create database Piezasyproveedores;
+
+use Piezasyproveedores
+
+	create table PIEZAS(
+		codigo varchar (10),
+		nombre varchar (30),
+		primary key (codigo))
+		engine=InnoDB;
+		
+	create table PROVEEDOR(
+		id varchar (10),
+		nombre varchar (30),
+		primary key (id))
+		engine=InnoDB;
+		
+	create table Suministra(
+		codigoPieza varchar (10),
+		idProveedor varchar (10),
+		Precio float,
+		primary key (codigoPieza,idProveedor),
+		foreign key (codigoPieza) references PIEZAS(codigo),
+		foreign key (idProveedor) references PROVEEDOR(id))
+		engine=InnoDB;
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+use Piezasyproveedores		
+
+	insert into PIEZAS
+		values('1111','tornillo');
+	insert into PIEZAS
+		values('2222','puntilla');
+	insert into PIEZAS
+		values('1','tuerca');
+	insert into PIEZAS
+		values('4','clavo');
+		
+	insert into PROVEEDOR
+		values('1111','pepe');
+	insert into PROVEEDOR
+		values('2222','juan');
+	insert into PROVEEDOR
+		values('3333','maria');
+	insert into PROVEEDOR
+		values('TBNC','Skellington Supplies');
+	insert into PROVEEDOR
+		values('RBT','Susan Calvin Corp');
+		
+	insert into Suministra
+		values('1111','1111',6);
+	insert into Suministra
+		values('1111','3333',7.53);
+	insert into Suministra
+		values('2222','3333',0.8);
+	insert into Suministra
+		values('2222','2222',1.2);
+	insert into Suministra
+		values('1','TBNC',0.7);
+	insert into Suministra
+		values('4','TBNC',0.15);
+	insert into Suministra
+		values('2222','RBT',0.7);
+	insert into Suministra
+		values('4','RBT',0.1);
+		
+	
+	delete from Suministra where codigoPieza = '4' AND idProveedor = 'RBT';
+	delete from Suministra where idProveedor = 'RBT';
+
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+use Piezasyproveedores
+	
+	select nombre from PIEZAS;
+	select * from PROVEEDOR;
+	select codigoPieza, avg(precio) as media from Suministra group by codigoPieza;
+	select PROVEEDOR.nombre from PROVEEDOR, Suministra where PROVEEDOR.id = Suministra.idProveedor AND Suministra.codigoPieza = '1';
+	select PIEZAS.nombre from PIEZAS, Suministra where PIEZAS.codigo = Suministra.codigoPieza AND Suministra.idProveedor = 'HAL';
+	select PROVEEDOR.nombre, PIEZAS.nombre, Suministra.precio from PIEZAS, PROVEEDOR, Suministra where suministra.codigoPieza = PIEZAS.codigo AND Suministra.idProveedor = PROVEEDOR.id AND Suministra.precio IN
+		(select max(precio) from Suministra group by (codigoPieza));
+
+/*
++----------------------+----------+--------+
+| nombre               | nombre   | precio |
++----------------------+----------+--------+
+| Skellington Supplies | tuerca   |    0.7 |
+| maria                | tornillo |   7.53 |
+| juan                 | puntilla |    1.2 |
+| Skellington Supplies | clavo    |   0.15 |
++----------------------+----------+--------+
+4 rows in set (0.02 sec)
+*/
+		
+		
+		
+		
+	

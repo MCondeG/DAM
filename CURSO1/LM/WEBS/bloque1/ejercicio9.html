@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Ejercicio 1.9</title>
+	  <meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			var nota, media = 0;
+			for (var i = 1; i < 4; i++) {  
+				nota = parseInt(prompt('Ingrese nota '+i+':',''));
+				media += nota;
+			}
+			media = media/3;
+			if (media >= 4) {
+				document.write("Regular");
+			}
+			else {
+				document.write("Reprobado");
+			}
+		</script>
+
+	</body>
+</html>

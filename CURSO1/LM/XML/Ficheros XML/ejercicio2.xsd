@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="etiqueta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="nombre"/>
+        <xs:element type="xs:string" name="calle"/>
+        <xs:element type="xs:string" name="ciudad"/>
+        <xs:element type="xs:string" name="pais"/>
+        <xs:element type="xs:short" name="codigo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

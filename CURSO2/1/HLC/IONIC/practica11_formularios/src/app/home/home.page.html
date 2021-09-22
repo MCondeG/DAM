@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      formulario-cuenta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label position="floating" color="primary">DNI</ion-label>
+      <ion-input type="text" formControlName="dni"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Código IBAN</ion-label>
+      <ion-input type="text" formControlName="iban"></ion-input>
+    </ion-item>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Aceptar</ion-button>
+  </form>
+</ion-content>

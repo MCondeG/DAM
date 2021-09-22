@@ -1,0 +1,75 @@
+1.- select apellidos from empleados;
+
+2.- select distinct apellidos from empleados;
+
+3.- select * from empleados where apellidos = "López";
+
+4.- select * from empleados where apellidos in ("López", "Pérez");
+
+5. select * from empleados where departamento = 14;
+empty set
+
+6. select * from empleados where departamento = 37 or departamento = 77;
+empty set
+
+
+7.- select * from empleados where apellidos like "P%";
+
+8.- select sum(presupuesto) from empleados;
+
+9.- select count(*) from empleados where departamento = "37";
+
+10. select empleados.*, departamento.* from empleados, departamento;
++-----------+--------+-----------+--------------+--------+--------+-------------+
+| dni       | nombre | apellido  | departamento | codigo | nombre | presupuesto |
++-----------+--------+-----------+--------------+--------+--------+-------------+
+| 28435625h | Miguel | Garcia    | 111          | 111    | Fisica |         100 |
+| 29793865p | Victor | Fernandez | 222          | 111    | Fisica |         100 |
+| 28435625h | Miguel | Garcia    | 111          | 222    | Lengua |         150 |
+| 29793865p | Victor | Fernandez | 222          | 222    | Lengua |         150 |
++-----------+--------+-----------+--------------+--------+--------+-------------+
+
+11. select empleados.nombre, empleados.apellido, departamento.nombre, 
+departamento.presupuesto from empleados, departamento;
++--------+-----------+--------+-------------+
+| nombre | apellido  | nombre | presupuesto |
++--------+-----------+--------+-------------+
+| Miguel | Garcia    | Fisica |         100 |
+| Victor | Fernandez | Fisica |         100 |
+| Miguel | Garcia    | Lengua |         150 |
+| Victor | Fernandez | Lengua |         150 |
++--------+-----------+--------+-------------+
+
+12. select empleados.nombre, empleados.apellido from empleados, departamento 
+	where departamento.presupuesto > 60000;
+empty set
+
+13. 
+
+
+14.- update departamentos set presupuesto = presupuesto * 0,9;
+
+15.- update empleados set departamento = 14 where departamento = 77;
+
+16.- delete from empleados where departamento = 14;
+
+17.- delete from empleados;
+
+18. select empleados, count(*) from departamento;
+
+
+19. select nombre, apellido from empleados where presupuesto > 60000;
+
+
+20. 
+
+
+21. 
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+Create database edificios;
+
+use edificios
+
+		/* TABLAS */ 
+		
+		/* INSERCIÓN DE DATOS */
+		
+		/* CONSULTAS */
+		
+use edificios
+
+	select nombre from TRABAJADOR where tarifa between 10 AND 12;
+	select TRABAJADOR.oficio from TRABAJADOR, Asignacion where TRABAJADOR.id_t = asignacion.id_t AND asignacion.id_e = 435;
+	select t1.nombre, t2.nombre as nombre_supervisor from TRABAJADOR t1, TRABAJADOR t2 where t1.id_t = t1.id_t AND t1.id_supv = t2.id_t;
+	select t.nombre from TRABAJADOR t, EDIFICIO e, Asignacion a where t.id_t = a.id_t AND e.id_e = a.id_e AND e.tipo = "OFICINA";
+	select nombre from TRABAJADOR where tarifa > (select t2.tarifa from TRABAJADOR t1, TRABAJADOR t2 where t1.id_supv = t2.id_t);
+	select sum(num_dias) from Asignacion where id_e = 312;
+	select count id_e from EDIFICIO group by tipo;
+/*10*/ select avg(calidad) from EDIFICIO where calidad < 4 AND categoria = 1 group by tipo;
+	select id_t, nombre from TRABAJADOR where tarifa < (select avg(tarifa) from TRABAJADOR);
+	select id_t, nombre from TRABAJADOR t1 group by oficio having tarifa < (select avg(tarifa) from TRABAJADOR t2 where t2.oficio = t1.oficio);
+	select id_t, nombre from TRABAJADOR group by id_supv having tarifa < (select avg(tarifa) from TRABAJADOR);
+	select t.nombre, a.fecha_inicio from TRABAJADOR t, Asignacion a where oficio = "electricista" AND a.id_t = t.id_t AND a.id_e = 435;

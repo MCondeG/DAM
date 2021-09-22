@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FAQ SYSTEM "FAQ.DTD">
+<FAQ>
+    <INFO>
+        <TITULO> WINDOWS98? SOLO SI ME OBLIGAN! </TITULO>
+        <AUTOR> Fernando Damián Lorenzo García </AUTOR>
+        <EMAIL> Fer@yahoo.es </EMAIL>
+        <VERSION> 1.0 </VERSION>
+        <FECHA> 20.MAYO.99 </FECHA>
+    </INFO>
+    <PART number="1">
+        <Q id="ID1">
+            <QTEXT>¿Por qué tengo que instalar W95?</QTEXT>
+            <A> A mi también me parece una buena pregunta.</A>
+        </Q>
+        <Q id="ID2">
+            <QTEXT>Y de que me vale?</QTEXT>
+            <A>Otra ingeniosa pregunta.</A>
+        </Q>
+    </PART>
+</FAQ>

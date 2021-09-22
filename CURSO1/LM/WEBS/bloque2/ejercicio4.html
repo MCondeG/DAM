@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<TITLE>Ejercicio 2.4</TITLE>
+	</HEAD>
+	<BODY>
+		<script>
+            var n, suma = parseInt(0);
+            do {
+                n = parseInt(prompt('Introduce un entero',''));
+                if (n != 9999) suma += n;
+                else alert('Carga finalizada');
+            } while (n != 9999);
+            document.write('Total = '+suma);
+            if (suma > 0) document.write(' (positivo)');
+            else if (suma < 0) document.write(' (negativo)');
+            else document.write(' (cero)');
+    		</script>
+	</BODY>
+</HTML>

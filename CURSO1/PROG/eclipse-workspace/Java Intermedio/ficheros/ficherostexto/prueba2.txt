@@ -1,0 +1,3 @@
+
+Escritura en fichero
+con BufferedWriter

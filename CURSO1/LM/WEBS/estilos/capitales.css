@@ -1,0 +1,48 @@
+body{
+	padding-left: 12em;
+	font-family: Arial;
+	color: purple;
+	background-color: #d8da3d;
+}
+
+h1{
+	font-family: Comic Sans MS;
+}
+
+#menu {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	position: fixed;
+	left: 50px;
+	top: 116px;
+	text-align: center;
+	border: solid red;
+}
+
+a {
+	padding: 5px 5px 5px 5px;
+	border: white;
+	background: #DFDADA;
+	text-decoration: none;
+	display: block;
+}
+
+img.imagen{
+	width: 400px;
+	height: 300px;
+	float: right;
+	margin-right: 50;
+}
+
+p.parrafo{
+	padding: 10px 10px 10px 10px;
+	margin-right: 30em;
+	color: black;
+	background-color: plum;
+	border: 5px solid brown;
+	position: fixed;
+	top: 100px;
+}
+
+#menu a:hover, #menu a:active {background: #F34A3C;}
+#menu a:visited {color: black;}

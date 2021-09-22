@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Computacion Cuantica</title>
+   	<link>.</link>
+        <generator>jAlbum 19.2</generator>
+   		<description></description>
+        <jalbum:absolutePath>https://mcondeg.jalbum.net/Computacion%20Cuantica/</jalbum:absolutePath>
+    	<jalbum:link rel="sub" href="https://mcondeg.jalbum.net/Computacion%20Cuantica/Miniatura/album.rss" title="Miniatura" thumbnail="https://mcondeg.jalbum.net/Computacion%20Cuantica/Miniatura/thumbs/img1.jpg" thumbnailWidth="340" thumbnailHeight="260" />
+        <item>
+            <title>cc1</title>
+            <link>https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc1.jpeg</link>
+            <pubDate>Wed, 08 Jan 2020 22:46:36 +0100</pubDate>
+            <description>Criptografía</description>
+            <media:description type="html">Criptografía</media:description>
+            <media:thumbnail url="https://mcondeg.jalbum.net/Computacion%20Cuantica/thumbs/cc1.jpeg" width="340" height="260"/>
+            <media:content type="image/jpeg" url="https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc1.jpeg" width="870" height="490"/>
+            <guid isPermaLink="false">slides/cc1.jpeg</guid>
+        </item>
+        <item>
+            <title>cc3</title>
+            <link>https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc3.png</link>
+            <pubDate>Wed, 08 Jan 2020 22:46:36 +0100</pubDate>
+            <description>Ordenador cuántico de Google</description>
+            <media:description type="html">Ordenador cuántico de Google</media:description>
+            <media:thumbnail url="https://mcondeg.jalbum.net/Computacion%20Cuantica/thumbs/cc3.png" width="340" height="260"/>
+            <media:content type="image/png" url="https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc3.png" width="1000" height="563"/>
+            <guid isPermaLink="false">slides/cc3.png</guid>
+        </item>
+        <item>
+            <title>cc2</title>
+            <link>https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc2.jpg</link>
+            <pubDate>Wed, 08 Jan 2020 22:46:36 +0100</pubDate>
+            <description>Qubit</description>
+            <media:description type="html">Qubit</media:description>
+            <media:thumbnail url="https://mcondeg.jalbum.net/Computacion%20Cuantica/thumbs/cc2.jpg" width="340" height="260"/>
+            <media:content type="image/jpeg" url="https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc2.jpg" width="500" height="444"/>
+            <guid isPermaLink="false">slides/cc2.jpg</guid>
+        </item>
+        <item>
+            <title>cc4</title>
+            <link>https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc4.png</link>
+            <pubDate>Wed, 08 Jan 2020 22:46:36 +0100</pubDate>
+            <description>Qubit2</description>
+            <media:description type="html">Qubit2</media:description>
+            <media:thumbnail url="https://mcondeg.jalbum.net/Computacion%20Cuantica/thumbs/cc4.png" width="340" height="260"/>
+            <media:content type="image/png" url="https://mcondeg.jalbum.net/Computacion%20Cuantica/slides/cc4.png" width="1000" height="511"/>
+            <guid isPermaLink="false">slides/cc4.png</guid>
+        </item>
+    </channel>
+</rss>

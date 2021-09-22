@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{usuario.usuario}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let reserva of reservas; let indice=index"> 
+      <ion-card *ngIf="reserva.idUsuario==usuario.id">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="11">
+                <b>{{reserva.alojamiento}}</b>
+            </ion-col>
+            <ion-col size="1">
+              <button ion-button icon-only (click)="cancelarReserva(reserva.alojamiento, indice)" danger>
+                  <ion-icon name="trash"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" size-md="6" size-lg="3">
+              {{reserva.localidad}}
+            </ion-col>
+            <ion-col size="12" size-md="6" size-lg="3">
+              {{reserva.pais}}
+            </ion-col>
+            <ion-col size="12" size-md="6" size-lg="3">
+              Entrada:{{reserva.fechaEntrada}}
+            </ion-col>
+            <ion-col size="12" size-md="6" size-lg="3">
+              Salida:{{reserva.fechaSalida}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+</ion-content>

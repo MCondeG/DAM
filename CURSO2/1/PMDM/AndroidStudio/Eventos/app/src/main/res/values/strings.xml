@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Eventos</string>
+    <string name="text1">Usuario</string>
+    <string name="text2">Contraseña</string>
+    <string name="boton1">Aceptar</string>
+    <string name="boton2">Cancelar</string>
+</resources>

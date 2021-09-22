@@ -1,0 +1,56 @@
+div, header, footer{
+    border: 1px solid black;
+    outline: 4px solid white;
+}
+
+header{
+    background-color: #00FD02;
+    height: 60px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+header p{
+    padding-top: 10px;
+}
+
+footer{
+    background-color: #00FD02;
+    height: 40px;
+}
+
+footer p{
+    padding-top: 7px;
+}
+
+p{
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.bloqNum{
+    background-color: #87AADE;
+    height: 100px;
+}
+
+.bloqLetra{
+    background-color: #CCCCCC;
+    height: 100px;
+}
+
+.bloqIcono{
+    background-color: #FF9955;
+    height: 100px;
+}
+
+#mobile, #tablet, #desktop {
+    background-color: #00FFFF;
+    height: 80px;
+}
+
+#mobile p, #tablet p, #desktop p{
+    padding-top: 25px;
+}

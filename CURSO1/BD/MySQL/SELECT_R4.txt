@@ -1,0 +1,25 @@
+1.- select nombre from peliculas;
+
+2.- select distinct calificacionEdad from peliculas;
+
+3.- select * from peliculas where calificacionEdad is null;
+
+4.- select * from salas where pelicula is null;
+
+5. 
+
+
+6. 
+
+
+7. 
+
+
+8.- insert into peliculas (nombre, calificacionEdad) values ("Uno, Dos, Tres", 7);
+
+9.- update peliculas set calificacionEdad = 13 where calificacionEdad is null;
+
+10. delete from salas where pelicula in (select codigo from peliculas where calificacionedad = "0");
+
+
+

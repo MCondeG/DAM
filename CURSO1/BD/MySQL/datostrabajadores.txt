@@ -1,0 +1,122 @@
+create database datostrabajadores;
+
+use datostrabajadores;
+
+	create table DEPT2 (dept_no int,
+		dnombre varchar (14),
+		loc varchar (14),
+		primary key (dept_no))
+		engine = innodb;
+
+	create table EMP (emp_no int,
+		apellido varchar (10),
+		oficio varchar (10),
+		dir int,
+		fecha_alta date,
+		salario int,
+		comision int,
+		dept_no int,
+		primary key (emp_no),
+		foreign key (dept_no) references DEPT2(dept_no))
+		engine = innodb;
+
+
+	insert into DEPT2 values (10, "contabilidad", "Madrid");
+
+	insert into DEPT2 values (20, "investigacion", "Bilbao");
+
+	insert into DEPT2 values (30, "ventas", "Sevilla");
+
+	insert into DEPT2 values (40, "operaciones", "Malaga");
+
+
+
+	insert into EMP values (7369, "Sanchez", "EMPleado", 7902, "1980-12-17", 104000, null, 20);
+
+	insert into EMP values (7499, "Arroyo", "vendedor", 7698, "1981-02-20", 208000, 39000, 30);
+
+	insert into EMP values (7521, "Sala", "vendedor", 7698, "1981-02-22", 162500, 65000, 30);
+
+	insert into EMP values (7566, "Jimenez", "director", 7839, "1981-04-02", 386750, null, 20);
+
+	insert into EMP values (7654, "Arenas", "vendedor", 7698, "1981-09-28", 162500, 182000, 30);
+
+	insert into EMP values (7698, "Negro", "director", 7839, "1981-05-01", 370500, null, 30);
+
+	insert into EMP values (7782, "Cerezo", "director", 7839, "1981-06-09", 318500, null, 10);
+
+	insert into EMP values (7788, "Gil", "analista", 7566, "1982-12-09", 390000, null, 20);
+
+	insert into EMP values (7839, "Rey", "presidente", null, "1981-11-17", 650000, null, 10);
+
+	insert into EMP values (7844, "Tovar", "vendedor", 7698, "1981-09-08", 195000, 0, 30);
+
+	insert into EMP values (7876, "Alonso", "EMPleado", 7798, "1983-01-12", 143000, null, 20);
+
+	insert into EMP values (7900, "Jimeno", "EMPleado", 7698, "1981-12-03", 123500, null, 30);
+
+	insert into EMP values (7902, "Fernandez", "analista", 7566, "1981-12-03", 390000, null, 20);
+
+	insert into EMP values (7934, "Muñoz", "EMPleado", 7782, "1982-01-23", 169000, null, 10);
+
+
+
+
+/* CONSULTAS */
+
+use database datostrabajadores
+ 
+	select concat("El departamento de ", dnombre, " está en ", loc) as COMENTARIO from DEPT2;
+	select concat(substr(apellido, 1, locate("n", apellido)), "nn", substr(apellido,((locate("n", apellido)+1)))) from EMP where apellido like "%n%" order by apellido asc;
+
+	3. select apellido, if (comision is null, salario, salario+comision) from emp; 
+	/*
+	+-----------+------------------+
+	| apellido  | salario+comision |
+	+-----------+------------------+
+	| sanchez   |             NULL |
+	| arroyo    |           247000 |
+	| sala      |           227500 |
+	| jimenez   |             NULL |
+	| arenas    |           344500 |
+	| negro     |             NULL |
+	| cerezo    |             NULL |
+	| gil       |             NULL |
+	| rey       |             NULL |
+	| tovar     |           195000 |
+	| alonso    |             NULL |
+	| jimeno    |             NULL |
+	| fernandez |             NULL |
+	| muñoz     |             NULL |
+	+-----------+------------------+
+	*/
+
+	3b. select apellido, salario, substr(salario+if(comision is not null), 1, 1) from emp 
+	where comision is not null ; //
+
+
+	4. select apellido, oficio , if(comision is null, salario+salario+0.15, salario+comision)
+	where comision is null or comision > salario * 0.15 order by oficio, salario desc;
+
+
+	6. select apellido, oficio, fecha_alta from emp where dept_no = 20 and 
+	salario > 150000;
+
+	/*
+
+	+-----------+----------+------------+
+	| apellido  | oficio   | fecha_alta |
+	+-----------+----------+------------+
+	| jimenez   | director | 1981-04-02 |
+	| gil       | analista | 1982-12-09 |
+	| fernandez | analista | 1981-12-03 |
+	+-----------+----------+------------+
+
+	*/
+
+	7. select apellido, oficio, dayname(fecha_alta) from emp where dayname(fecha_alta) in ("", "", "") order by oficio; //
+
+
+	8. select apellido, oficio, case dayname (fecha_alta) when wednesday then monday... 
+	else "Fin de Semana" from emp order by 3; //
+

@@ -1,0 +1,42 @@
+body{
+	color: red;
+	background-color: silver;
+	font-family: Arial;
+	margin-left: 200px;
+}
+
+h1{
+	color: white;
+	word-spacing: 30px;
+	font-family: 'Comic Sans MS';
+	/*margin-right: 300px;*/
+	padding: 5px;
+	border: 5px solid red;
+}
+
+h3{
+	font-style: italic;
+	text-transform: lowercase;
+	font-family: Tahoma;
+	/*margin-right: 300px;*/
+	text-align: right;
+}
+
+p{
+	text-align: center;
+	width: 250px;
+	background-color: olive;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border: 10px solid blue;
+}
+
+li{
+	border: 0.5px solid white;
+	padding: 0.5px;
+}
+
+ul{
+	width: 200px;
+	background-color: purple;
+}

@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+#menu {
+	height: 13%;
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	display: inline-block;
+	padding: 0px 30px 0px 0px;
+	background-image: url(../imagenes/fondoindice.png);
+}
+
+#menu #contenedor {
+	padding: 32px 0px 0px 0px;
+	display: inline-block;
+	text-align: center;
+}
+
+#menu #contenedor a {
+	padding: 10px 10px 10px 10px;
+	margin: 0px 5px 0px 5px;
+	border: white;
+	text-decoration: none;
+	text-align: center;
+}
+
+#menu #contenedor a.enlacehtml {
+	background: #F1F1F1;
+}
+
+#menu #contenedor a.enlacejs {
+	color: white;
+	background: #6C41FD;
+}
+
+#menu #contenedor a.old {
+	color: white;
+	background: #167702;
+}
+
+.contenido {
+	border: 0px;
+	height: 94%;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+}
+
+#menu #contenedor a.enlacehtml:hover, #menu #contenedor a.enlacehtml:active {
+	background: #A1D916;
+}
+
+#menu #contenedor a.enlacehtml:visited {
+	color: black;
+}
+
+#menu #contenedor a.enlacejs:hover, #menu #contenedor a.enlacejs:active {
+	background: #482CAA;
+}
+
+#menu #contenedor a.old:hover, #menu #contenedor a.enlacejs:active {
+	background: #125604;
+}

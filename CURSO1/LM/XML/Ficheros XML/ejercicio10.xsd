@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="cv">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="presentacion"/>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element type="xs:string" name="datos_academicos"/>
+					<xs:element type="xs:string" name="experiencia_laboral"/>
+				</xs:choice>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element type="xs:string" name="lectura"/>
+					<xs:element type="xs:string" name="deportes"/>
+					<xs:element type="xs:string" name="otros"/>
+				</xs:choice>
+				<xs:element type="xs:string" name="referencias" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

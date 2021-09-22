@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE etiqueta [
+    <!ELEMENT etiqueta (nombre, calle, ciudad, pais, codigo)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT ciudad (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT codigo (#PCDATA)>
+]>
+
+<etiqueta>
+    <nombre>Pepe García</nombre>
+    <calle>C/Ronda, 3</calle>
+    <ciudad>Sevilla</ciudad>
+    <pais>España</pais>
+    <codigo>18465</codigo>
+</etiqueta>

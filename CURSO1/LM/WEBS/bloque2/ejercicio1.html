@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<TITLE>Ejercicio 2.1</TITLE>
+	</HEAD>
+	<BODY>
+		<script>
+            var c;
+            c = prompt('Introduce una de estas palabras: "casa", "mesa", "perro", "gato"','');
+            if (c != 'casa' && c != 'mesa' && c != 'perro' && c != 'gato') document.write('ERROR');
+            else {
+                if (c == 'casa') c = 'house';
+                if (c == 'mesa') c = 'table';
+                if (c == 'perro') c = 'dog';
+                if (c == 'gato') c = 'cat';
+                document.write('Traducción al inglés: '+c);
+            }
+		</script>
+	</BODY>
+</HTML>

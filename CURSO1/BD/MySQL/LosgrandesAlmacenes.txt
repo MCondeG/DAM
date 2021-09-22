@@ -1,0 +1,42 @@
+Create database LosgrandesAlmacenes;
+
+use LosgrandesAlmacenes
+
+	create table PRODUCTOS(
+		codigo varchar (10),
+		nombre varchar (30),
+		precio float,
+		primary key (codigo))
+		engine=InnoDB;
+		
+	create table CAJEROS(
+		codigo varchar (10),
+		nomApellidos varchar (50),
+		primary key (codigo))
+		engine=InnoDB;
+		
+	create table MAQUINA(
+		codigo varchar (10),
+		piso integer,
+		primary key (codigo))
+		engine=InnoDB;
+		
+	create table Venta(
+		cajero varchar (10),
+		producto varchar (10),
+		maquina varchar (10),
+		primary key (cajero,producto,maquina),
+		foreign key (cajero) references CAJEROS(codigo),
+		foreign key (producto) references PRODUCTOS(codigo),
+		foreign key (maquina) references MAQUINA(codigo))
+		engine=InnoDB;
+		
+		
+		/* CONSULTAS */
+		
+use LosgrandesAlmacenes
+
+	select PRODUCTOS.codigo, count(Venta.producto) from PRODUCTOS, Venta where PRODUCTOS.codigo = Venta.producto order by count(Venta.producto);
+	select c.nomApellidos, p.nombre, p.precio, m.piso from PRODUCTOS, CAJEROS, MAQUINA, Venta where....;
+
+

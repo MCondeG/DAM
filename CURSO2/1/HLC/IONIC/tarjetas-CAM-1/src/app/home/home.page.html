@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="/assets/img/camLogo.jpg" class="mediana"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+<ion-grid>
+  <ion-row>
+  <ion-col>
+  <ion-text>Puedes utilizar cualquiera de las tarjetas que se muestran a
+    continuación.
+  </ion-text>
+  <ion-img src="/assets/img/american-express.jpg" class="small"></ion-img>
+  <ion-img src="/assets/img/discover.png" class="small"></ion-img>
+  <ion-img src="/assets/img/mastercard.jpg" class="small"></ion-img>
+  <ion-img src="/assets/img/visa.jpg" class="small"></ion-img>
+</ion-col>
+</ion-row>
+  <form [formGroup]='formulario'>
+      <ion-row>
+        <ion-col>
+          <ion-text>Número de tarjeta:</ion-text>
+          <ion-input formControlName="numTarjeta"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-text>Expira:</ion-text>
+            <ion-input type="text" placeholder="MM/AA" class="expira" formControlName="expira"></ion-input>
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+        <ion-col>
+            <ion-text>CCV:</ion-text>
+            <ion-input  type="password"  maxlength="3" class="ccv" formControlName="ccv"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-text>Tipo de tarjeta: </ion-text>
+          <ion-select formControlName="tipo">
+            <ion-select-option *ngFor="let tipoTarjeta of tiposTarjeta | keyvalue" >{{tipoTarjeta.key}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+        <ion-col>
+          <ion-text style="float: left">C.Prom.: </ion-text>
+          <br>
+          <ion-checkbox formControlName="clientePromocional"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+        </ion-col>
+        <ion-col>
+          <ion-button color="danger" class="botonBorrar" (click)="clickBorrar()">Borrar</ion-button>
+
+        </ion-col>
+        <ion-col>
+          <ion-button color="success" class="botonAceptar" [disabled]="!formulario.valid" (click)="clickAceptar()">Aceptar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+    </ion-grid>
+ 
+
+</ion-content>

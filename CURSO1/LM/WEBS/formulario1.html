@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<TITLE>Formulario 1</TITLE>
+  </HEAD>
+  <BODY>
+	<br>
+	<h1 align = "center">DATOS DE ALUMNOS</h1>
+	<br>
+	<table align = "center" border = "2" cellpadding = "20">
+		<tr><td>
+			<h2 align = "center"><font color = "red">Teclea datos de entrada</font></h3>
+			<form>
+				<p>
+					Teclea nombre de alumno.....:<input type = "text" name = "nombre" size = "30" maxlength = "30" required>
+					<br>
+					Teclea número de matrícula..:<input type = "text" name = "num_matricula" size = "30" maxlength = "30">
+					<br>
+					Teclea dirección............:<input type = "text" name = "direcc" size = "30" maxlength = "30">
+					<br>
+					Teclea población............:<input type = "text" name = "pobla" size = "30" maxlength = "30">
+					<br>
+					Teclea teléfono.............:<input type = "text" name = "tlf" size = "30" maxlength = "30">
+					<br>
+				</p>
+				<p>
+					Selecciona el sexo: 
+					<input type = "radio" name = "sexo" value = "hombre" checked>Masculino
+					<input type = "radio" name = "sexo" value = "mujer">Femenino
+				</p>
+				<hr>
+				<p align = "center">
+					<button type = "submit" value = " Enviar datos " name = "Enviar"><img src = "imagenes/enviar.jpg" width = "50" height = "50"></button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button type = "reset" value = " Limpiar datos " name = "Limpiar"><img src = "imagenes/limpiar.jpg" width = "50" height = "50"></button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button type = "button" value = " Cerrar ventana " name = "Cerrar" onclick = "window.close();"><img src = "imagenes/cerrar.jpg" width = "50" height = "50"></button>&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button type = "button" value = " Siguiente formulario " name = "Siguiente" onclick = "window.open('formulario2.html','_self');"><img src = "imagenes/siguiente.png" width = "50" height = "50"></button>
+				</p>
+			</form>
+		</td></tr>
+	</table>
+  </BODY>
+</HTML>

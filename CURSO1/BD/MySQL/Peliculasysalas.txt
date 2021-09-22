@@ -1,0 +1,19 @@
+Create database Peliculasysalas;
+
+use Peliculasysalas
+
+	create table PELICULAS(
+		codigo varchar (10),
+		nombre varchar (30),
+		calificacionedad integer,
+		primary key (codigo))
+		engine=InnoDB;
+		
+	create table SALAS(
+		codigo varchar (10),
+		nombre varchar (20),
+		pelicula varchar (10),
+		primary key (codigo),
+		index (pelicula),
+		foreign key (pelicula) references PELICULAS(codigo))
+		engine=InnoDB;

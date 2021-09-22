@@ -1,0 +1,15 @@
+.botones{
+    padding-top: 50px;
+  }
+
+  .botones ion-button{
+    width: 120px;
+    padding-right: 15px;
+  }
+
+  #fila1, #fila2 {
+      padding-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }

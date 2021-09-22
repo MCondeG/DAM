@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ejercicio1_ManuelConde</string>
+    <string name="text1">Usuario</string>
+    <string name="text2">Contraseña</string>
+    <string name="text3">Alumno</string>
+    <string name="text4">EXPULSIÓN</string>
+    <string name="text5">PARTE</string>
+    <string name="boton1">Aceptar</string>
+    <string name="boton2">Aceptar</string>
+    <string name="boton3">Volver</string>
+    <string name="check1">Molestar</string>
+    <string name="check2">Violencia</string>
+    <string name="check3">Sin deberes</string>
+    <string name="radio1">Si</string>
+    <string name="radio2">No</string>
+</resources>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ladder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-reorder-group (ionItemReorder)="onRenderItems($event)" disabled="false">
+      <ion-item *ngFor="let ladderItem of ladder">
+        <ion-label>
+          {{ladderItem}}
+        </ion-label>
+        <ion-reorder></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+</ion-content>

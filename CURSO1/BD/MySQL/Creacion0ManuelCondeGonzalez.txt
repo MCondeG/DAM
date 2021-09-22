@@ -1,0 +1,105 @@
+Create database Creacion0ManuelCondeGonzalez;
+
+use Creacion0ManuelCondeGonzalez
+
+	create table ESTUDIOS(
+		codigo varchar (10),
+		titulo varchar (30),
+		ciudad varchar (20),
+		primary key (codigo))
+		engine = innoDB;
+	
+	create table DEPARTAMENTOS(
+		dpto_cod varchar (10),
+		nombre_dpto varchar (30),
+		presupuesto float,
+		pres_actual float,
+		primary key (dpto_cod))
+		engine = innoDB;
+		
+	create table TRABAJOS(
+		trabajo_cod varchar (10),
+		nombre_trabajo varchar (30),
+		salario_min float,
+		salario_max float,
+		dpto_cod varchar (10),
+		primary key (trabajo_cod),
+		foreign key (dpto_cod) references DEPARTAMENTOS(dpto_cod))
+		engine = innoDB;
+		
+	create table EMPLEADOS(
+		dni varchar (10),
+		nombre varchar (20),
+		apellido varchar (30),
+		direccion varchar (50),
+		ciudad varchar (20),
+		municipio varchar (20),
+		cod_postal varchar (5),
+		sexo varchar (10),
+		primary key (dni))
+		engine = innoDB;
+		
+	create table HISTORIAL_SALARIAL(
+		codigo varchar (10),
+		salario float,
+		fecha_comienzo date,
+		fecha_fin date,
+		dni varchar (10),
+		primary key (codigo),
+		foreign key (dni) references EMPLEADOS(dni))
+		engine = innoDB;
+		
+	create table Tiene(
+		codigo varchar (10),
+		dni varchar (10),
+		primary key (codigo,dni),
+		foreign key (codigo) references ESTUDIOS(codigo),
+		foreign key (dni) references EMPLEADOS(dni))
+		engine = innoDB;
+		
+	create table Historial_laboral(
+		trabajo_cod varchar (10),
+		dni varchar (10),
+		fecha_inicio date,
+		fecha_fin date,
+		primary key (trabajo_cod,dni,fecha_inicio),
+		foreign key (trabajo_cod) references TRABAJOS(trabajo_cod),
+		foreign key (dni) references EMPLEADOS(dni))
+		engine = innoDB;
+		
+	alter table EMPLEADOS 
+		add valoracion integer;
+				
+				
+		/* INSERCIÓN DE DATOS */
+		
+use Creacion0ManuelCondeGonzalez
+
+	insert into ESTUDIOS
+		values('1','LIC. INFORMÁTICO','SEVILLA');
+	insert into ESTUDIOS
+		values('2','TEC. EN EXPLOTACIÓN DE S.I.','LORA DEL RIO');
+	insert into ESTUDIOS
+		values('3','TEC. EN ADMINISTRACIÓN DE S.I.','SEVILLA');
+		
+	insert into DEPARTAMENTOS
+		values('1111','álgebra',3000.99,1000);
+	insert into DEPARTAMENTOS
+		values('2222','sistemas informáticos',5000,0);
+		
+	insert into TRABAJOS
+		values('1111','profesor',1000,2000,'1111');
+	insert into TRABAJOS
+		values('2222','investigador',1500,3000,'2222');
+		
+	insert into EMPLEADOS
+		values('123456789A','pepe','perez','c/ falsa 123','sevilla','sevilla','41008','masculino',NULL);
+	insert into EMPLEADOS
+		values('123456789B','maria','','c/ falsa 123','sevilla','sevilla','41008','masculino',NULL);
+	
+	insert into HISTORIAL_SALARIAL
+		values('1111',1000,'2008-12-01','2015-12-01','123456789B');	
+	insert into HISTORIAL_SALARIAL
+		values('3333',1500,'2010-04-15','2018-12-01','123456789A');
+
+

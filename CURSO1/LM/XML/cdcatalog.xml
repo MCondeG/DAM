@@ -1,0 +1,18 @@
+<?XML version = "1.0" standalone = "yes"? encoding = "UTF-8"?>
+<CATALOGO>
+	<CD>
+		<ARTIST>Metallica</ARTIST>
+		<TITLE>The Black Album</TITLE>
+		<YEAR>1991</YEAR>
+	</CD>
+	<CD>
+		<ARTIST>Deep Purple</ARTIST>
+		<TITLE>Stormbringer</TITLE>
+		<YEAR>1974</YEAR>
+	</CD>
+	<CD>
+		<ARTIST>Iron Maiden</ARTIST>
+		<TITLE>Fear of the Dark</TITLE>
+		<YEAR>1992</YEAR>
+	</CD>
+</CATALOGO>

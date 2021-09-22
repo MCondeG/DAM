@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<HTML>
+  <HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<TITLE>Formulario 2</TITLE>
+  </HEAD>
+  <BODY>
+	<br>
+	<h1 align = "center">DATOS DE ALUMNOS - CONTINUACIÓN</h1>
+	<br>
+	<table align = "center" border = "2" cellpadding = "20">
+		<tr><td>
+			<h2 align = "center"><font color = "red">Teclea más datos</font></h3>
+			<form>
+				<p>
+					<b>Teclea fecha de nacimiento:</b>
+					<br><br>
+					Teclea día de nacimiento..:<input type = "text" name = "direcc" size = "4" maxlength = "4">&nbsp&nbsp
+					Selecciona mes de nacimiento..:<select name "mes">
+						<option value = "enero" selected>Enero
+						<option value = "febrero">Febrero
+						<option value = "marzo">Marzo
+						<option value = "abril">Abril
+						<option value = "mayo">Mayo
+						<option value = "junio">Junio
+						<option value = "julio">Julio
+						<option value = "agosto">Agosto
+						<option value = "septiembre">Septiembre
+						<option value = "octubre">Octubre
+						<option value = "noviembre">Noviembre
+						<option value = "diciembre">Diciembre
+					</select>&nbsp&nbsp
+					Teclea año de nacimiento..:<input type = "text" name = "edad" size = "4" maxlength = "4">
+				</p>
+				<p>
+					Selecciona el curso..:<select name "curso">
+						<option value = "primerosmr" selected>Primero SMR
+						<option value = "segundosmr">Segundo SMR
+						<option value = "primerodam">Primero DAM
+						<option value = "primerodam">Segundo DAM
+					</select>
+				</p>
+				<hr>
+				<p>
+					Elige 3 materias optativas&nbsp&nbsp
+					<input type = "checkbox" name = "asignatura">Inglés
+					<input type = "checkbox" name = "asignatura">Francés
+					<input type = "checkbox" name = "asignatura">Deporte
+					<input type = "checkbox" name = "asignatura">Astronomía
+					<input type = "checkbox" name = "asignatura">Historia
+					<input type = "checkbox" name = "asignatura">Páginas web
+					<input type = "checkbox" name = "asignatura">Redes
+				</p>
+				<hr>
+				<p>
+					Selecciona el turno:
+					<input type = "radio" name = "turno" value = "diurno">Diurno
+					<input type = "radio" name = "turno" value = "nocturno">Nocturno
+					<input type = "radio" name = "turno" value = "vespertino">Vespertino
+				</p>
+				<hr>
+				<p align = "center">
+					<button type = "submit" value = " Enviar datos " name = "Enviar"><img src = "imagenes/enviar.jpg" width = "50" height = "50"></button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button type = "reset" value = " Limpiar datos " name = "Limpiar"><img src = "imagenes/limpiar.jpg" width = "50" height = "50"></button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<button type = "button" value = " Cerrar ventana " name = "Cerrar" onclick = "window.close();"><img src = "imagenes/cerrar.jpg" width = "50" height = "50"></button>
+				</p>
+			</form>
+		</td></tr>
+	</table>
+  </BODY>
+</HTML>

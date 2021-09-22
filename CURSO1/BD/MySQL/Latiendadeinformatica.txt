@@ -1,0 +1,33 @@
+Create database Latiendadeinformatica;
+
+use Latiendadeinformatica
+
+	create table FABRICANTES(
+		codigo varchar (10),
+		nombre varchar (20),
+		primary key (codigo))
+		engine=InnoDB;
+	
+	create table ARTICULOS(
+		nombre varchar (20),
+		precio float,
+		fabricante varchar (10),
+		primary key (nombre),
+		index (fabricante),
+		foreign key (fabricante) references FABRICANTES(codigo))
+		engine=InnoDB;
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+use Latiendadeinformatica		
+
+	insert into FABRICANTES
+		values('1111','hp');
+	insert into FABRICANTES
+		values('2222','dell');
+		
+	insert into ARTICULOS
+		values('raton',10,'1111');
+	insert into ARTICULOS
+		values('pantalla',100.99,'1111');

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Ejercicio 1.10</title>
+	  <meta charset="UTF-8">
+	</head>
+	<body>
+
+		<script>
+			var n
+			n = parseInt(prompt('Introduce entero entre 1 y 99:',''));
+			if (n < 1 || n > 99) {
+				document.write('ERROR');
+			}
+			else {
+				if (n/10 >= 1) document.write('El número tiene 2 cifras');
+				else document.write('El número tiene 1 cifra');
+			}
+		</script>
+
+	</body>
+</html>

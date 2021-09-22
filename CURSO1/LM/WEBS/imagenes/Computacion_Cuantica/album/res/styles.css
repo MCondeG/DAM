@@ -1,0 +1,6 @@
+body, .lightbox-overlay {
+	background-image: url(bg.jpg);
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: cover;
+}

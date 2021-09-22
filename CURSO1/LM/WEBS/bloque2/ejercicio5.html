@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8"/>
+		<TITLE>Ejercicio 2.5</TITLE>
+	</HEAD>
+	<BODY>
+		<SCRIPT>
+			var doc, edad, sexo, total = 0, hombre = 0, mujer = 0, hmayoredad = 0;
+				do {
+					doc = parseInt(prompt('Introduce número de documento:',''));
+					if (doc > 0) {
+						edad = parseInt(prompt('Introduce la edad:',''));
+						sexo = prompt('Introduce el sexo (masculino/femenino):','');
+						if (sexo == 'masculino') { 
+							hombre++;
+							if (edad >= 16 && edad <= 65) hmayoredad++;
+						} 
+						if (sexo == 'femenino') mujer++;
+						total++;
+					}
+		  } while (doc!=0);
+		  document.write('Personas censadas: '+total+'<br>');
+		  document.write('Hombres: '+hombre+'<br>'); 
+		  document.write('Mujeres: '+mujer+'<br>');   
+		  document.write('Hombres entre 16 y 65 años: '+hmayoredad+'<br>');
+		</SCRIPT>
+	</BODY>
+</HTML>

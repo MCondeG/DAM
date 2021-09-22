@@ -1,0 +1,76 @@
+Create database Losdirectores;
+
+use Losdirectores
+
+	create table DESPACHOS(
+		numero varchar (5),
+		capacidad integer,
+		primary key (numero))
+		engine=InnoDB;
+		
+	create table DIRECTORES(
+		DNI varchar (10),
+		nombre varchar (20),
+		dnijefe varchar (10),
+		despacho varchar (5),
+		primary key (DNI),
+		index (despacho),
+		foreign key (despacho) references DESPACHOS(numero))
+		engine=InnoDB;
+		
+	alter table DIRECTORES 
+		add foreign key (dnijefe) references DIRECTORES(DNI);
+		
+		
+				/* INSERCIÓN DE DATOS */
+		
+use Losdirectores		
+
+	insert into DESPACHOS
+		values('2',2);
+	insert into DESPACHOS
+		values('5',4);
+	insert into DESPACHOS
+		values('124',2);
+		
+	insert into DIRECTORES
+		values('28','pepe',NULL,'5');
+	insert into DIRECTORES
+		values('40','Marta',NULL,'124');
+	insert into DIRECTORES
+		values('74568521','Manuel',NULL,'124');
+	insert into DIRECTORES
+		values('10','Luis Perez','40','5');
+	insert into DIRECTORES
+		values('32','Juan','28','2');
+	insert into DIRECTORES
+		values('41','Maria','28','5');
+		
+	insert into DIRECTORES
+		values('28201700','Paco Perez',NULL,'124';
+		
+	update DIRECTORES
+		set dnijefe = '74568521' where nombre like '%Perez';
+		
+	delete from DIRECTORES
+		where dnijefe is not NULL;
+		
+		
+				/* CONSULTAS */
+				
+use Losdirectores
+
+	select dni, nombre from DIRECTORES;
+	select * from DIRECTORES where dnijefe is NULL;
+	select DIRECTORES.nombre, DESPACHOS.capacidad from DIRECTORES, DESPACHOS where DIRECTORES.despacho = DESPACHOS.numero;
+	select despacho, count(DNI) from DIRECTORES group by despacho;
+	select * from DIRECTORES where dnijefe is not NULL AND dnijefe IN 
+		(select DNI from DIRECTORES where dnijefe is NULL);
+	select DIRECTORES.nombre, DIRECTORES.nombre as nombrejefe from DIRECTORES, DIRECTORES where DIRECTORES.DNI = DIRECTORES.dnijefe;
+	select numero from DESPACHOS where capacidad < 
+		(select count(*) from DIRECTORES where despacho = numero);
+	
+	
+	
+	
+	

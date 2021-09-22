@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Ejercicio 1.14</title>
+	  <meta charset="UTF-8">
+	</head>
+	<body>
+
+		<script>
+			var sueldo, antiguedad;
+			sueldo = parseFloat(prompt('Sueldo:',''));
+			antiguedad = parseInt(prompt('Años de antigüedad:',''));
+			if (sueldo < 500) {
+				if (antiguedad >= 10) sueldo += sueldo*0.2;
+				else sueldo += sueldo*0.05;
+			}
+			document.write('El sueldo es: '+sueldo);
+		</script>
+
+	</body>
+</html>

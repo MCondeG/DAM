@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8"/>
+		<TITLE>Ejercicio 2.8</TITLE>
+	</HEAD>
+	<BODY>
+		<SCRIPT>
+			function traducir(c) {
+				if (c != 'casa' && c != 'mesa' && c != 'perro' && c != 'gato') c = 'ERROR';
+				else {
+					if (c == 'casa') c = 'house';
+					if (c == 'mesa') c = 'table';
+					if (c == 'perro') c = 'dog';
+					if (c == 'gato') c = 'cat';
+				}
+				
+				return c;
+			}
+			
+			var c;
+            c = prompt('Introduce una de estas palabras: "casa", "mesa", "perro", "gato"','');
+			c = traducir(c);
+			document.write('Traducción al inglés: '+c);
+		</SCRIPT>
+	</BODY>
+</HTML>

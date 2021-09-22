@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label position="floating" color="primary">Username</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Password</ion-label>
+      <ion-input type="text" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Confirm password</ion-label>
+      <ion-input type="text" formControlName="confirmpassword"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Name</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Last name</ion-label>
+      <ion-input type="text" formControlName="lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">Gender</ion-label>
+      <ion-select formControlName="gender" cancelText="Cancel" okText="OK">
+        <ion-select-option *ngFor="let gender of genders" [value]="gender">{{gender}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">I accept terms and conditions</ion-label>
+      <ion-checkbox color="primary" formControlName="terms"></ion-checkbox>
+    </ion-item>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Submit data</ion-button>
+  </form>
+</ion-content>

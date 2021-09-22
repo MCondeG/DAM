@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Ex1Ev1ManuelConde/src"/>
+	<classpathentry kind="src" path="MaquinaExpendedora/src"/>
+	<classpathentry kind="src" path="MiPrimerProyecto/src"/>
+	<classpathentry kind="src" path="TEMA 1/src"/>
+	<classpathentry kind="src" path="TEMA 2/src"/>
+	<classpathentry kind="src" path="TEMA 3/src"/>
+	<classpathentry kind="output" path="Ex1Ev1ManuelConde/bin"/>
+</classpath>

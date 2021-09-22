@@ -1,0 +1,34 @@
+Create database LosCientificos;
+
+use LosCientificos
+
+	create table CIENTIFICO(
+		DNI varchar (10),
+		nomApell varchar (50),
+		primary key (DNI))
+		engine=InnoDB;
+		
+	create table PROYECTO(
+		id varchar (10),
+		nombre varchar (30),
+		horas integer,
+		primary key (id))
+		engine=InnoDB;
+		
+	create table AsignadoA(
+		Cientifico varchar (10),
+		Proyecto varchar (10),
+		primary key (Cientifico,Proyecto),
+		foreign key (Cientifico) references CIENTIFICO(DNI),
+		foreign key (Proyecto) references PROYECTO(id))
+		engine=InnoDB;
+		
+	
+		/* CONSULTAS */
+		
+use LosCientificos
+	
+	select CIENTIFICO.DNI, CIENTIFICO.nomApell, PROYECTO.id, PROYECTO.nombre from CIENTIFICO, PROYECTO, AsignadoA where AsignadoA.cientifico = CIENTIFICO.DNI AND AsignadoA.proyecto = PROYECTO.id;
+	select CIENTIFICO.DNI, CIENTIFICO.nomApell, count(AsignadoA.proyecto) as numProyectos from CIENTIFICO, AsignadoA where AsignadoA.cientifico = CIENTIFICO.DNI group by (AsignadoA.Cientifico);
+	select PROYECTO.id, PROYECTO.nomApell, count(AsignadoA.Cientifico) as numCientificos from PROYECTO, AsignadoA where AsignadoA.proyecto = PROYECTO.id group by (AsignadoA.proyecto);
+	

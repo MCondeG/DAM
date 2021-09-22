@@ -1,0 +1,45 @@
+div, header, footer, p{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu, footer {
+    background-color: cyan;
+}
+
+#naranja{
+    background-color: orangered;
+}
+
+#rojo{
+    background-color: red;
+}
+
+#izquierda, #amarillo1, #amarillo2{
+    background-color: yellow;
+}
+
+#verde1, #verde2{
+    background-color: greenyellow;
+    height: 40px;
+}
+
+#morado1, #morado2{
+    background-color: purple;
+    height: 20px;
+}
+
+#izquierda{
+    height: 100px;
+}
+
+#amarillo1{
+    height: 40px;
+}
+#amarillo2{
+    height: 60px;
+}

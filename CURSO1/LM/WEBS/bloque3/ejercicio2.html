@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<TITLE>Ejercicio 3.2</TITLE>
+	</HEAD>
+	<BODY>
+		<script>
+        	var p;
+ 			p = prompt('Introduce una cadena de carácteres','');
+  			document.write('<b>'+p+'</b><br><br>');
+			mitad(p);
+			ultimoChar(p);
+			inverso(p);
+			guiones(p);
+			vocales(p);
+			
+			function mitad(p) {
+				document.write('La primera mitad de la frase es: "'+p.substring(0, (p.length/2))+'"<br><br>');
+			}
+
+			function ultimoChar(p) {
+				document.write('El último carácter de la frase es: "'+p.charAt(p.length-1)+'"<br><br>');
+			}
+
+			function inverso(p) {
+				document.write('Frase al revés: "'+p.split('').reverse().join('')+'"<br><br>');
+			}
+
+			function guiones(p) {
+				document.write('Frase separada por guiones: "');
+				for(var i = 0; i < (p.length-1); i++) {
+				document.write(p.charAt(i)+'-');
+				}
+				document.write(p.charAt(i)+'"<br><br>');
+			}
+
+			function vocales(p) {
+				var cont=0;
+				for(var i = 0; i <p.length; i++) {
+					if (p.charAt(i)=='a' || p.charAt(i)=='e' || p.charAt(i)=='i' || p.charAt(i)=='o' || p.charAt(i)=='u' || p.charAt(i)=='A' || p.charAt(i)=='E' || p.charAt(i)=='I' || p.charAt(i)=='O' || p.charAt(i)=='U') cont++;
+				}
+				document.write('En la frase hay '+cont+' vocales');
+			}
+		</script>
+	</BODY>
+</HTML>

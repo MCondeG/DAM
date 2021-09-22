@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="13.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>lastFolderThumbCrop</string>
+   <boolean>true</boolean>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbPath</string>
+   <string>Miniatura/img1.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderImageSize</string>
+   <string>1600x240</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbSize</string>
+   <string>600x420</string>
+  </void>
+  <void method="put">
+   <string>themeImagePath</string>
+   <object class="se.datadosen.jalbum.AlbumObjectProperties$HiddenProperty">
+    <void property="property">
+     <string>img1.jpg</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>lastFolderImagePath</string>
+   <string>Miniatura/img1.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbName</string>
+   <string>Miniatura_img1.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbDims</string>
+   <string>507x388</string>
+  </void>
+ </object>
+</java>

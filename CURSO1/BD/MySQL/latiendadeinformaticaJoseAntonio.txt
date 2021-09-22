@@ -1,0 +1,134 @@
+create database Latiendadeinformatica;
+
+use latiendadeinformatica;
+
+create table fabricantes (codigo varchar (8),
+    nombre varchar (12),
+    primary key (codigo));
+
+create table articulos (nombre varchar (12),
+    precio float,
+    fabricante varchar (8),
+    primary key (nombre),
+    foreign key (fabricante) references fabricantes(codigo))
+    engine=innodb;
+
+insert into fabricantes (codigo, nombre) values ("111", "Luis");
+
+insert into fabricantes (codigo, nombre) values ("222", "Juan");
+
+select * from fabricantes;
+
+insert into articulos (nombre, precio, fabricante) values ("Camiseta", 10.50 ,"111");
+
+insert into articulos (nombre, precio, fabricante) values ("Pantalon", 12.50 ,"222");
+
+
+
+SELECT LATIENDADEINFORMATICA
+
+1. obtener los nombres de los productos de la tienda
+
+select nombre from articulos;
+
+2. obtener nombre y precio de los productos de la tienda
+
+select nombre, precio from articulos;
+
+3. obtener nombre de los productos cuyo precio sea mayor o igual a 200
+
+select nombre from articulos where precio >= 200;
+
+4. obtener todos los datos de los articulos cuyo precio este entre 60 y 120 euros (rango)
+
+select * from articulos where precio between 60 and 120;
+
+5. obtener nombre y precio en pesetas
+
+select nombre, precio * 166 from articulos;
+
+6. seleccionar el precio medio de todos los productos
+
+select avg(precio) from articulos;
+
+7. obtener el precio medio de los articulos cuyo codigo de fabricante sea 2
+
+select avg(precio) from articulos where fabricante = "2";
+
+8. obtener el numero de articulos cuyo precio sea mayor o igual a 180
+
+select count(*) from articulos where precio >= 180;
+
+9. idem 8 y ordenar descendentemente por precio y asc por nombre
+
+select * from articulos where precio >= 180 order by precio desc, nombre asc;
+
+10. select fabricantes.*, articulos.* from articulos, fabricantes; 
++--------+--------+----------+--------+------------+
+| codigo | nombre | nombre   | precio | fabricante |
++--------+--------+----------+--------+------------+
+| 111    | Luis   | Camiseta |   10.5 | 111        |
+| 111    | Luis   | Pantalon |   12.5 | 222        |
+| 222    | Juan   | Camiseta |   10.5 | 111        |
+| 222    | Juan   | Pantalon |   12.5 | 222        |
++--------+--------+----------+--------+------------+
+
+11. select fabricantes.nombre, articulos.nombre, precio from articulos, fabricantes where articulos.fabricante
+	= fabricantes.codigo;
++--------+----------+--------+
+| nombre | nombre   | precio |
++--------+----------+--------+
+| Luis   | Camiseta |   10.5 |
+| Juan   | Pantalon |   12.5 |
++--------+----------+--------+
+
+12. select avg(precio), fabricante from articulos group by fabricante;
++-------------+------------+
+| avg(precio) | fabricante |
++-------------+------------+
+|        10.5 | 111        |
+|        12.5 | 222        |
++-------------+------------+
+
+
+13. select avg(precio), fabricantes.nombre from articulos, fabricantes
+	where articulos.fabricante = fabricantes.codigo group by fabricantes.nombre; 
++-------------+--------+
+| avg(precio) | nombre |
++-------------+--------+
+|        12.5 | Juan   |
+|        10.5 | Luis   |
++-------------+--------+
+
+14. select avg(precio), fabricantes.nombre from articulos, fabricantes
+	where articulos.fabricante = fabricantes.codigo group by fabricantes.nombre having avg(precio) >= 150; 
+Empty set
+
+15. 
+
+
+
+16. 
+
+
+
+17. añadir un nuevo producto altavoces de 70 euros del fabricante 2
+
+insert into articulos (nombre, precio, fabricante) values ("altavoces", 70, "2");
+
+18. cambiar el nombre del producto 8 a impresora laser 
+
+//NO HACER
+
+19. aplicar un descuento del 10% a todos los productos
+
+update articulos set precio = precio * 0,1;
+
+20. aplicar un descuento de 10 euros a todos los productos cuyo precio sea mayor o igual a 120 euros
+
+update articulos set precio = precio - 10 where precio >= 120;
+
+
+
+
+

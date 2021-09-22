@@ -1,0 +1,4 @@
+fichero de
+prueba para
+leer con
+java

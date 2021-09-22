@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script type = "text/javascript" src = "../javascript/ejercicio3_5.js"></script>
+        <script type = "text/javascript" src = "../javascript/ejercicio3_6.js"></script>
+		<TITLE>Ejercicio 3.6</TITLE>
+	</HEAD>
+	<BODY>
+        <form>
+            Pizzas: 
+            <select id = "pizza" onchange = "selectPizza()">
+                <option value = "4 €">Queso</option>
+                <option value = "6 €">Jamon y Queso</option>
+                <option value = "10 €">Especial</option>
+            </select>
+            <br>
+            Precio: <input type = "text" id = "precio" readonly = "readonly">
+            Cantidad de pizzas: <input type = "text" id = "cantidad">
+            <br><br><br>
+            <input type = "button" value = "Calcula tu pedido" onClick = "calcularPrecio()">
+            <br>
+            <input type = "text" id = "preciototal" readonly = "readonly">
+        </form>
+	</BODY>
+</HTML>

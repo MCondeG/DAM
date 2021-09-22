@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>     
+    <ion-title>
+      Alta corredor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+    
+    <div formGroupName="grupo">
+      <ion-item>
+        <ion-label position="floating" color="primary">DNI</ion-label>
+        <ion-input type="text" formControlName="dniCorredor"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating" color="primary">Edad</ion-label>
+        <ion-input type="number" formControlName="edad" (ionChange)="onChangeEdad($event)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="primary">Federado</ion-label>
+        <ion-checkbox formControlName="federado" (ionChange)="onChangeFederado($event)"></ion-checkbox>
+      </ion-item>
+
+      <div *ngIf="formulario.get('grupo').get('dniCorredor').valid
+                  &&  formulario.get('grupo').get('edad').valid">
+
+          <div *ngIf="formulario.get('grupo').get('federado').value==true">
+            <ion-item>
+              <ion-label position="floating" color="primary">equipo</ion-label>
+              <ion-input type="text" formControlName="equipo"></ion-input>
+            </ion-item>
+          </div>
+
+          <div *ngIf="formulario.get('grupo').get('federado').value==false
+                      && formulario.get('grupo').get('edad').value<18">
+              <ion-item>
+                <ion-label position="floating" color="primary">Teléfono Tutor legal</ion-label>
+                <ion-input type="text" formControlName="telefonoTutorLegal"></ion-input>
+              </ion-item>
+            
+          </div>
+
+      </div>
+
+    </div>  <!-- end div grupo-->
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formulario.valid">Submit data</ion-button>
+  </form>
+</ion-content>

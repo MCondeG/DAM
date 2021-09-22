@@ -1,0 +1,70 @@
+div, header, footer, p{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    padding-top: 8px;
+}
+
+header{
+    background-color: red;
+    border: 1px solid black;
+    height: 50px;
+}
+
+footer{
+    background-color: cyan;
+    border: 1px solid black;
+    height: 50px;
+}
+
+#logo{
+    background-color: orangered;
+    border: 1px solid black;
+    height: 50px;
+}
+
+#menu{
+    background-color: cyan;
+    border: 1px solid black;
+    height: 50px;
+}
+
+.lateral{
+    background-color: yellow;
+    border: 1px solid black;
+    height: 50px;
+}
+
+#lateral1{
+    height: 100px;
+}
+
+#seccion1, #seccion2, #seccion6{
+    background-color: greenyellow;
+    border: 1px solid black;
+    height: 50px;
+}
+
+#seccion3, #seccion5{
+    background-color: purple;
+    border: 1px solid black;
+    height: 50px;
+}
+
+#seccion4{
+    background-color: grey;
+    border: 1px solid black;
+    height: 50px;
+}
+
+#seccion7{
+    background-color: orangered;
+    border: 1px solid black;
+    height: 50px;
+}

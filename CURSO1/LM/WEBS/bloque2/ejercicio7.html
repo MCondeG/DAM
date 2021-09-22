@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8"/>
+		<TITLE>Ejercicio 2.7</TITLE>
+	</HEAD>
+	<BODY>
+		<SCRIPT>
+			var n, pos = 0, neg = 0, mult = 0, sumapares = parseInt(0);
+			for(var i = 0; i < 10; i++) {
+				n = parseInt(prompt('Introduce un entero:',''));
+				if (n < 0) neg++;
+				else pos++;
+				if (n%15 == 0) mult++;
+				if (n%2 == 0) sumapares += n;
+			}
+			document.write('Negativos: '+neg+'<br>');
+			document.write('Positivos: '+pos+'<br>');
+			document.write('Múltiplos de 15: '+mult+'<br>');
+			document.write('Valor acumulado de los números pares: '+sumapares+'<br>');
+		</SCRIPT>
+	</BODY>
+</HTML>

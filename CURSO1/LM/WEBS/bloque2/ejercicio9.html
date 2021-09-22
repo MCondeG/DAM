@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8"/>
+		<TITLE>Ejercicio 2.9</TITLE>
+	</HEAD>
+	<BODY>
+		<SCRIPT>
+			function muestraMultiplos() {
+				var n = parseInt(8);
+				for (n; n <= 500; n += 8) {
+					if (n != 8) document.write(' - '+n);
+					else document.write(n);
+				}
+			}
+			
+			function calculaSueldo() {
+				var sueldo, i = 1, cont1 = 0; cont2 = 0; total = parseInt(0);
+				
+				while (i <= 5) {
+					do{
+						sueldo = parseInt(prompt('Sueldo de trabajador '+i,''));
+						if ((sueldo < 100) || (sueldo > 500)) alert('ERROR. Sueldo debe estar entre $100 y $500');
+					} while ((sueldo < 100) || (sueldo > 500));
+					if (sueldo > 300) cont2++;
+					else cont1++;
+					total += sueldo;
+					i++;
+				}
+				
+				document.write('Empleados con sueldo por encima de $300: '+cont2);
+				document.write('<br>Empleados con sueldo por debajo de $300: '+cont1);
+				document.write('<br>Gasto total en sueldos: '+total);
+			}
+			
+			var p;
+			alert('Elige una opción');
+			p = prompt('- Mostrar múltiplos\n- Calcular sueldos','');
+			if (p != 'Mostrar múltiplos' && p != 'Calcular sueldos') document.write('ERROR');
+			else {
+				if (p == 'Mostrar múltiplos') {
+					document.write('<b>Mostrar múltiplos:</b><br><br>');
+					muestraMultiplos();
+				}
+				else {
+					document.write('<b>Calcular sueldos:</b><br><br>');
+					calculaSueldo();
+				}
+			}
+		</SCRIPT>
+	</BODY>
+</HTML>

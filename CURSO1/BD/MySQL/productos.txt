@@ -1,0 +1,77 @@
+create database productos;
+
+use productos;
+
+create table productos (codigo varchar (3),
+	nombre varchar (15),
+	precio int,
+	fechaAlta date,
+	primary key (codigo));
+
+insert into productos values ("123", "Ordenador", 699 , "2018-01-09");
+
+insert into productos values ("456", "Silla", 40 , "2019-04-13");
+
+insert into productos values ("789", "Camiseta", 10 , "2016-12-23");
+
+
+///////////////SELECTS/////////////////
+
+1. select * from productos;
++--------+-----------+--------+------------+
+| codigo | nombre    | precio | fechaAlta  |
++--------+-----------+--------+------------+
+| 123    | Ordenador |    699 | 2018-01-09 |
+| 456    | Silla     |     40 | 2019-04-13 |
+| 789    | Camiseta  |     10 | 2016-12-23 |
++--------+-----------+--------+------------+
+
+2. select * from productos where nombre = "ordenador";
++--------+-----------+--------+------------+
+| codigo | nombre    | precio | fechaAlta  |
++--------+-----------+--------+------------+
+| 123    | Ordenador |    699 | 2018-01-09 |
++--------+-----------+--------+------------+
+
+3. select * from productos where nombre like "C%";
++--------+----------+--------+------------+
+| codigo | nombre   | precio | fechaAlta  |
++--------+----------+--------+------------+
+| 789    | Camiseta |     10 | 2016-12-23 |
++--------+----------+--------+------------+
+
+4. select nombre, precio from productos where precio > 22;
++-----------+--------+
+| nombre    | precio |
++-----------+--------+
+| Ordenador |    699 |
+| Silla     |     40 |
++-----------+--------+
+
+5. select avg(precio) from productos where nombre = "Silla";
++-------------+
+| avg(precio) |
++-------------+
+|     40.0000 |
++-------------+
+
+6. alter table productos add categoria varchar (15);
+
+
+7. update productos set categoria = "utensilio";
+
+
+8. update productos set categoria = "silla" where nombre = "Silla"; 
+
+
+9. select distinct categoria from productos;
++-----------+
+| categoria |
++-----------+
+| utensilio |
+| silla     |
++-----------+
+
+10. select count (categoria) from productos group by categoria;
+
+

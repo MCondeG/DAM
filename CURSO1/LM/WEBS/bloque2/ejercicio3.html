@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<TITLE>Ejercicio 2.3</TITLE>
+	</HEAD>
+	<BODY>
+		<script>
+            var sueldo, i = 1, cont1 = 0; cont2 = 0; total = parseInt(0);
+			
+            while (i <= 5) {
+                do{
+                    sueldo = parseInt(prompt('Sueldo de trabajador '+i,''));
+                    if ((sueldo < 100) || (sueldo > 500)) alert('ERROR. Sueldo debe estar entre $100 y $500');
+                } while ((sueldo < 100) || (sueldo > 500));
+                if (sueldo > 300) cont2++;
+                else cont1++;
+                total += sueldo;
+                i++;
+            }
+			
+            document.write('Empleados con sueldo por encima de $300: '+cont2);
+            document.write('<br>Empleados con sueldo por debajo de $300: '+cont1);
+            document.write('<br>Gasto total en sueldos: '+total);
+		</script>
+	</BODY>
+</HTML>

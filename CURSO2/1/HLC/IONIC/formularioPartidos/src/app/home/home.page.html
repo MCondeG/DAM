@@ -1,0 +1,105 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Partidos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+    <ion-grid>
+      <ion-row>
+        <!--en pantallas pequeñas la fecha ocupa toda la pantalla
+            en pantallas medias y grandes ocupa un tercio de la pantalla-->
+        <ion-col size="12" size-md="4"> 
+          <ion-item>
+            <ion-label position="stacked" color="primary">Fecha:</ion-label>
+            <ion-input type="date" formControlName="fechaPartido"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <div formGroupName="grupoEquipos">
+        <ion-row>
+          <!--en pantallas pequeñas los dos equipos salen uno debajo del otro
+          en pantallas medias y grandes salen uno al lado del otro y ocupan cada uno la mitad de la pantalla-->
+          <ion-col size="12" size-md="6">
+            <ion-item>
+              <ion-label position="floating" color="primary">Equipo Local:</ion-label>
+              <ion-select formControlName="equipoLocal" (ionChange)="onChangeEquipoLocal($event)" >
+                <ion-select-option *ngFor="let equipo of equipos" [value]="equipo">
+                      {{equipo.equipo}}
+                </ion-select-option>
+              </ion-select>      
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md="6">
+            <ion-item>
+              <ion-label position="floating" color="primary">Equipo Visitante:</ion-label>
+              <ion-select formControlName="equipoVisitante" (ionChange)="onChangeEquipoVisitante($event)">
+                <ion-select-option *ngFor="let equipo of equipos" [value]="equipo">
+                      {{equipo.equipo}}
+                </ion-select-option>
+              </ion-select>      
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </div> <!--End div grupoEquipos-->
+      <div *ngIf="grupoEquipos.valid"> <!--div seccion 2-->
+          
+        <!--el resultado sale siempre en una fila-->
+        <ion-row>
+          <ion-col size="4">
+              <ion-text class="resultado" color="primary">Resultado:</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item>
+              <ion-input class="ion-text-end" type="number" formControlName="golesLocal" min=0 text-right></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="1" class="ion-align-self-center" style="font-size:20px;text-align:center;">
+            -
+          </ion-col>
+          <ion-col size="4">
+            
+            <ion-item>
+              <ion-input class="ion-text-end" type="number" formControlName="golesVisitante" min=0></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12" size-md="6">
+            <ion-item>
+              <h1>Alineación {{equipoLocal}}</h1>
+            </ion-item>
+            <ion-item-sliding *ngFor="let jugador of jugadoresLocal; let indice=index">
+              <ion-item>
+                  {{jugador}}
+              </ion-item>
+              <ion-item-options>
+                  <button ion-button icon-only (click)="deleteJugadorLocal(indice)" danger>
+                      <ion-icon name="trash"></ion-icon>
+                  </button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-col>
+            <ion-col size="12" size-md="6">
+              <ion-item>
+                <h1>Alineación {{equipoVisitante}}</h1>              
+              </ion-item>
+              <ion-item *ngFor="let jugador of jugadoresVisitante; let indice=index">
+                {{jugador}}
+                <button ion-button icon-only 
+                  (click)="deleteJugadorVisitante(indice)" slot="end">
+                        <ion-icon name="trash"></ion-icon>
+                </button>
+              </ion-item>
+          </ion-col>  
+        </ion-row>
+      </div> <!--End div seccion 2-->
+      <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formulario.valid">Aceptar</ion-button>
+    </ion-grid>
+  </form>
+</ion-content>

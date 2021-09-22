@@ -1,0 +1,134 @@
+create database tablaempleados;
+
+use tablaempleados
+
+	create table DEPARTAMENTO(
+		cod int,
+		nombre varchar (30),
+		localidad varchar (20),
+		primary key (cod))
+		engine=innoDB;
+
+	create table EMPLEADO(
+		cod int,
+		apellido varchar (50),
+		puesto varchar (30),
+		cod_jefe int,
+		fecha_alta date,
+		salario int,
+		comision int,
+		cod_dep int,
+		primary key (cod),
+		foreign key (cod_dep) references DEPARTAMENTO(cod))
+		engine=innoDB;
+		
+	alter table EMPLEADO add
+		foreign key (cod_jefe) references EMPLEADO(cod);
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+use tablaempleados
+
+	INSERT INTO DEPARTAMENTO 
+		VALUES (10, 'CONTABILIDAD', 'SEVILLA');
+	INSERT INTO DEPARTAMENTO 
+		VALUES (20, 'INVESTIGACIÓN', 'MADRID');
+	INSERT INTO DEPARTAMENTO 
+		VALUES (30, 'VENTAS', 'BARCELONA');
+	INSERT INTO DEPARTAMENTO 
+		VALUES (40, 'PRODUCCIÓN', 'BILBAO');
+
+	INSERT INTO EMPLEADO 
+		VALUES (7839,'REY', 'PRESIDENTE', NULL, '1991/11/17', 4100, NULL, 10);
+	INSERT INTO EMPLEADO 
+		VALUES (7566,'JIMÉNEZ', 'DIRECTOR', 7839, '1991/04/02', 2900, NULL, 20);
+	INSERT INTO EMPLEADO 
+		VALUES (7902,'FERNÁNDEZ','ANALISTA', 7566, '1991/12/03', 3000, NULL, 20);
+	INSERT INTO EMPLEADO 
+		VALUES (7369,'SÁNCHEZ', 'EMPLEADO', 7902, '1990/12/17', 1040, NULL, 20);
+	INSERT INTO EMPLEADO 
+		VALUES (7698,'NEGRO', 'DIRECTOR', 7839, '1991/05/01', 3005, NULL, 30);
+	INSERT INTO EMPLEADO 
+		VALUES (7499,'ARROYO', 'VENDEDOR', 7698, '1990/02/20', 1500, 390, 30);
+	INSERT INTO EMPLEADO 
+		VALUES (7521,'SALA', 'VENDEDOR', 7698, '1991/02/22', 1625, 650, 30);
+	INSERT INTO EMPLEADO 
+		VALUES (7654,'MARTÍN', 'VENDEDOR', 7698, '1991/09/29', 1600, 1020, 30);
+	INSERT INTO EMPLEADO 
+		VALUES (7782,'CEREZO', 'DIRECTOR', 7839, '1991/06/09', 2885, NULL, 10);
+	INSERT INTO EMPLEADO 
+		VALUES (7788,'GIL', 'ANALISTA', 7566, '1991/11/09', 3000, NULL, 20);
+	INSERT INTO EMPLEADO 
+		VALUES (7844,'TOVAR', 'VENDEDOR', 7698, '1991/09/08', 1350, 0, 30);
+	INSERT INTO EMPLEADO 
+		VALUES (7876,'ALONSO', 'EMPLEADO', 7788, '1991/09/23', 1430, NULL, 20);
+	INSERT INTO EMPLEADO 
+		VALUES (7900,'JIMENO', 'EMPLEADO', 7698, '1991/12/03', 1335, NULL, 30);
+	INSERT INTO EMPLEADO 
+		VALUES (7934,'MUÑOZ', 'EMPLEADO', 7782, '1992/01/23', 1690, NULL, 10);
+		
+		
+			/* CONSULTAS */
+			
+use tablaempleados
+
+	select apellido, puesto, cod_dep from EMPLEADO;
+	select cod, nombre, localidad from DEPARTAMENTO;
+	select * from EMPLEADO;
+	select * from EMPLEADO order by apellido;
+	select * from EMPLEADO order by cod_dep desc;
+	select * from EMPLEADO order by cod_dep desc, apellido asc;
+	select cod_dep, apellido from EMPLEADO order by cod_dep desc, apellido asc;
+	select * from EMPLEADO where salario > 2000;
+	select * from EMPLEADO where puesto = 'ANALISTA';
+	select apellido, puesto from EMPLEADO where cod_dep = 20;
+	select * from EMPLEADO order by apellido;
+	select * from EMPLEADO where puesto = 'VENDEDOR' order by apellido;
+	select * from EMPLEADO where puesto = 'EMPLEADO' AND cod_dep = 20 order by apellido;
+	select * from EMPLEADO where salario > 2000 OR cod_dep = 20;
+	select * from EMPLEADO order by puesto, apellido;
+	select * from EMPLEADO where apellido like 'A%';
+	select * from EMPLEADO where apellido like '%Z';
+	select * from EMPLEADO where apellido like 'A%' AND puesto like '%E%';
+	select * from EMPLEADO where salario between 1000 AND 2000;
+	select * from EMPLEADO where puesto = 'VENDEDOR' AND comision > 1000;
+	select * from EMPLEADO order by cod_dep, apellido;
+	select cod, apellido from EMPLEADO where apellido like '%Z' AND salario > 2000;
+	select * from DEPARTAMENTO where localizacion like '%B';
+	select * from EMPLEADO where puesto = 'EMPLEADO' AND salario > 1100 AND cod_dep = 10;
+	select apellido from EMPLEADO where comision is NULL;
+	select apellido from EMPLEADO where comision is NULL AND apellido like 'J%';
+	select apellido from EMPLEADO where puesto = 'VENDEDOR' OR puesto = 'ANALISTA' OR puesto = 'EMPLEADO';
+	select * from EMPLEADO where (puesto <> 'ANALISTA' AND puesto <> 'EMPLEADO') AND salario > 2000;
+	select * from EMPLEADO where salario between 2000 AND 3000;
+	select apellido, salario, cod_dep from EMPLEADO where salario > 2000 AND (cod_dep = 10 OR cod_dep = 30);
+	select apellido, cod from EMPLEADO where salario not between 1000 AND 2000;
+	select lower(apellido) from EMPLEADO; 
+	select concat(apellido,' ', puesto) from EMPLEADO; 
+	select apellido, length(apellido) from EMPLEADO order by length(apellido) desc; 
+	select apellido, year(fecha_alta) from EMPLEADO;
+	select * from EMPLEADO where year(fecha_alta) = 1992;
+	select * from EMPLEADO where monthname(fecha_alta) = 'FEBRUARY';
+	select apellido, greatest (salario, comision) from EMPLEADO where comision is not NULL;
+	select apellido, (salario+comision) from EMPLEADO where (salario+comision) = (select max(salario+comision) from EMPLEADO where comision is not NULL);
+	select * from EMPLEADO where year(fecha_alta) = 1990 AND apellido like 'A%';
+	select * from EMPLEADO where cod_dep = 10 AND comision is NULL;
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+	
+	
+	
+	

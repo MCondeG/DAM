@@ -1,0 +1,45 @@
+Create database Losalmacenes;
+
+use Losalmacenes
+
+	create table ALMACENES(
+		codigo varchar (10),
+		lugar varchar (20),
+		capacidad float,
+		primary key (codigo))
+		engine=InnoDB;
+	
+	create table CAJAS(
+		Numeroreferencia varchar (10),
+		contenido varchar (20),
+		valor float,
+		almacen varchar (10),
+		primary key (Numeroreferencia),
+		index (almacen),
+		foreign key (almacen) references ALMACENES(codigo))
+		engine=InnoDB;
+		
+		
+		/* INSERCION DE DATOS */
+		
+use Losalmacenes
+		
+	insert into ALMACENES
+		values ('2','Bilbao',10000);
+	
+	insert into CAJAS
+		values ('H5RT','papel',200,'2');
+			
+	update CAJAS set
+		valor = (valor - (valor*15/100));
+		
+		
+		/* CONSULTAS */
+		
+use Losalmacenes
+	
+	select codigo from ALMACENES;
+	select Numeroreferencia from CAJAS where valor > 150;
+	select contenido from CAJAS;
+	select avg (valor) from CAJAS;
+	select avg (valor) from CAJAS group by ciudad;

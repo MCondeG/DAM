@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: e6cd06d0e82d49248b6541c4ef01257a
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_candle1_candle3Mat
+    second: {fileID: 4941468951178077645, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_candle1_flower1Mat
+    second: {fileID: 5821390680724144425, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_candle1_holder1Mat
+    second: {fileID: 2031892241845805605, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_candle1_wick1Mat
+    second: {fileID: -1509359797545463019, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_1_cake_inside8Mat
+    second: {fileID: -7447597283823366400, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_1_cake_outside6Mat
+    second: {fileID: -9006516666438149797, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_1_cherryMat
+    second: {fileID: 4973953599030971868, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_1_cream4Mat
+    second: {fileID: -1164099294654521676, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_2_cake_inside5Mat
+    second: {fileID: -1043344476623973812, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_2_cake_outside8Mat
+    second: {fileID: 4901024535480182505, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_2_cherry2Mat
+    second: {fileID: 3350159300375895379, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_2_creamMat
+    second: {fileID: -3113233753241571529, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_3_cake_inside6Mat
+    second: {fileID: -1890851836213498614, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_3_cake_outside1Mat
+    second: {fileID: 2640198894085090471, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_3_cherry3Mat
+    second: {fileID: 4974738806815103464, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_3_cream1Mat
+    second: {fileID: 2041260218694149777, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_4_cake_inside1Mat
+    second: {fileID: -6382888546890114187, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_4_cake_outside4Mat
+    second: {fileID: 8416112980912034576, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_4_cherry5Mat
+    second: {fileID: -1210065789058497971, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_4_cream2Mat
+    second: {fileID: 4927598423079257169, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_5_cake_inside4Mat
+    second: {fileID: 2664618401483024427, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_5_cake_outside2Mat
+    second: {fileID: -7829748536047662236, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_5_cherry6Mat
+    second: {fileID: -1011897193871285339, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_5_cream3Mat
+    second: {fileID: 7034873336029908082, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_6_cake_inside7Mat
+    second: {fileID: -4708703958656856029, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_6_cake_outside5Mat
+    second: {fileID: 1902571685227545490, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_6_cherry4Mat
+    second: {fileID: -4110145341473290311, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_6_cream5Mat
+    second: {fileID: 6716961538479107594, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_7_cake_inside2Mat
+    second: {fileID: -3757393252153273025, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_7_cake_outside7Mat
+    second: {fileID: -5340608764243433007, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_7_cherry1Mat
+    second: {fileID: 8489749954879348259, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_7_cream7Mat
+    second: {fileID: 8489749954879348259, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_8_cake_inside3Mat
+    second: {fileID: 3576564286622020618, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_8_cake_outsideMat
+    second: {fileID: -6077434245664479174, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_8_cherry8Mat
+    second: {fileID: -1022631348609262241, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_pieces_piece_8_cream8Mat
+    second: {fileID: -7623042282694876625, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_Pieces_plate1Mat
+    second: {fileID: -8001943714730620365, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_cake_insideMat
+    second: {fileID: 869347689618144572, guid: e6cd06d0e82d49248b6541c4ef01257a, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_cake_outside3Mat
+    second: {fileID: 6990669719808482333, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_candle_candle2Mat
+    second: {fileID: 3631097456821813904, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_candle_flowerMat
+    second: {fileID: 5821390680724144425, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_candle_holderMat
+    second: {fileID: 3143479787423225180, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_candle_wickMat
+    second: {fileID: 7460772852213284537, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_cherry7Mat
+    second: {fileID: 7256573079312249906, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_cream6Mat
+    second: {fileID: -8878880657699074796, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cake_plateMat
+    second: {fileID: 2637589170740506809, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TubeMat
+    second: {fileID: -5756179570322058980, guid: e6cd06d0e82d49248b6541c4ef01257a,
+      type: 3}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

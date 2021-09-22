@@ -1,0 +1,67 @@
+Create database LosInvestigadores;
+
+use LosInvestigadores
+
+	create table FACULTAD(
+		codigo varchar (10),
+		nombre varchar (30),
+		primary key (codigo))
+		engine=InnoDB;
+		
+	create table EQUIPO(
+		numeroSerie varchar (10),
+		nombre varchar (30),
+		facultad varchar (10),
+		primary key (numeroSerie),
+		foreign key (facultad) references FACULTAD(codigo))
+		engine=InnoDB;
+		
+	create table INVESTIGADOR(
+		DNI varchar (10),
+		nomApell varchar (50),
+		facultad varchar (10),
+		primary key (DNI),
+		foreign key (facultad) references FACULTAD(codigo))
+		engine=InnoDB;
+		
+	create table Reserva(
+		DNI varchar (10),
+		numSerie varchar (10),
+		comienzo date,
+		fin date,
+		primary key (DNI,numSerie,comienzo),
+		foreign key (DNI) references INVESTIGADOR(DNI),
+		foreign key (numSerie) references EQUIPO(numeroSerie))
+		engine=InnoDB;
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+use LosInvestigadores		
+
+	insert into FACULTAD
+		values('1111','Harvard');
+	insert into FACULTAD
+		values('2222','MIT');
+		
+	insert into EQUIPO
+		values('1111','actimel','1111');
+	insert into EQUIPO
+		values('3333','SFC','1111');
+		
+	insert into INVESTIGADOR
+		values('1111','pepe perez','1111');
+	insert into INVESTIGADOR
+		values('2222','maria gil','2222');
+		
+	insert into Reserva
+		values('1111','1111',"2015-06-01","2017-06-01");
+	insert into Reserva
+		values('2222','3333',"2018-12-01",NULL);
+		
+		
+		/* CONSULTAS */
+		
+use LosInvestigadores		
+
+	select i.DNI, i.nomApell from INVESTIGADOR i, Reserva r 

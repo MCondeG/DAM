@@ -1,0 +1,35 @@
+Create database Empleados;
+
+use Empleados
+
+	create table DEPARTAMENTO(
+		codigo varchar (10),
+		nombre varchar (20),
+		presupuesto float,
+		primary key (codigo))
+		engine=InnoDB;
+	
+	create table EMPLEADOS(
+		DNI varchar (10),
+		nombre varchar (20),
+		apellido varchar (20),
+		departamento varchar (10),
+		primary key (DNI),
+		index (departamento),
+		foreign key (departamento) references DEPARTAMENTO(codigo))
+		engine=InnoDB;
+		
+		
+		/* INSERCIÓN DE DATOS */
+		
+use Empleados		
+
+	insert into DEPARTAMENTO
+		values('1111','informatica',1000);
+	insert into DEPARTAMENTO
+		values('2222','historia',1500);
+		
+	insert into EMPLEADOS
+		values('123456789A','pepe','perez','2222');
+	insert into EMPLEADOS
+		values('123456789B','maria','gil','1111');

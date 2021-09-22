@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+        Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="form-content">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+    
+    <div formGroupName="grupoUsuarioPassword">
+      <ion-item>
+        <ion-label position="floating" color="primary">Usuario</ion-label>
+        <ion-input type="text" formControlName="usuario"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.usuario">
+          <div class="error-message" *ngIf="formulario.get('grupoUsuarioPassword').get('usuario').hasError(validation.type) 
+                                              && (formulario.get('grupoUsuarioPassword').get('usuario').dirty 
+                                              || formulario.get('grupoUsuarioPassword').get('usuario').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+      <ion-item>
+        <ion-label position="floating" color="primary">Password</ion-label>
+        <ion-input type="text" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message" *ngIf="formulario.get('grupoUsuarioPassword').get('password').hasError(validation.type) 
+                                            && (formulario.get('grupoUsuarioPassword').get('password').dirty 
+                                            || formulario.get('grupoUsuarioPassword').get('password').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>  <!-- end div grupoUsuarioPassword-->
+    <!-- These validations are for the form group -->
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.grupoUsuarioPassword">
+        <div class="error-message" *ngIf="formulario.get('grupoUsuarioPassword').hasError(validation.type) 
+                                          && formulario.get('grupoUsuarioPassword').get('usuario').valid 
+                                          && formulario.get('grupoUsuarioPassword').get('password').valid">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formulario.valid">Submit data</ion-button>
+  </form>
+</ion-content>

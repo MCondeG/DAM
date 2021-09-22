@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>     
+    <ion-title>
+      Listado corredores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let corredor of corredores">
+    <ion-grid>
+      <ion-row>
+        <ion-col col=6>{{corredor.dniCorredor}}</ion-col>
+        <ion-col col=6>{{corredor.edad}}años</ion-col>
+     </ion-row>
+     <ion-row >
+      <ion-col *ngIf="corredor.federado" col=12>
+        Equipo: {{corredor.equipo}}
+      </ion-col>
+      <ion-col *ngIf="!corredor.federado && corredor.edad<18" col=12>
+        Teléfono tutor: {{corredor.telefonoTutorLegal}}
+      </ion-col>
+     </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,209 @@
+Create database TablaHospital;
+
+use TablaHospital
+
+	create table HOSPITAL (hospital_cod int,
+		nombre varchar (10),
+		direccion varchar (20),
+		telefono varchar (10),
+		num_cama integer,
+		primary key (hospital_cod));
+
+	create table SALA (hospital_cod int,
+		sala_cod integer,
+		nombre varchar (20),
+		num_cama integer,
+		primary key (hospital_cod, sala_cod),
+		foreign key (hospital_cod) references HOSPITAL(hospital_cod))
+		engine = innodb;
+
+	create table PLANTILLA (hospital_cod int,
+		sala_cod integer,
+		empleado_no integer,
+		apellido varchar (15),
+		funcion varchar (10),
+		turno varchar (1),
+		salario integer,
+		primary key (empleado_no),
+		foreign key (hospital_cod, sala_cod) references SALA(hospital_cod, sala_cod),
+		foreign key (hospital_cod) references HOSPITAL(hospital_cod))
+		engine = innodb;
+
+	create table OCUPACION(
+		inscripcion integer,
+		hospital_cod integer,
+		sala_cod integer,
+		cama integer,
+		primary key (inscripcion),
+		foreign key (hospital_cod, sala_cod) references SALA (hospital_cod, sala_cod),
+		foreign key (hospital_cod) references HOSPITAL (hospital_cod))
+		engine = innoDB;
+
+	create table ENFERMO(
+		nss integer,
+		apellido varchar(15),
+		direccion varchar(20),
+		fecha_nac date,
+		s varchar(1),
+		inscripcion integer,
+		primary key (nss),
+		foreign key (inscripcion) references OCUPACION (inscripcion))
+		engine = innoDB;
+		
+	create table DOCTOR(
+		doctor_no integer,
+		apellido varchar(13),
+		especialidad varchar(16),
+		hospital_cod integer,
+		primary key (doctor_no),
+		foreign key (hospital_cod) references HOSPITAL (hospital_cod))
+		engine = innoDB;
+		
+		
+		/* INSERCION DATOS */
+
+use TablaHospital
+
+	
+	insert into hospital (hospital_cod, nombre, direccion, telefono, num_cama) values 
+		(13, "Provincial", "O Donell 50,", "964-426400", 502);
+
+	insert into hospital (hospital_cod, nombre, direccion, telefono, num_cama) values 
+		(18, "General", "Atocha s/n", "595-311100", 987);
+
+	insert into hospital (hospital_cod, nombre, direccion, telefono, num_cama) values 
+		(22, "La Paz", "Castellana 1000", "923-541100", 412);
+
+	insert into hospital (hospital_cod, nombre, direccion, telefono, num_cama) values 
+		(45, "San Carlos", "Ciudad Universitaria", "597-150000", 845);
+
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(13, 3, "Cuidados Intensivos", 21);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(13, 6, "Psquiátrico", 67);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(18, 3, "Cuidados Intensivos", 10);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(18, 4, "Cardiología", 53);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(22, 1, "Recuperación", 10);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(22, 6, "Psiquiátrico", 118);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(22, 2, "Maternidad", 34);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(45, 4, "cardiología", 55);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(45, 1, "Recuperación", 13);
+
+	insert into sala (hospital_cod, sala_cod, nombre, num_cama) values 
+		(45, 2, "Maternidad", 24);
+
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(13, 6, 3754, "Diaz B.", "Enfermera", "T", 2262000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(13, 6, 3106, "Hernandez J.", "Enfermero", "T", 2755000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(18, 4, 6357, "Karplus W.", "Interno", "T", 3379000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 6, 1009, "Higueras D.", "Enfermera", "T", 2005000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 6, 8422, "Bocina G.", "Enfermero", "M", 1638000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 2, 9901, "Nuñez C.", "Interno", "M", 2210000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 1, 6065, "Rivera G.", "Enfermera", "N", 1626000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 1, 7379, "Carlos R.", "Enfermera", "T", 2119000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(45, 4, 1280, "Amigo R.", "Interno", "N", 2210000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(45, 1, 8526, "Frank H.", "Enfermera", "T", 2522000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 2, 1234, "Garcia J.", "Enfermo", "M", 3000000);
+
+	insert into plantilla (hospital_cod, sala_cod, empleado_no, apellido, funcion, turno, salario) values
+		(22, 2, 2222, "Garcia J.", null, null, null);
+	
+		
+	insert into OCUPACION
+		values (10995, 13, 3, 1);
+	insert into OCUPACION
+		values (18004, 13, 3, 2);
+	insert into OCUPACION
+		values (14024, 13, 3, 3);
+	insert into OCUPACION
+		values (36658, 18, 4, 1);
+	insert into OCUPACION
+		values (38702, 18, 4, 2);
+	insert into OCUPACION
+		values (39217, 22, 6, 1);
+	insert into OCUPACION
+		values (59076, 22, 6, 2);
+	insert into OCUPACION
+		values (63827, 22, 6, 3);
+	insert into OCUPACION
+		values (64823, 22, 2, 1);
+	insert into OCUPACION
+		values (74835, 45, 2, 1);
+		
+		
+	insert into ENFERMO
+		values (280862482, 'Laguia M.', 'Recoletos 50', '1967-06-23', 'M', 10995);
+	insert into ENFERMO
+		values (284991452, 'Serrano V', 'Alcala 12 ', '1960-05-21', 'F', 18004);
+	insert into ENFERMO
+		values (321790059, 'Fernandez M ', 'Recoletos 50', '1967-06-23', 'F', 14024);
+	insert into ENFERMO
+		values (160657471, 'Domin S.', 'Mayor 71' , '1942-01-01', 'M', 36658);
+	insert into ENFERMO
+		values (380010217, 'Neal R', 'Orense 11', '1940-06-18', 'F', 38702);
+	insert into ENFERMO
+		values (440294390, 'Cervantes', 'M.Peron 38', '1952-02-29', 'M', 39217);
+	insert into ENFERMO
+		values (311969044, 'Miller G.', 'Lopez de Hoyos 2', '1945-09-16', 'F', 59076);
+	insert into ENFERMO
+		values (100973253, 'Ruiz P.', 'Esquerdo 103', '1980-12-26', 'M', 63827);
+	insert into ENFERMO
+		values (285201776, 'Fraser A.', 'Soto 3', '1980-07-10', 'F', 64823);
+	insert into ENFERMO
+		values (154811767, 'Benitez E.', 'Argentina 5', '1957-10-05', 'M', 74835);
+		
+		
+	insert into DOCTOR
+		values (435, 'Lopez A.', 'Cardiología', 13);
+	insert into DOCTOR
+		values (585, 'Miller G', 'Ginecología', 18);
+	insert into DOCTOR
+		values (982, 'Cajal R.', 'Cardiología', 18);
+	insert into DOCTOR
+		values (453, 'Galo D.', 'Pediatría', 22);
+	insert into DOCTOR
+		values (398, 'Best K.', 'Urología', 22);
+	insert into DOCTOR
+		values (386, 'Cabeza D.', 'Psiquiatría', 22);
+	insert into DOCTOR
+		values (607, 'Niqo P.', 'Pediatría', 45);
+	insert into DOCTOR
+		values (522, 'Adams C.', 'Neurología', 45);
+		

@@ -1,0 +1,178 @@
+create database universidad;
+
+
+		/* TABLAS */
+
+use universidad
+
+	create table PERSONA(
+		DNI varchar(9),
+		nombre varchar(25),
+		apellido varchar(50),
+		ciudad varchar(25),
+		direccion_calle varchar(50),
+		direccion_num varchar(3),
+		telefono varchar(9),
+		fecha_nacimiento date,
+		varon varchar(1),
+		Primary Key (DNI))
+		engine=innoDB;
+		
+	create table ALUMNO(
+		id_alumno varchar(7),
+		DNI varchar(9),
+		Primary Key (id_alumno),
+		Foreign Key (DNI) References PERSONA(DNI))
+		engine=innoDB;
+		
+	create table PROFESOR(
+		id_profesor varchar(4),
+		DNI varchar(9),
+		Primary Key (id_profesor),
+		Foreign Key (DNI) References PERSONA(DNI))
+		engine=innoDB;
+		
+	create table TITULACION(
+		id_titulacion varchar(6),
+		nombre varchar (20),
+		Primary Key (id_titulacion))
+		engine=innoDB;
+		
+	create table ASIGNATURA(
+		id_asignatura varchar(6),
+		nombre varchar(50),
+		creditos float,
+		cuatrimestre varchar(1),
+		coste_basico float,
+		id_profesor varchar(4),
+		id_titulacion varchar(6),
+		curso int,
+		Primary Key (id_asignatura),
+		Foreign Key (id_profesor) References PROFESOR(id_profesor),
+		Foreign Key (id_titulacion) References TITULACION(id_titulacion))
+		engine=innoDB;
+		
+	create table alumno_asignatura(
+		id_alumno varchar(7),
+		id_asignatura varchar(6),
+		numero_matricula int,
+		Primary Key (id_alumno, id_asignatura),
+		Foreign Key (id_alumno) References ALUMNO(id_alumno),
+		Foreign Key (id_asignatura) References ASIGNATURA(id_asignatura))
+		engine=innoDB;
+		
+	
+		/* INSERCIÓN DATOS */
+	
+use universidad
+
+	insert into PERSONA values ("16161616A", "Luis", "Ramírez", "Haro", "Pez", "34", "941111111", "1969-01-01", "1");
+	insert into PERSONA values ("17171717A", "Laura", "Beltrán", "Madrid", "Gran Vía", "23", "912121212", "1974-08-08", "0");
+	insert into PERSONA values ("18181818A", "Pepe", "Pérez", "Madrid", "Percebe", "13", "913131313", "1980-02-02", "1");
+	insert into PERSONA values ("19191919A", "Juan", "Sánchez", "Bilbao", "Melancolía", "7", "944141414", "1966-03-03", "1");
+	insert into PERSONA values ("20202020A", "Luis", "Jiménez", "Nájera", "CigÜña", "15", "941151515", "1979-03-03", "1");
+	insert into PERSONA values ("21212121A", "Rosa", "García", "Haro", "Alegría", "16", "941161616", "1978-04-04", "0");
+	insert into PERSONA values ("23232323A", "Jorge", "Sáenz", "Logroño", "Luis Ulloa", "17", "941171717", "1978-09-09", "1");
+	insert into PERSONA values ("24242424A", "María", "Gutiérrez", "Logroño", "Avda. de Paz", "18", "941181818", "1964-10-10", "0");
+	insert into PERSONA values ("25252525A", "Rosario", "Díaz", "Logroño", "Percebe", "19", "941191919", "1971-11-11", "0");
+	insert into PERSONA values ("26262626A", "Elena", "González", "Logroño", "Percebe", "20", "941202020", "1975-05-05", "0");
+	
+	insert into ALUMNO values("A010101", "21212121A");
+	insert into ALUMNO values("A020202", "18181818A");
+	insert into ALUMNO values("A030303", "20202020A");
+	insert into ALUMNO values("A040404", "26262626A");
+	insert into ALUMNO values("A121212", "16161616A");
+	insert into ALUMNO values("A131313", "17171717A");
+
+	insert into PROFESOR values("P101", "19191919A");
+	insert into PROFESOR values("P117", "25252525A");
+	insert into PROFESOR values("P203", "23232323A");
+	insert into PROFESOR values("P204", "26262626A");
+	insert into PROFESOR values("P304", "24242424A");
+
+	insert into TITULACION values("130110", "Matemáticas");
+	insert into TITULACION values("150210", "Químicas");
+	insert into TITULACION values("160000", "Empresariales");	
+
+	insert into ASIGNATURA values("000115", "Seguridad Vial", 4.5, "1", 30, "P204", NULL, NULL);
+	insert into ASIGNATURA values("130113", "Programación I", 9, "1", 60, "P101", "130110", 1);
+	insert into ASIGNATURA values("130122", "Análisis II", 9, "2", 60, "P203", "130110", 2);
+	insert into ASIGNATURA values("150212", "Química Física", 4.5, "2", 70, "P304", "150210", 1);
+	insert into ASIGNATURA values("160002", "Contabilidad", 6, "1", 70, "P117", "160000", 1);
+
+	insert into alumno_asignatura values("A010101", "150212", 1);
+	insert into alumno_asignatura values("A020202", "130113", 1);
+	insert into alumno_asignatura values("A020202", "150212", 2);
+	insert into alumno_asignatura values("A030303", "130113", 3);
+	insert into alumno_asignatura values("A030303", "150212", 1);
+	insert into alumno_asignatura values("A030303", "130122", 2);
+	insert into alumno_asignatura values("A040404", "130122", 1);
+	insert into alumno_asignatura values("A121212", "000115", 1);
+	insert into alumno_asignatura values("A131313", "160002", 4);
+	
+	
+		/* CONSULTAS */
+		
+use universidad
+	
+	select creditos from ASIGNATURA;
+	select nombre, creditos from ASIGNATURA;
+	select distinct(creditos) from ASIGNATURA;
+	select * from personas;
+	select sum(creditos) from ASIGNATURA;
+	select avg(coste_basico) from ASIGNATURA;
+	select max(coste_basico) from ASIGNATURA;
+	select min(coste_basico) from ASIGNATURA;
+	select count(coste_basico) from ASIGNATURA;
+	select count(distinct(coste_basico)) from ASIGNATURA;
+	select count(id_asignatura) from ASIGNATURA;
+	select sum(creditos) as "TotalCreditos" from ASIGNATURA;
+	select nombre, creditos from ASIGNATURA where cuatrimestre = "1";
+	select nombre, apellido from PERSONA where fecha_nacimiento < "1975-01-01";
+	select nombre, coste_basico from ASIGNATURA where creditos > 4.5;
+	select nombre from ASIGNATURA where coste_basico between 25 AND 35;
+	select distinct(id_alumno) from alumno_asignatura where id_asignatura = '150212' OR id_asignatura = '130113';
+	select nombre from ASIGNATURA where cuatrimestre = "2" AND creditos <> 6;
+	select distinct(id_alumno) from alumno_asignatura where id_alumno NOT IN(select id_alumno from alumno_asignatura where id_asignatura = '150212' OR id_asignatura = '130113');
+	select nombre from ASIGNATURA where coste_basico >= 25 AND coste_basico <= 35;
+	select distinct(id_alumno) from alumno_asignatura where id_asignatura IN ('150212', '130113');
+	select nombre, apellido from PERSONA where apellido like "G%";
+	select nombre from ASIGNATURA where id_titulacion IS NULL;
+	select nombre from ASIGNATURA where id_titulacion IS NOT NULL;
+	select nombre from ASIGNATURA where creditos > 8;
+	select nombre, (creditos*10) as Numero_horas from ASIGNATURA;
+	select concat(nombre, " ", apellido) as Nombre_Completo, concat(direccion_calle, ", ", direccion_num, ", ", ciudad) as Direccion from PERSONA;
+	select * from PERSONA order by apellido;
+	select * from ASIGNATURA where cuatrimestre = "2" order by id_titulacion, coste_basico desc, nombre;
+	select PERSONA.nombre, PERSONA.apellido from PERSONA, PROFESOR where PERSONA.DNI = PROFESOR.DNI;
+	select a.nombre from PERSONA per, PROFESOR prof, ASIGNATURA a where per.dni = prof.dni AND prof.id_profesor = a.id_profesor AND per.ciudad = "Logroño";
+	select concat(nombre, " ", apellido) as Nombre_Completo from PERSONA;
+	select DNI, nombre, apellido from PERSONA where telefono like "941%";
+	select p.DNI, p.nombre, p.apellido from PERSONA p, ASIGNATURA a, ALUMNO al, alumno_asignatura aa where p.DNI = al.DNI AND al.id_alumno = aa.id_alumno AND aa.id_asignatura = a.id_asignatura AND a.nombre = "Seguridad Vial";
+	select distinct(t.id_titulacion) from ASIGNATURA a, ALUMNO al, alumno_asignatura aa, TITULACION t where al.id_alumno = aa.id_alumno AND aa.id_asignatura = a.id_asignatura AND a.id_titulacion = t.id_titulacion AND al.DNI = "20202020A";
+	select a.nombre, aa.numero_matricula from  ASIGNATURA a, ALUMNO al, alumno_asignatura aa, PERSONA p where p.nombre = "Rosa" AND p.apellido = "García" AND p.dni = al.dni AND al.id_alumno = aa.id_alumno AND aa.id_asignatura = a.id_asignatura;
+	select al.dni from ALUMNO al, ASIGNATURA a, alumno_asignatura aa where al.id_alumno = aa.id_alumno AND aa.id_asignatura = a.id_asignatura AND a.id_profesor IN 
+		(select prof.id_profesor from PERSONA p, PROFESOR prof, ASIGNATURA a where p.nombre = "Jorge" AND p.apellido = "Sáenz" AND p.dni = prof.DNI AND prof.id_profesor = a.id_profesor);
+	select sum(coste_basico*1.07) as Coste_total from ASIGNATURA where id_asignatura IN 
+		(select a.id_asignatura from ASIGNATURA a, TITULACION t where a.id_titulacion = t.id_titulacion AND t.nombre = "Matemáticas");
+	select nombre from ASIGNATURA where creditos > (select creditos from ASIGNATURA where nombre = "Seguridad Vial");
+	select al.dni, p.nombre, p.apellido from PERSONA p, ALUMNO al, ASIGNATURA a, alumno_asignatura aa where p.DNI = al.DNI AND al.id_alumno = aa.id_alumno AND aa.id_asignatura = a.id_asignatura AND a.id_profesor IN 
+		(select prof.id_profesor from PERSONA p, PROFESOR prof, ASIGNATURA a where p.nombre = "Jorge" AND p.apellido = "Sáenz" AND p.dni = prof.DNI AND prof.id_profesor = a.id_profesor);
+	select prof.dni from PROFESOR prof, ALUMNO al where prof.dni = al.dni;
+	select a.nombre, count(*) as matriculados from ALUMNO al, ASIGNATURA a, alumno_asignatura aa where al.id_alumno = aa.id_alumno AND aa.id_asignatura = a.id_asignatura group by a.id_asignatura;
+	select t.nombre, sum(a.coste_basico) as Coste_total from ASIGNATURA a, TITULACION t where a.id_titulacion = t.id_titulacion group by t.id_titulacion;
+	select distinct(aa.id_alumno), sum(a.coste_basico + ((aa.numero_matricula - 1)*0.1)*a.coste_basico) as precio from ASIGNATURA a, alumno_asignatura aa where aa.id_asignatura = a.id_asignatura group by aa.id_alumno;
+	select id_titulacion, avg(coste_basico) as coste_medio from ASIGNATURA where coste_basico > 60 group by id_titulacion;
+	select distinct(id_alumno) from alumno_asignatura where id_asignatura = '150212' AND id_alumno IN (select id_alumno from alumno_asignatura where id_asignatura = '130113');
+	select distinct(id_alumno) from alumno_asignatura where id_asignatura = '150212' OR id_asignatura = '130113' AND id_alumno NOT IN 
+		(select id_alumno from alumno_asignatura where id_asignatura = '150212' AND id_alumno IN 
+			(select id_alumno from alumno_asignatura where id_asignatura = '130113'));
+	select nombre from ASIGNATURA where id_titulacion = "130110" AND coste_basico > (select avg(coste_basico) from ASIGNATURA where id_titulacion = "130110");
+	select nombre from TITULACION where 0 < (select count(a.id_asignatura) from ASIGNATURA a, TITULACION t where a.id_titulacion = t.id_titulacion AND a.creditos = 4.5);
+	select distinct(id_alumno) from alumno_asignatura where id_alumno NOT IN(select id_alumno from alumno_asignatura where id_asignatura = '150212' OR id_asignatura = '130113');
+	select distinct(id_alumno) from alumno_asignatura where id_asignatura = "150212" AND id_alumno NOT IN(select id_alumno from alumno_asignatura where id_asignatura = '130113');
+
+	
+	
+	
+	

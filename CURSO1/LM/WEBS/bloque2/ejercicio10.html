@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta http-equiv = "Content-Type" content = "text/html; charset = UTF-8"/>
+		<TITLE>Ejercicio 2.10</TITLE>
+	</HEAD>
+	<BODY>
+		<SCRIPT>
+			var fecha = new Date();
+			var mes = fecha.getMonth();
+			if (mes < 4) document.write('Nos encontramos en el primer cuatrimestre del año');
+			else {
+				if (mes < 9) document.write('Nos encontramos en el segundo cuatrimestre del año');
+				else document.write('Nos encontramos en el tercer cuatrimestre del año');
+			}
+		</SCRIPT>
+	</BODY>
+</HTML>
