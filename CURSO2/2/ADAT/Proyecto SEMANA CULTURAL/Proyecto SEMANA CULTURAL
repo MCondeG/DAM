@@ -1,0 +1,37 @@
+Alumnos se inscriben en 1 o mas talleres (pueden tener tope de inscripciones o no).
+Un taller puede durar de 1 a 3 horas y lo imparte un profesor (puede impartir más de 1).
+Los talleres se ofrecen a alumnos de determinados grupos.
+Un profesor tutoriza 0 o 1 grupo.
+
+
+
+1) Crear BD
+2) Rellenar datos de profesor, alumno y grupo (leer ficheros)
+3) Crear aplicación --> conectar a BD
+
+
+
+Casos de uso:
+
+	PROFESOR:	login
+			crear taller
+			borrar taller
+			editar taller
+			ver todos los talleres
+			ver talleres propios del profesor
+			
+	TUTOR:		mismas acciones que PROFESOR
+			ver alumnos del grupo que tutoriza
+			ver alumnos de un taller
+			
+	ALUMNO:	login
+			matricularse en un taller
+			desmatricularse en un taller
+			ver todos los talleres
+			ver talleres propios del alumno
+			
+	ADMIN:		login
+			control total (CRUD)
+			ver todos los talleres
+			ver todos los profesores
+			ver todos los alumnos
