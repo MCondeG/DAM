@@ -10,9 +10,11 @@
     <string name="boton7">7</string>
     <string name="boton8">8</string>
     <string name="boton9">9</string>
+    <string name="botonPunto">.</string>
+    <string name="botonNeg">(-)</string>
     <string name="botonSuma">+</string>
     <string name="botonResta">-</string>
-    <string name="botonX">x</string>
+    <string name="botonX">X</string>
     <string name="botonDiv">/</string>
     <string name="botonIgual">=</string>
     <string name="botonC">C</string>
