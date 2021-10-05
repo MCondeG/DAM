@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "p2-checkboxRadioButton",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

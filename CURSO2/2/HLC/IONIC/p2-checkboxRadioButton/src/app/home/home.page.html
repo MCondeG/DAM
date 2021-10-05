@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Práctica 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Apellidos</ion-label>
+    <ion-input [(ngModel)]></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input id="input2"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Provincia</ion-label>
+    <ion-input id="input3"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label>Estado civil</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Soltero</ion-label>
+        <ion-radio slot="start" value="Soltero"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Casado</ion-label>
+        <ion-radio slot="start" value="Casado"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Separado</ion-label>
+        <ion-radio slot="start" value="Separado"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Divorciado</ion-label>
+        <ion-radio slot="start" value="Divorciado"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-label>Familia numerosa</ion-label>
+  <ion-checkbox slot="end"></ion-checkbox>
+</ion-content>
