@@ -2,6 +2,8 @@ package com.ejemplos.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.ejemplos.modelo.Producto;
 import com.ejemplos.modelo.ProductoRepositorio;
 
@@ -32,8 +33,19 @@ public class ProductoController {
 	 * @return
 	 */
 	@GetMapping("/producto")
-	public List<Producto> obtenerTodos() {
-		return productoRepositorio.findAll();
+	public ResponseEntity<?> obtenerTodos() {
+		
+		List<Producto> result = productoRepositorio.findAll();
+		
+		if (result.isEmpty()) {
+			// devolvemos una respuesta (404) como instancia de ResponseEntity
+			return ResponseEntity.notFound().build();
+		}
+		else {
+			// queremos devolver la lista, pero como en el if devolvemos una respuesta
+			// 404 usando la clase ResponseEntity, debemos seguir usando la clase en la respuesta
+			return ResponseEntity.ok(result);
+		}
 	}
 	
 	
@@ -41,9 +53,12 @@ public class ProductoController {
 	//@PathVariable: permite inyectar un fragmento de la URL en una variable, es decir,
 	//pasa el valor del id de la URL al método como parametro donde esté @PathVariable
 	@GetMapping("/producto/{id}")
-	public Producto obtenerUno(@PathVariable Long id) {
-		return productoRepositorio.findById(id).orElse(null); //devuelve un Optional
-		//no manejamos todavia los errores y devolvemos un null
+	public ResponseEntity<?> obtenerUno(@PathVariable Long id) {
+		
+		Producto result = productoRepositorio.findById(id).orElse(null);
+				
+		if (result == null) return ResponseEntity.notFound().build();
+		else return ResponseEntity.ok(result);
 	}
 	
 	
@@ -51,8 +66,11 @@ public class ProductoController {
 	//@RequestBody permite inyectar el cuerpo de la peticion en un objeto,
 	//guardo en nuevo lo que venga del body en peticion
 	@PostMapping("/producto")
-	public Producto nuevoProducto(@RequestBody Producto nuevo) {
-		return productoRepositorio.save(nuevo);
+	public ResponseEntity<?> nuevoProducto(@RequestBody Producto nuevo) {
+		
+		Producto saved = productoRepositorio.save(nuevo);
+		// devuelve 201 cuando la inserción es exitosa
+		return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 	}
 	
 	

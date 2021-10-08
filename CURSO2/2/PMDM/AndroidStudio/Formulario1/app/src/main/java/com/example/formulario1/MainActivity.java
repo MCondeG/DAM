@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private Button b1;
     private Button b2;
 
+    private Formulario form;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         inicializaVariables();
+        aceptar();
     }
 
 
@@ -36,11 +41,24 @@ public class MainActivity extends AppCompatActivity {
         this.rg = (RadioGroup) findViewById(R.id.radioGroup);
         this.b1 = (Button) findViewById(R.id.boton1);
         this.b2 = (Button) findViewById(R.id.boton2);
+        this.form = new Formulario();
     }
 
 
-    public void aceptar(View view) {
+    public void aceptar() {
 
+        this.b1.setOnClickListener(
+                view -> {
+                    RadioButton rb = (RadioButton) findViewById(this.rg.getCheckedRadioButtonId());
+
+                    this.form.setNombre(this.nombre.getText().toString());
+                    this.form.setPass(this.pass.getText().toString());
+                    this.form.setCb(this.cb.isChecked());
+                    this.form.setRb(rb.getText().toString());
+
+                    Toast.makeText(this, "Formulario enviado", Toast.LENGTH_LONG).show();
+                }
+        );
     }
 
     public void cancelar(View view) {

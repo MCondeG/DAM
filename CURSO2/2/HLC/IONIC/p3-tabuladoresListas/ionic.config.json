@@ -1,0 +1,7 @@
+{
+  "name": "p3-tabuladoresListas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
