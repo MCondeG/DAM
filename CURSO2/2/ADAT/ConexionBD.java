@@ -1,4 +1,4 @@
-package com.manuelcondegonzalez.semanacultural.control;
+package ;
 
 
 import java.sql.Connection;

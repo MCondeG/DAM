@@ -4,10 +4,19 @@
  */
 package com.manuelcondegonzalez.semanacultural.vista;
 
+import com.manuelcondegonzalez.semanacultural.control.ConexionBD;
+import com.manuelcondegonzalez.semanacultural.modelo.daos.DaoProfesor;
+
 /**
  *
- * @author ahbyss
+ * @author manuelconde
  */
 public class Prueba {
     
+    public static void main(String[] args) {
+        
+        ConexionBD conexion = new ConexionBD("mysql", "ManuelCondeGonzalez-SemanaCultural", "root", "root");
+        
+        DaoProfesor dp = new DaoProfesor(conexion);
+    }
 }
