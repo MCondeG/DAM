@@ -2,7 +2,9 @@ package com.example.formulario1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.io.Serializable;
@@ -36,5 +38,11 @@ public class Activity2 extends AppCompatActivity {
         this.tv.append("\n\tContraseña: ******");
         this.tv.append("\n\tProfesor: " + form.isCb());
         this.tv.append("\n\tCurso: " + form.getRb());
+    }
+
+    public void volver(View view) {
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

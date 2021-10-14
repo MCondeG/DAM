@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="409dp"
-        android:layout_height="510dp"
+        android:layout_width="411dp"
+        android:layout_height="511dp"
         android:background="#D8C992"
         android:text="@string/textView2"
         android:textSize="20sp"
@@ -19,5 +19,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/boton3"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:onClick="volver"
+        android:text="@string/boton3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.851" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,4 +10,5 @@
     <string name="boton1">ENVIAR</string>
     <string name="boton2">BORRAR</string>
     <string name="textView2" />
+    <string name="boton3">VOLVER</string>
 </resources>
