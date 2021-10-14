@@ -1,7 +1,0 @@
-{
-  "name": "p2-checkboxRadioButton",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

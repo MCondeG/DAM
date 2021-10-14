@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<profesores>
+    <profesor>
+        hola
+        <nombre>Pepe</nombre>
+        <horasLectivas>18</horasLectivas>
+        <mayor55>false</mayor55>
+   </profesor>
+    <profesor dni="1234" movil="890" cp="41008">
+        <nombre>Juana</nombre>
+        <horasLectivas>18</horasLectivas>
+        <mayor55>false</mayor55>
+    </profesor>
+    <profesor>
+        <nombre>Rosa</nombre>
+        <horasLectivas>18</horasLectivas>
+        <mayor55>true</mayor55>
+    </profesor>
+    
+    
+ </profesores>
