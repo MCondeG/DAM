@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Formulario1</string>
-    <string name="editTextNombre">usuario</string>
-    <string name="editTextPass">contraseña</string>
+    <string name="editTextNombre" />
+    <string name="editTextPass" />
     <string name="textView">CURSO</string>
     <string name="checkBox">PROFESOR</string>
     <string name="radioButton1">DAM</string>
@@ -9,4 +9,5 @@
     <string name="radioButton3">ASIR</string>
     <string name="boton1">ENVIAR</string>
     <string name="boton2">BORRAR</string>
+    <string name="textView2" />
 </resources>

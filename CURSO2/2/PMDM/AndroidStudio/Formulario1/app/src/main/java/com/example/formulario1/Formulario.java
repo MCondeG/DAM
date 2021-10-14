@@ -1,6 +1,8 @@
 package com.example.formulario1;
 
-public class Formulario {
+import java.io.Serializable;
+
+public class Formulario implements Serializable {
 
     private String nombre;
     private String pass;

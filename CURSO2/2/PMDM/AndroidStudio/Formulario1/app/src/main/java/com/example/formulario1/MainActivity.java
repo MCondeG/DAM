@@ -2,6 +2,7 @@ package com.example.formulario1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button b2;
 
     private Formulario form;
+    private ListaUsuarios lista;
 
 
     @Override
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         this.b1 = (Button) findViewById(R.id.boton1);
         this.b2 = (Button) findViewById(R.id.boton2);
         this.form = new Formulario();
+        this.lista = new ListaUsuarios();
     }
 
 
@@ -56,16 +59,28 @@ public class MainActivity extends AppCompatActivity {
                     this.form.setCb(this.cb.isChecked());
                     this.form.setRb(rb.getText().toString());
 
-                    Toast.makeText(this, "Formulario enviado", Toast.LENGTH_LONG).show();
+                    this.lista.añadir(form);
+
+                    Toast.makeText(this, "Formulario enviado", Toast.LENGTH_SHORT).show();
+
+                    abrirActivity();
                 }
         );
     }
 
     public void cancelar(View view) {
 
-        this.nombre.setText("nombre");
-        this.pass.setText("contraseña");
+        this.nombre.setText("");
+        this.pass.setText("");
         this.cb.setChecked(false);
         this.rg.clearCheck();
+    }
+
+    public void abrirActivity() {
+
+        Intent intent = new Intent(this, Activity2.class);
+        intent.putExtra("lista", this.lista);
+
+        startActivity(intent);
     }
 }
