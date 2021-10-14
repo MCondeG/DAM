@@ -33,8 +33,7 @@ public class Activity2 extends AppCompatActivity {
 
     public void pintarDatos(Formulario form) {
 
-        this.tv.setText("\t\t\t\t\t\t\tDATOS\n\n");
-        this.tv.append("\tUsuario: " + form.getNombre());
+        this.tv.append("\n\n\tUsuario: " + form.getNombre());
         this.tv.append("\n\tContraseña: ******");
         this.tv.append("\n\tProfesor: " + form.isCb());
         this.tv.append("\n\tCurso: " + form.getRb());
