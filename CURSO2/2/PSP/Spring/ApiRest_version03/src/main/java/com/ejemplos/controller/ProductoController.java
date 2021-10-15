@@ -1,6 +1,7 @@
 package com.ejemplos.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.ejemplos.dto.ProductoDTO;
+import com.ejemplos.dto.ProductoDTOConverter;
 import com.ejemplos.modelo.Producto;
 import com.ejemplos.modelo.ProductoRepositorio;
 
@@ -21,7 +25,9 @@ import lombok.RequiredArgsConstructor;
 public class ProductoController {
 	
 	// se declara como final pq no se va a modificar este repositorio
-	private final ProductoRepositorio productoRepositorio; 
+	private final ProductoRepositorio productoRepositorio;
+	
+	private final ProductoDTOConverter productoDTOConverter;
 	
 	//se inyecta solo al crear el bean controlador
 	//Dentro de la carpeta resources esta data.sql
@@ -44,7 +50,9 @@ public class ProductoController {
 		else {
 			// queremos devolver la lista, pero como en el if devolvemos una respuesta
 			// 404 usando la clase ResponseEntity, debemos seguir usando la clase en la respuesta
-			return ResponseEntity.ok(result);
+			List<ProductoDTO> dtoList = result.stream().map(productoDTOConverter::convertirADto).collect(Collectors.toList());
+			
+			return ResponseEntity.ok(dtoList);
 		}
 	}
 	
@@ -58,7 +66,11 @@ public class ProductoController {
 		Producto result = productoRepositorio.findById(id).orElse(null);
 				
 		if (result == null) return ResponseEntity.notFound().build();
-		else return ResponseEntity.ok(result);
+				
+		else {
+			ProductoDTO productoDto = productoDTOConverter.convertirADto(result);
+			return ResponseEntity.ok(productoDto);
+		}
 	}
 	
 	
@@ -68,9 +80,10 @@ public class ProductoController {
 	@PostMapping("/producto")
 	public ResponseEntity<?> nuevoProducto(@RequestBody Producto nuevo) {
 		
-		Producto saved = productoRepositorio.save(nuevo);
+		Producto prod = productoDTOConverter.convertirAProd(nuevo);
+
 		// devuelve 201 cuando la inserción es exitosa
-		return ResponseEntity.status(HttpStatus.CREATED).body(saved);
+		return ResponseEntity.status(HttpStatus.CREATED).body(productoRepositorio.save(prod));
 	}
 	
 	
@@ -80,7 +93,9 @@ public class ProductoController {
 		
 		if (productoRepositorio.existsById(id)) {
 			editar.setId(id);
-			return ResponseEntity.ok(productoRepositorio.save(editar));
+			productoRepositorio.save(editar);
+			ProductoDTO productoDto = productoDTOConverter.convertirADto(editar);
+			return ResponseEntity.ok(productoDto);
 		}
 		else return ResponseEntity.notFound().build();
 	}
