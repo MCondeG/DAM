@@ -15,13 +15,22 @@ const routes: Routes = [
       {
         path: 'notes',
         loadChildren: () => import('../notes/notes.module').then(m => m.NotesPageModule)
+      },
+      {
+        path: 'contacts',
+        loadChildren: () => import('../contacts/contacts.module').then(m => m.ContactsPageModule)
+      },
+      {
+        path: 'ladder',
+        loadChildren: () => import('../ladder/ladder.module').then(m => m.LadderPageModule)
       }
     ]
   },
   {
     path: '',
     redirectTo: '/tabs-nav/groceries'
-  }];
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

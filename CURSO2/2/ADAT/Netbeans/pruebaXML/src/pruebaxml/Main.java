@@ -22,7 +22,7 @@ public class Main {
      */
     public static void main(String[] args) {
         
-        DaoProfesorXML dp= new DaoProfesorXML("/home/enrique/Escritorio/profesores.xml");
+        DaoProfesorXML dp= new DaoProfesorXML("./src/profesoresJulioVerne.xml");
         
         
         ArrayList<Profesor> profesores=dp.verProfesores();
@@ -32,8 +32,5 @@ public class Main {
            
            System.out.println("profesor: "+p.getNombre()+"   cp:   "+p.getCp()+" "+p.getHorasLectivas()+" "+p.isMayor55());
         }
-        
-    
     }
-
 }
