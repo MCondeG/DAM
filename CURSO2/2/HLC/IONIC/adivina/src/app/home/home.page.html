@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Adivina el número secreto
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="ion-padding">
+    <div *ngIf="mayorMenor!=''">
+      <ion-input type="number" min="1" max="100" [(ngModel)]="num" placeholder="Introduce un número del 1 al 100"></ion-input>
+      <p>El número secreto es {{ mayorMenor }} {{ num }}</p>
+      <ion-button expand="block" (click)="compruebaNumero()">Adivina</ion-button> 
+    </div>
+    <ion-card *ngIf="mayorMenor==''">
+      <ion-card-header>
+      ¡¡¡Enhorabuena!!!
+    </ion-card-header>
+    <ion-card-content>
+        Has acertado, el número secreto es el {{ num }}
+    </ion-card-content>
+    <ion-button expand="block" (click)="reinicia()">Reinicia</ion-button> 
+    </ion-card>
+    
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>

@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inicializaVariables();
-        aceptar();
+        if(savedInstanceState == null) {
+            inicializaVariables();
+            aceptar();
+        }
     }
 
 

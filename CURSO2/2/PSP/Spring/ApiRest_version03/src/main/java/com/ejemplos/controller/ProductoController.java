@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ejemplos.dto.CreateProductoDTO;
 import com.ejemplos.dto.ProductoDTO;
 import com.ejemplos.dto.ProductoDTOConverter;
 import com.ejemplos.modelo.Producto;
@@ -61,15 +62,23 @@ public class ProductoController {
 	//@PathVariable: permite inyectar un fragmento de la URL en una variable, es decir,
 	//pasa el valor del id de la URL al método como parametro donde esté @PathVariable
 	@GetMapping("/producto/{id}")
-	public ResponseEntity<?> obtenerUno(@PathVariable Long id) {
+	public ResponseEntity<?> obtenerUno(@PathVariable Long id) throws Exception {
+		
+		Exception e = new Exception("NO EXISTE EL PRODUCTO");
 		
 		Producto result = productoRepositorio.findById(id).orElse(null);
-				
-		if (result == null) return ResponseEntity.notFound().build();
-				
-		else {
-			ProductoDTO productoDto = productoDTOConverter.convertirADto(result);
-			return ResponseEntity.ok(productoDto);
+		
+		try {
+			if (result != null) {
+				ProductoDTO productoDto = productoDTOConverter.convertirADto(result);
+				return ResponseEntity.ok(productoDto);
+			}				
+			else {
+				return ResponseEntity.notFound().build();
+			}
+		}
+		catch(Exception excepcion) {
+			throw e;
 		}
 	}
 	
@@ -78,7 +87,7 @@ public class ProductoController {
 	//@RequestBody permite inyectar el cuerpo de la peticion en un objeto,
 	//guardo en nuevo lo que venga del body en peticion
 	@PostMapping("/producto")
-	public ResponseEntity<?> nuevoProducto(@RequestBody Producto nuevo) {
+	public ResponseEntity<?> nuevoProducto(@RequestBody CreateProductoDTO nuevo) {
 		
 		Producto prod = productoDTOConverter.convertirAProd(nuevo);
 

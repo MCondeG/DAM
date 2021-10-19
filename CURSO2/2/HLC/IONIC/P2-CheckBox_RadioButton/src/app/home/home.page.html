@@ -9,19 +9,19 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label position="floating">Apellidos</ion-label>
-    <ion-input [(ngModel)]></ion-input>
+    <ion-input [(ngModel)] = "apellidos"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Nombre</ion-label>
-    <ion-input id="input2"></ion-input>
+    <ion-input [(ngModel)] = "nombre"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Provincia</ion-label>
-    <ion-input id="input3"></ion-input>
+    <ion-input [(ngModel)] = "provincia"></ion-input>
   </ion-item>
 
   <ion-list>
-    <ion-radio-group value="biff">
+    <ion-radio-group value="Soltero" [(ngModel)] = "estadoCivil">
       <ion-list-header>
         <ion-label>Estado civil</ion-label>
       </ion-list-header>
@@ -44,6 +44,11 @@
     </ion-radio-group>
   </ion-list>
 
-  <ion-label>Familia numerosa</ion-label>
-  <ion-checkbox slot="end"></ion-checkbox>
+  <ion-item *ngIf = "estadoCivil != 'soltero'">
+    <ion-label [(ngModel)]="famNum">Familia numerosa</ion-label>
+    <ion-checkbox slot="end"></ion-checkbox>
+  </ion-item>
+
+  <ion-button [disabled]=""
+  id="boton" (click)="clickBoton()">Aceptar</ion-button>
 </ion-content>
