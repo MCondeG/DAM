@@ -9,6 +9,6 @@ public class ProductNotFoundException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 	
 	public ProductNotFoundException(Long id) {
-		super("No existe el producto con la ID: "+id);
+		super("No se encuentra el producto con la ID: "+id);
 	}
 }

@@ -1,11 +1,13 @@
 package com.ejemplos.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ejemplos.dto.CreateProductoDTO;
 import com.ejemplos.dto.ProductoDTO;
 import com.ejemplos.dto.ProductoDTOConverter;
+import com.ejemplos.excepciones.ApiError;
+import com.ejemplos.excepciones.ProductNotFoundException;
 import com.ejemplos.modelo.Producto;
 import com.ejemplos.modelo.ProductoRepositorio;
 
@@ -62,24 +66,15 @@ public class ProductoController {
 	//@PathVariable: permite inyectar un fragmento de la URL en una variable, es decir,
 	//pasa el valor del id de la URL al método como parametro donde esté @PathVariable
 	@GetMapping("/producto/{id}")
-	public ResponseEntity<?> obtenerUno(@PathVariable Long id) throws Exception {
-		
-		Exception e = new Exception("NO EXISTE EL PRODUCTO");
-		
+	public ResponseEntity<?> obtenerUno(@PathVariable Long id) {
+				
 		Producto result = productoRepositorio.findById(id).orElse(null);
 		
-		try {
-			if (result != null) {
-				ProductoDTO productoDto = productoDTOConverter.convertirADto(result);
-				return ResponseEntity.ok(productoDto);
-			}				
-			else {
-				return ResponseEntity.notFound().build();
-			}
+		if (result != null) {
+			ProductoDTO productoDto = productoDTOConverter.convertirADto(result);
+			return ResponseEntity.ok(productoDto);
 		}
-		catch(Exception excepcion) {
-			throw e;
-		}
+		else throw new ProductNotFoundException(id);
 	}
 	
 	
@@ -119,5 +114,17 @@ public class ProductoController {
 			return ResponseEntity.noContent().build();
 		}
 		else return ResponseEntity.notFound().build();
+	}
+	
+	
+	// Cuando se produzca un error de este tipo ejecuta este método
+	@ExceptionHandler(ProductNotFoundException.class)
+	public ResponseEntity<ApiError> handleProductoNoEncontrado(ProductNotFoundException ex) {
+		ApiError apiError = new ApiError();
+		apiError.setEstado(HttpStatus.NOT_FOUND);
+		apiError.setFecha(LocalDateTime.now());
+		apiError.setMensaje(ex.getMessage());
+		
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(apiError);
 	}
 }
