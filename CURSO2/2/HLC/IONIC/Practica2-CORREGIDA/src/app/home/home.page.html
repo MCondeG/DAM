@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">apellidos</ion-label>
+    <ion-input placeholder="apellidos" [(ngModel)]="apellidos"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">nombre</ion-label>
+    <ion-input placeholder="nombre" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">provincia</ion-label>
+    <ion-input placeholder="provincia" [(ngModel)]="provincia"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="estadoCivil">
+      <ion-list-header>
+        <ion-label>estado civil</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>soltero</ion-label>
+        <ion-radio slot="start" value="soltero"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>casado</ion-label>
+        <ion-radio slot="start" value="casado"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>divorciado</ion-label>
+        <ion-radio slot="start" value="divorciado"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>separado</ion-label>
+        <ion-radio slot="start" value="separado"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item *ngIf="estadoCivil!='soltero'
+                   && estadoCivil!=''">
+    <ion-label position="floating">familia numerosa</ion-label>
+    <ion-checkbox [(ngModel)]="familiaNumerosa"></ion-checkbox>
+  </ion-item>
+  <ion-button [disabled]="!(apellidos.trim()!=''
+                            && nombre.trim()!=''
+                            && provincia.trim()!=''
+                            && estadoCivil=='casado'
+                            && familiaNumerosa
+                          )"
+  id="boton1" (click)="clickBoton1()">Aceptar</ion-button>
+  
+</ion-content>

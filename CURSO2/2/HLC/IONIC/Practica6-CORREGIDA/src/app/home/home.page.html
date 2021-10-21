@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <div *ngIf="!mostrarEmpleados">
+    <ion-item>
+      <ion-label>ciudad</ion-label>
+      <ion-select [(ngModel)]="ciudad">
+        <ion-select-option *ngFor="let ciudad of ciudades">
+            {{ciudad}}
+        </ion-select-option>
+        
+      </ion-select>
+    </ion-item>
+    <ion-button (click)="buscar()">
+      buscar
+    </ion-button>
+  </div>
+
+  <ion-list *ngIf="mostrarEmpleados">
+    <ion-item *ngFor="let empleado of empleadosSeleccionados">
+      {{empleado.apellidos}}, {{empleado.nombre}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

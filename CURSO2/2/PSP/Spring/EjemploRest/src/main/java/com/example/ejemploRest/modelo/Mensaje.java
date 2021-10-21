@@ -1,5 +1,9 @@
 package com.example.ejemploRest.modelo;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class Mensaje {
 	
 	private String mensaje;
@@ -12,5 +16,12 @@ public class Mensaje {
 	public Mensaje(String mensaje) {
 		
 		this.mensaje = mensaje;
+	}
+	
+	
+	@Override
+	public String toString() {
+		
+		return this.getMensaje();
 	}
 }
