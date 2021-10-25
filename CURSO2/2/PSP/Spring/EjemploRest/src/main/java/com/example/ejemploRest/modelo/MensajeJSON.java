@@ -5,23 +5,16 @@ import lombok.Setter;
 
 
 @Getter @Setter
-public class Mensaje {
+public class MensajeJSON {
 	
 	private String mensaje;
 	
 	
-	public Mensaje() {
+	public MensajeJSON() {
 		this.mensaje = "";
 	}
 	
-	public Mensaje(String mensaje) {
+	public MensajeJSON(String mensaje) {
 		this.mensaje = mensaje;
-	}
-	
-	
-	@Override
-	public String toString() {
-		
-		return this.getMensaje();
 	}
 }

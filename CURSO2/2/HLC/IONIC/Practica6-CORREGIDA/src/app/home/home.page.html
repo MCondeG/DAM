@@ -18,6 +18,28 @@
         
       </ion-select>
     </ion-item>
+    <ion-item>
+      <ion-label position="floating">sueldo mayor que</ion-label>
+      <ion-input [(ngModel)]="sueldo" type="number">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">practicas</ion-label>
+      <ion-checkbox [(ngModel)]="practicas"></ion-checkbox>
+    </ion-item>
+
+      <ion-radio-group [(ngModel)]="categoria">
+        <ion-item>
+          <ion-label>analista</ion-label>
+          <ion-radio value="analista"></ion-radio>
+          <ion-label>programador senior</ion-label>
+          <ion-radio value="programador_senior"></ion-radio>
+          <ion-label>programador junior</ion-label>
+          <ion-radio value="programador_junior"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+
     <ion-button (click)="buscar()">
       buscar
     </ion-button>
@@ -27,6 +49,9 @@
     <ion-item *ngFor="let empleado of empleadosSeleccionados">
       {{empleado.apellidos}}, {{empleado.nombre}}
     </ion-item>
+    <ion-button (click)="volver()">
+      volver
+    </ion-button>
   </ion-list>
 
 </ion-content>

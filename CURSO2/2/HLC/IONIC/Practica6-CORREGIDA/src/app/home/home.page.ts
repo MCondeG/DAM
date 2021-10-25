@@ -813,24 +813,52 @@ empleados: Empleado[]=[
     }
   ];
 
-  ciudad:string;
+  ciudad:string=null;
   mostrarEmpleados:boolean=false;
   empleadosSeleccionados:Empleado[];
+  sueldo:number=null;
+  practicas:boolean=false;
+  categoria:string;
+  
 
   constructor() {
   }
 
 
   public buscar(){
+    var cadenaBuscarCiudad:string;
+    var cadenaBuscarSueldo:string;
+
+    if(this.ciudad==null)
+      cadenaBuscarCiudad="true";
+    else
+      cadenaBuscarCiudad="empleado.ciudad.normalize().trim()===this.ciudad.normalize().trim()";
+
+    if(this.sueldo==null)
+      cadenaBuscarSueldo="true";
+    else
+      cadenaBuscarSueldo="empleado.sueldo>= this.sueldo";
+
+    console.log(cadenaBuscarSueldo + "" + cadenaBuscarCiudad + "");
+
     this.empleadosSeleccionados=[];
     this.empleados.forEach(empleado=>{
-      if(empleado.ciudad.trim()===this.ciudad.trim()){
-        console.log(empleado.ciudad);
-        console.log(this.ciudad);
-        this.empleadosSeleccionados.push(empleado);
-      }
+        if(eval(cadenaBuscarCiudad) 
+                && eval(cadenaBuscarSueldo)
+                && this.practicas==empleado.practicas){
+          this.empleadosSeleccionados.push(empleado);
+        }
     })
     this.mostrarEmpleados=true;
   }
+
+  public volver(){
+    this.mostrarEmpleados=false;
+    this.empleadosSeleccionados=[];
+    //this.ciudad=null;
+    //this.sueldo=null;
+    //this.practicas=null;
+  }
+
 
 }//end_class
