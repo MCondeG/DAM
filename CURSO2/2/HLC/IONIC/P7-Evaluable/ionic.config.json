@@ -1,0 +1,7 @@
+{
+  "name": "P7-Evaluable",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

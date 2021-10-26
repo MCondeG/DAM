@@ -41,6 +41,6 @@ public class MensajeController {
 	@RequestMapping(value = "/saludo/json/{p}", method = RequestMethod.GET, produces = "application/json")
 	public MensajeJSON obtenerMensajeJSON_2(@PathVariable String p) {
 		
-		return new MensajeJSON(p);
+		return new MensajeJSON("Hola JSON!: " + p);
 	}
 }

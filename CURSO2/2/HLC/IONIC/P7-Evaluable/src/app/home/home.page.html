@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Práctica 7
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div *ngIf = "radio1 == null">
+    <ion-list>
+      <ion-radio-group [(ngModel)]="radio1">
+        <ion-item>
+          <ion-label>ESO</ion-label>
+          <ion-radio slot="end" value="ESO"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>CICLO</ion-label>
+          <ion-radio slot="end" value="CICLO"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  <div *ngIf = "mostrarCurso()">
+    <ion-list>
+      <ion-radio-group [(ngModel)]="radio2">
+        <ion-item>
+          <ion-label>1º ESO</ion-label>
+          <ion-radio slot="end" value="1ºESO"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>2º ESO</ion-label>
+          <ion-radio slot="end" value="2ºESO"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>3º ESO</ion-label>
+          <ion-radio slot="end" value="3ºESO"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>4º ESO</ion-label>
+          <ion-radio slot="end" value="4ºESO"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+
+  <div *ngIf = "mostrarCurso()">
+    <ion-item>
+      <ion-label>Repite ESO</ion-label>
+      <ion-checkbox [(ngModel)]="checkbox"></ion-checkbox>
+    </ion-item>
+  </div>
+
+  <div *ngIf = "mostrarCiclo()">
+    <ion-item>
+      <ion-label>CICLO</ion-label>
+      <ion-select [(ngModel)]="ciclo">
+        <ion-select-option *ngFor="let ciclo of ciclos">
+          {{ciclo}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <div *ngIf = "mostrarBoton()">
+    <ion-item>
+      <ion-button id="boton" [disabled] = "activarBoton()" (click)="clickBoton()">Aceptar</ion-button>
+    </ion-item>
+  </div>
+
+</ion-content>
