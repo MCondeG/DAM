@@ -18,7 +18,7 @@ public class Ventana extends JFrameXML {
     public Ventana() throws Exception{
         
         
-        setContentView("/home/enrique/Escritorio/vista.xml");
+        setContentView("vista.xml");
         
         JButton boton1=(JButton)this.getViewFindByID("boton1");
         JButton boton2=(JButton)this.getViewFindByID("boton2");

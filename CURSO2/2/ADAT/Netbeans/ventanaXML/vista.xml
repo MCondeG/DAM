@@ -1,0 +1,26 @@
+
+<JFrame 
+    id="ventana"
+    nombre="Ventana principal"
+    ancho="300"
+    alto="400"
+    setDefaultCloseOperation="on">
+    	<FlowLayout id="Layout1">
+		<JButton
+		    id="boton1"
+		    nombre="Mi boton1"
+		    onClick="pulsar"/>
+		<JButton
+		    id="boton2"
+		    nombre="Mi boton2"
+		    onClick="pulsar"/>
+		<JButton
+		    id="boton3"
+		    nombre="Mi boton3"
+		    onClick="pulsar"/>
+		<JButton
+		    id="boton4"
+		    nombre="Mi boton4"
+		    onClick="pulsar"/>
+	</FlowLayout>  
+</JFrame>
