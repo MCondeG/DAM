@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PruebaWidgets</string>
+
+    <string-array name="paises">
+        <item>España</item>
+        <item>Francia</item>
+        <item>Inglaterra</item>
+        <item>Estados Unidos</item>
+        <item>Andorra</item>
+        <item>Portugal</item>
+        <item>Alemania</item>
+        <item>Holanda</item>
+        <item>Austria</item>
+    </string-array>
 </resources>
