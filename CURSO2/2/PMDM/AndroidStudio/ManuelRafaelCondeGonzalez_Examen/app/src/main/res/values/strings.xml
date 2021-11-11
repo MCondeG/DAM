@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ManuelRafaelCondeGonzalez_Examen</string>
+    <string name="cb1">Pan 230 KCal/100gr</string>
+    <string name="cb2">Aceite 884 KCal/100gr</string>
+    <string name="cb3">Jamón 195 KCal/100gr</string>
+    <string name="rb1">Sí</string>
+    <string name="rb2">No</string>
+    <string name="textView1"></string>
+    <string name="textView2">¿Está usted satisfecho?</string>
+</resources>
