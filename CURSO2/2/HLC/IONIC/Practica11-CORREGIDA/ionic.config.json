@@ -1,0 +1,7 @@
+{
+  "name": "Practica11-CORREGIDA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
