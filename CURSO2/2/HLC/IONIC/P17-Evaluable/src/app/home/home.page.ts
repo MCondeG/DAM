@@ -17,19 +17,17 @@ export class HomePage implements OnInit{
 
   validation_messages = {
     'dniUsuario': [
-      { type: 'validDNI', message: 'La letra no corresponde con los números' },
-      { type: 'required', message: 'DNI es requerido' },
+      { type: 'validDNI', message: 'letra incorrecta' },
+      { type: 'required', message: 'DNI requerido' },
       { type: 'minlength', message: 'DNI debe tener 9 caracteres' },
       { type: 'maxlength', message: 'DNI debe tener 9 caracteres' },
-      { type: 'pattern', message: 'DNI debe tener el patrón correspondiente' },
+      { type: 'pattern', message: 'patrón incorrecto' },
     ],
     'apellidosNombreUsuario': [
-      { type: 'required', message: 'apellidos y nombre es requerido' },
-      { type: 'maxlength', message: 'apellidos y nombre debe tener 80 caracteres como máximo' },
-      { type: 'pattern', message: 'apellidos y nombre solo puede contener letras' }
+      { type: 'required', message: 'apellidos y nombre requeridos' },
     ],
     'fechaNacimientoUsuario': [
-      { type: 'required', message: 'fecha de nacimiento es requerido' }
+      { type: 'required', message: 'fecha de nacimiento requerido' }
     ],
     'grupoDatosUsuario': [
       { type: 'validarGrupoDatosUsuario', message: 'Es obligatorio introducir el DNI por ser mayor de 18' }
@@ -47,8 +45,6 @@ export class HomePage implements OnInit{
       ])),
       apellidosNombreUsuario: new FormControl('',Validators.compose([
         Validators.required,
-        Validators.maxLength(80),
-        Validators.pattern('[A-Za-z\\s]+')
       ])),
       dniUsuario: new FormControl('',Validators.compose([
         this.validDNI,
@@ -65,8 +61,9 @@ export class HomePage implements OnInit{
   }
 
   onSubmit(values){
+
     let usuario:Usuario;
-    usuario=new Usuario(values['grupoDatosUsuario']['dniUsuario'].toUpperCase(),
+    usuario = new Usuario(values['grupoDatosUsuario']['dniUsuario'].toUpperCase(),
       values['grupoDatosUsuario']['apellidosNombreUsuario'],
       values['grupoDatosUsuario']['fechaNacimientoUsuario']
     );
@@ -81,45 +78,33 @@ export class HomePage implements OnInit{
   
 
   validarGrupoDatosUsuario(fg: FormGroup){
-    var fechaNacimiento:string=fg.controls['fechaNacimientoUsuario'].value;
-    var dni:string=fg.controls['dniUsuario'].value;
-    var edad:number;
+    var fechaNacimiento: string=fg.controls['fechaNacimientoUsuario'].value;
+    var dni: string=fg.controls['dniUsuario'].value;
+    var edad: number;
 
-    if(!fechaNacimiento) //si no hay valor en la fecha de nacimiento no se valida
-        return {validarGrupoDatosUsuario:true};
+    if(!fechaNacimiento) return {validarGrupoDatosUsuario: true};
 
-    //se hace uso de la libreria moment de javascript
-    //se instala con:   npm install moment
-    //para usarla aquí hay que importarla: import * as moment from 'moment';
     edad = moment().diff(fechaNacimiento, 'years');
     console.log(edad);
-    if(edad<18){
-      //no hace falta introducir dni porque el alumno es menor de 18
-      return null;   //se valida
-    }
-    else{ //el alumno es mayor de 18
-      //es obligatorio introducir el dni
-      if(dni==='')  //no se ha introducido dni
-        return {validarGrupoDatosUsuario:true};  //no se valida
-      else
-        return null;  //se valida
+
+    if( edad < 18) return null;
+    else{
+      if(dni === '') return {validarGrupoDatosUsuario: true};
+      else return null;
     }
   }
 
   validDNI(fc: FormControl) {
-    if(fc.value===''){
-      return null;  //se valida
-    }
+
+    if(fc.value==='') return null;
+
     var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
     var numeros = fc.value.substring(0, fc.value.length - 1);
     var numero = numeros % 23;
     var letraCorr = letras.charAt(numero);
     var letra = fc.value.substring(8, 9).toUpperCase();
-    if (letraCorr != letra) {
-      return ({ validDNI: true });  //no se valida
-    } else {
-      return (null);  //se valida
-    }
-  }
 
+    if (letraCorr != letra) return ({ validDNI: true });
+    else return (null);
+  }
 }

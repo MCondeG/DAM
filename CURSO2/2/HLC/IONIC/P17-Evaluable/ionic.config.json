@@ -1,7 +1,5 @@
 {
-  "name": "P17-Evaluable",
-  "integrations": {
-    "capacitor": {}
-  },
+  "name": "practicaFormularios2",
+  "integrations": {},
   "type": "angular"
 }

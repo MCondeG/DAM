@@ -1,0 +1,7 @@
+<profesores>
+    <profesor id="6">      
+        <nombre>Pepe</nombre>
+        <usuario>pepe</usuario>
+        <password>qwerty</password>
+   </profesor>
+ </profesores>

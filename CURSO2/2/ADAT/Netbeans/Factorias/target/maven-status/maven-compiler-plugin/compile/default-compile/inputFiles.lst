@@ -1,0 +1,16 @@
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Factory/IFactoryManager.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Factory/FactoryJPA.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/DAOJDBC/DAOJDBC.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Main/Main.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/DAOJPA/DAOTeacherJPA.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/DAOJDBC/DAOTeacherJDBC.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/BD/DBConnection.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Inteface/IDAOTeacher.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/DAOJPA/DAOStudentJPA.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/DAOJPA/DAOJPA.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Factory/FactoryJDBC.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Inteface/IDAOStudent.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Class/Student.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Class/Teacher.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/Factory/AbstractFactory.java
+/home/ismael/NetBeansProjects/FactoriaAbstracta/src/main/java/DAOJDBC/DAOStudentJDBC.java
