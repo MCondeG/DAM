@@ -1,0 +1,7 @@
+{
+  "name": "P20-Tarjetas_CAM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
