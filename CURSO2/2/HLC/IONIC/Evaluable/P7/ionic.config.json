@@ -1,0 +1,7 @@
+{
+  "name": "P7",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
