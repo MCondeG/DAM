@@ -1,0 +1,1 @@
+(function(_ds){var window=this;var VN=class extends _ds.C{Ta(a){a&&_ds.Ig(this,this.querySelector(".devsite-footer-utility"),a.querySelector(".devsite-footer-utility"))}};VN.prototype.updateContent=VN.prototype.Ta;try{window.customElements.define("devsite-footer-utility",VN)}catch(a){console.warn("Unrecognized DevSite custom element - DevsiteFooterUtility",a)};})(_ds_www);

@@ -1,0 +1,1 @@
+(function(_ds){var window=this;var UN=class extends _ds.C{Ta(a){a&&_ds.Ig(this,this.querySelector("nav"),a.querySelector("nav"))}};UN.prototype.updateContent=UN.prototype.Ta;try{window.customElements.define("devsite-footer-promos",UN)}catch(a){console.warn("Unrecognized DevSite custom element - DevsiteFooterPromos",a)};})(_ds_www);
