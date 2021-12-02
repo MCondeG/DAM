@@ -2,6 +2,7 @@ package com.modelo;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -30,9 +31,9 @@ public class Pelicula {
 	private Director director;
 	
 	@JoinTable(
-			name = "pelicula_has_actor",
-			joinColumns = @JoinColumn(name = "pelicula_id"),
+			name="pelicula_has_actor",
+			joinColumns = @JoinColumn(name="pelicula_id"),
 			inverseJoinColumns = @JoinColumn(name="actor_id"))
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Actor> actores;
 }
