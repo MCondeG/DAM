@@ -1,6 +1,6 @@
 package com.modelo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,9 +30,9 @@ public class Pelicula {
 	private Director director;
 	
 	@JoinTable(
-			name = "pelicula_actor",
+			name = "pelicula_has_actor",
 			joinColumns = @JoinColumn(name = "pelicula_id"),
-			inverseJoinColumns = @JoinColumn(name="director_id"))
+			inverseJoinColumns = @JoinColumn(name="actor_id"))
 	@ManyToMany
-	private ArrayList<Actor> actores;
+	private List<Actor> actores;
 }

@@ -1,6 +1,6 @@
 package com.modelo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +22,6 @@ public class Actor {
 	private String nombre;
 	private String nacionalidad;
 	
-	@ManyToMany(mappedBy = "actores")
-	private ArrayList<Pelicula> peliculas;
+	@ManyToMany(mappedBy="actores")
+	private List<Pelicula> peliculas;
 }
