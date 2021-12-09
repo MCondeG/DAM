@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--
+size-xm:  para cualquier ancho mínimo
+size-sm:  ancho mínimo de 576px
+size-md:  ancho mínimo de 768px
+size-lg:  ancho mínimo de 992px
+size-xl:  ancho mínimo de 1200px
+-->
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="2" sizeMd="4" sizeSm="6" sizeXs="12" 
+          *ngFor="let image of [1,2,3,4,5,6,7,8,9]">
+        <div class="img-wrapper" [style.background-image]="'url(assets/img/ionic-image-gallery-' + image + '.jpg)'">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

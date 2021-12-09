@@ -1,0 +1,11 @@
+sudo npm install -g @ionic/cli
+sudo npm install -g formidable@v3
+sudo npm install -g chokidar
+sudo npm install -g moment
+sudo npm install -g rxjs@^6.5.0
+sudo npm install -g @ionic-native/core@^5.1.0
+sudo npm install -g @angular-devkit/architect@^0.1200.0
+sudo npm install -g ajv@^6.9.1
+sudo npm install -g @ionic-native/splash-screen
+sudo npm install -g cordova-plugin-statusbar
+sudo npm install -g @ionic-native/status-bar 

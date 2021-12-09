@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let image of [1,2,3,4,5,6,7,8,9]">
+        <div class="img-wrapper" [style.background-image]="'url(assets/img/ionic-image-gallery-' + image + '.jpg)'">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

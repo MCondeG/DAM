@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--
+size-xm:  para cualquier ancho mínimo
+size-sm:  ancho mínimo de 576px
+size-md:  ancho mínimo de 768px
+size-lg:  ancho mínimo de 992px
+size-xl:  ancho mínimo de 1200px
+-->
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-grid>
+      <!--se diseña con una única fila. Las columnas se reparten unas debajo de otras.-->
+      <ion-row>
+        <!--la columna ocupa toda la pantalla cuando el ancho es menor de 576px
+        en caso de ser la pantalla mayor la columna ocupa la mitad de la pantalla-->
+        <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!--la columna ocupa toda la pantalla cuando el ancho es menor de 576px
+        en caso de ser la pantalla mayor la columna ocupa la mitad de la pantalla
+        En este caso aparecería a la derecha del nombre-->
+        <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email"></ion-input>
+          </ion-item>
+        </ion-col>
+        <!--la columna ocupa toda la pantalla cuando el ancho es menor de 576px
+        en caso de ser la pantalla mayor la columna ocupa la mitad de la pantalla
+        En este caso aparecería debajo del nombre-->
+        <ion-col size-lg="6" size-md="6" size-sm="6" size="12">
+          <ion-item>
+            <ion-label position="floating">Country</ion-label>
+            <ion-select value="usa" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="usa">United States</ion-select-option>
+              <ion-select-option value="india">India</ion-select-option>
+              <ion-select-option value="france">France</ion-select-option>
+              <ion-select-option value="spain">Spain</ion-select-option>
+              <ion-select-option value="brazil">Brazil</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <!--la columna ocupa toda la pantalla cuando el ancho es menor de 576px
+        En caso de ser mayor de 576px aparece a la derecha de Country, y debajo de email
+        En caso de ser la pantalla mayor de 992px la columna ocupa la mitad de la pantalla
+        Si la pantalla es mayor de 576px y menor de 992px ocupa 4 columnas. Quedaría un hueco a la derecha-->
+        <ion-col size-lg="6" size-md="4" size-sm="4" size="12">
+          <ion-item>
+            <ion-label position="floating">Choose City</ion-label>
+            <ion-select value="california" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="california">California</ion-select-option>
+              <ion-select-option value="illinois">Illinois</ion-select-option>
+              <ion-select-option value="texas">Texas</ion-select-option>
+              <ion-select-option value="pennsylvania">Pennsylvania</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <!--la columna aparece debajo de Country. Si el ancho es menor de 576px ocupa toda la pantalla
+        si tiene un ancho superior a 576px y menor de 768px ocupa 4 columnas
+        si el ancho es superior a 768px ocupa la mitad de la pantalla-->
+        <ion-col size-lg="6" size-md="6" size-sm="4" size="12">
+          <ion-item>
+            <ion-label position="floating">Address</ion-label>
+            <ion-textarea></ion-textarea>
+          </ion-item>
+        </ion-col>
+        <!--la columna aparece a la derecha de Address. Si el ancho es menor de 576px ocupa toda la pantalla
+        si tiene un ancho superior a 576px y menor de 768px ocupa 4 columnas.
+        Queda un hueco a la derecha de 4 columnas que es aprovechado por el campo gender.
+        Aparecen tres campos juntos
+        si el ancho es superior a 768px ocupa la mitad de la pantalla-->
+        <ion-col size-lg="6" size-md="6" size-sm="4" size="12">
+          <ion-item>
+            <ion-label position="floating">Postal Code</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <!--si la pantalla tiene menos de 576px de ancho ocupa toda la pantalla
+        si está entre 576px y 768px (sm) aparece a la derecha de los dos campos anteriores
+        si la pantalla es superior a 768px de ancho aparece debajo de address-->
+        <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
+          <ion-item>
+            <ion-label position="floating">Gender</ion-label>
+            <ion-select value="male" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="male">Male</ion-select-option>
+              <ion-select-option value="female">female</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <!--si la pantalla tiene menos de 576px de ancho ocupa toda la pantalla
+        si la pantalla es superior a 576px de ancho aparece siempre a la derecha de Gender, y deja un hueco a la derecha-->
+        <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
+          <ion-item>
+            <ion-label position="floating">Age</ion-label>
+            <ion-input type="number"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

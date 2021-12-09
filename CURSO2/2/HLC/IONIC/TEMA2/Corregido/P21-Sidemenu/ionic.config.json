@@ -1,0 +1,7 @@
+{
+  "name": "P21-Sidemenu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
