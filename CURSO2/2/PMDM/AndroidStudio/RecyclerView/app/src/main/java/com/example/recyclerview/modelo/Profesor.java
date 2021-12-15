@@ -15,6 +15,7 @@ public class Profesor {
         this.mayor_55 = mayor_55;
     }
 
+
     public String getUrlFoto() {
         return urlFoto;
     }
