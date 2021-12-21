@@ -1,0 +1,7 @@
+{
+  "name": "P1-ApiREST_Alumnos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

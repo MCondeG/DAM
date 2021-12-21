@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "P1-ApiREST_Alumnos",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

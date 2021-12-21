@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ejercicio2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-radio-group [(ngModel)]="dniPasaporte">
+    <ion-item>
+      <ion-label>dni</ion-label>
+      <ion-radio value="dni"></ion-radio>
+      <ion-label>pasaporte</ion-label>
+      <ion-radio value="pasaporte"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  <ion-item>
+    <ion-label>Familia numerosa: </ion-label>
+    <ion-checkbox [(ngModel)]="familiaNumerosa"></ion-checkbox>
+  </ion-item>
+
+  <div *ngFor="let usuario of usuarios; let indice=index;">
+    <div *ngIf="dniPasaporte=='' || (dniPasaporte=='dni' && usuario.dni!='') || (dniPasaporte=='pasaporte' && usuario.pasaporte!='')">
+      <div *ngIf="!familiaNumerosa || (familiaNumerosa && usuario.familiaNumerosa)">
+        <ion-card>
+          <ion-grid>
+            <ion-row>
+              <ion-col size=12>{{usuario.apellidos}}, {{usuario.nombre}}</ion-col>
+            </ion-row>
+            <ion-row *ngIf="usuario.dni!=''">
+              <ion-col size=12>DNI: {{usuario.dni}}</ion-col>
+            </ion-row>
+            <ion-row *ngIf="usuario.pasaporte!=''">
+              <ion-col size=12>Pasaporte: {{usuario.pasaporte}}</ion-col>
+            </ion-row>
+            <ion-row *ngIf="usuario.pasaporte!=''">
+              <ion-col size=12>{{usuario.nacionalidad}}</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col *ngIf="usuario.familiaNumerosa" size=8>familia numerosa</ion-col>
+              <ion-col *ngIf="usuario.familiaNumerosa" size=4>categoría {{usuario.categoriaFamiliaNumerosa}}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+</ion-content>
