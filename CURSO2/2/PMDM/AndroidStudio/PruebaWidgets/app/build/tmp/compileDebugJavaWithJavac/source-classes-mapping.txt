@@ -1,0 +1,4 @@
+com/example/pruebawidgets/BuildConfig.java
+ com.example.pruebawidgets.BuildConfig
+com/example/pruebawidgets/MainActivity.java
+ com.example.pruebawidgets.MainActivity
