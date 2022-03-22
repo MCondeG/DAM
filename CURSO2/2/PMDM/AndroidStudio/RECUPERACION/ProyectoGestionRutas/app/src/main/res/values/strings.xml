@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProyectoGestionRutas</string>
+    <string name="posicion">Posicion</string>
+    <string name="tramo">Tramo</string>
+</resources>

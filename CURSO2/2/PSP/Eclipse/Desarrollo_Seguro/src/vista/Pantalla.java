@@ -3,6 +3,11 @@ package vista;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
 
 public class Pantalla {
 
@@ -38,5 +43,18 @@ public class Pantalla {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JButton btnEnviar = new JButton("ENVIAR");
+		btnEnviar.setBounds(166, 178, 135, 39);
+		btnEnviar.setBackground(UIManager.getColor("CheckBoxMenuItem.acceleratorForeground"));
+		btnEnviar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		
+		
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(btnEnviar);
 	}
+
 }
