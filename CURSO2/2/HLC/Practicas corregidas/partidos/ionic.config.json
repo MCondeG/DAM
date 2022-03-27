@@ -1,0 +1,7 @@
+{
+  "name": "partidos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

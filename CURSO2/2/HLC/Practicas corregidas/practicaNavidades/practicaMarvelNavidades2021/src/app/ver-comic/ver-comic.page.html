@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" size="small"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">{{comic.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin:0.5em">
+    <ion-img src={{comic.imageLandscapeMedium}}>
+    </ion-img>
+    <br>
+    <div style="
+      text-align: justify;
+      text-justify: inter-word;
+    ">
+      {{comic.description}}
+    </div>
+  </div>
+</ion-content>

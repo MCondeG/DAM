@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Formulario-Cuenta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <div formGroupName="cuenta">
+      <ion-item>
+        <ion-label position="floating" color="primary">DNI</ion-label>
+        <ion-input type="text" formControlName="DNI"></ion-input>
+      </ion-item>
+      <div class="validation-errors">  <!--validación de errores para el DNI-->
+        <ng-container *ngFor="let validation of validation_messages.DNI">
+          <div class="error-message"
+            *ngIf="validations_form.get('cuenta').get('DNI').hasError(validation.type) && (validations_form.get('cuenta').get('DNI').dirty || validations_form.get('cuenta').get('DNI').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+      <ion-item>
+        <ion-label position="floating" color="primary">IBAN</ion-label>
+        <ion-input type="text" formControlName="IBAN"></ion-input>
+      </ion-item>
+      <div class="validation-errors">  <!--validación de errores para el IBAN-->
+        <ng-container *ngFor="let validation of validation_messages.IBAN">
+          <div class="error-message"
+            *ngIf="validations_form.get('cuenta').get('IBAN').hasError(validation.type) && (validations_form.get('cuenta').get('IBAN').dirty || validations_form.get('cuenta').get('IBAN').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>   <!--cierre del div del formGroup de cuenta-->
+    <div class="validation-errors">  <!--validación de errores para el formGroup-->
+      <ng-container *ngFor="let validation of validation_messages.cuenta">
+        <div class="error-message"
+          *ngIf="validations_form.get('cuenta').hasError(validation.type) && (validations_form.get('cuenta').get('IBAN').dirty || validations_form.get('cuenta').get('IBAN').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>  
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Enviar</ion-button>
+  </form>
+</ion-content>

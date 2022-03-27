@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list *ngIf="tipoEstudios==null">
+        <ion-radio-group [(ngModel)]="tipoEstudios">
+            <ion-item>
+              <ion-label>ESO</ion-label>
+              <ion-radio value="eso"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Ciclo</ion-label>
+              <ion-radio value="ciclo"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+
+    <ion-list *ngIf="tipoEstudios=='eso'">
+      <ion-radio-group [(ngModel)]="cursoEso">
+          <ion-item>
+              <ion-label>1º ESO</ion-label>
+              <ion-radio value="1eso"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>2º ESO</ion-label>
+              <ion-radio value="2eso"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>3º ESO</ion-label>
+              <ion-radio value="3eso"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <ion-item>
+        <ion-label position="floating">repiteEso</ion-label>
+        <ion-checkbox [(ngModel)]="repiteEso"></ion-checkbox>
+      </ion-item>
+      <ion-button (click)="clickBotonEso()" [disabled]="!(tipoEstudios==='eso' && cursoEso!=null)">
+        Aceptar
+      </ion-button>
+    </ion-list>
+
+    <ion-list *ngIf="tipoEstudios=='ciclo'">
+      <ion-item>
+        <ion-label>ciclo</ion-label>
+        <ion-select [(ngModel)]="ciclo">
+          <ion-select-option *ngFor="let ciclo of listaCiclos">
+              {{ciclo}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button (click)="clickBotonCiclo()" [disabled]="!(tipoEstudios==='ciclo' && ciclo!=null)">
+        Aceptar
+      </ion-button>
+    </ion-list>
+
+</ion-content>

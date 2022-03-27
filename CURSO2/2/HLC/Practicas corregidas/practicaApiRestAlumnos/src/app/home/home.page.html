@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="nuevoAlumno()">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>     
+    <ion-title>
+      Alumnos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let alumno of alumnos; let indice=index;">
+    <ion-grid>
+      <ion-row>
+        <ion-col style="display: flex; justify-content: center" size=3>
+          <ion-avatar>
+            <img [src]="alumno.avatar">
+          </ion-avatar>   
+        </ion-col>
+        <ion-col size=6>{{alumno.last_name}}, {{alumno.first_name}}</ion-col>
+        <ion-col size=1>
+          <button ion-button icon-only (click)="modificarAlumno(indice)">
+            <ion-icon name="create-outline"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col size=1>
+          <button ion-button icon-only (click)="eliminarAlumno(indice)">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col size=1></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

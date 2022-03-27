@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ejemplo Firestore
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Título</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.titulo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Descripción</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.descripcion"></ion-input>
+  </ion-item>
+  <ion-button (click)="clicBotonInsertar()">Añadir tarea</ion-button>
+
+  <h1>LISTA DE TAREAS</h1>
+  <ion-list>
+    <ion-item *ngFor="let documentTarea of arrayColeccionTareas">
+      <ion-grid>
+        <ion-row>
+          <h2>{{documentTarea.data.titulo}}</h2>
+        </ion-row>
+        <ion-row>
+          <p>{{documentTarea.data.descripcion}}</p>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">
+        <ion-icon slot="icon-only" name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="!validarSubmit()" (click)="submit()">
+        <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="addProducto()">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list no-padding>
+    <ion-item>
+      <ion-label position="floating">Cliente</ion-label>
+      <ion-select [(ngModel)]="clienteSeleccionado" ok-text="Seleccionar" cancel-text="Cancelar"
+        (ionChange)="seleccionadoCliente()">
+        <ion-select-option *ngFor="let cliente of clientes" [value]="cliente">
+          {{cliente.cliente}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-item-sliding *ngFor="let detalleProducto of factura.productos; let indice=index;">
+    <ion-item>
+      <ion-row style="font-size: x-small;">
+        <ion-col size=4>{{detalleProducto.descripcion}}</ion-col>
+        <ion-col size=3 class="ion-text-end">{{detalleProducto.getStringImporteUnitario()}}</ion-col>
+        <ion-col size=2 class="ion-text-end">{{detalleProducto.unidades}}</ion-col>
+        <ion-col size=3 class="ion-text-end">{{detalleProducto.getStringImporteTotal()}}</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option>
+        <button ion-button icon-only (click)="addUnidadProducto(indice)" danger>
+          <ion-icon name="add-outline"></ion-icon>
+        </button>
+      </ion-item-option>
+      <ion-item-option>
+        <button ion-button icon-only (click)="quitarUnidadProducto(indice)" danger>
+          <ion-icon name="remove-outline"></ion-icon>
+        </button>
+      </ion-item-option>
+      <ion-item-option>
+        <button ion-button icon-only (click)="eliminarProducto(indice)" danger>
+          <ion-icon name="trash-outline"></ion-icon>
+        </button>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-list>
+    <ion-item class="ion-text-end">
+      <ion-label>Total: {{factura.getStringImporteTotalSinIva()}}</ion-label>
+    </ion-item>
+    <ion-item class="ion-text-end">
+      <ion-label position="floating">porcentaje iva</ion-label>
+      <ion-input [(ngModel)]="factura.porcentajeIva" type="number"></ion-input>
+    </ion-item>
+    <ion-item class="ion-text-end">
+      <ion-label>Total con IVA: {{factura.getStringImporteTotalConIva()}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

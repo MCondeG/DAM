@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+
+      <ion-button (click)="nuevoPartido()">
+
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+
+      </ion-button>
+
+    </ion-buttons>
+
+    <ion-title>
+
+      Partidos
+
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let partido of partidos; let indice=index;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size=6>{{partido.equipoLocal}} - {{partido.equipoVisitante}}</ion-col>
+        <ion-col size=3>{{partido.golesEquipoLocal}} - {{partido.golesEquipoVisitante}}</ion-col>
+        <ion-col size=2>{{partido.minutosJugados}}</ion-col>
+        <ion-col size=1>
+          <button *ngIf="partido.noIniciado()" 
+            ion-button icon-only (click)="confirmar('¿Iniciar partido?',indice,'INICIAR_PARTIDO')">
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </button>
+          <button *ngIf="partido.primerTiempo()" 
+            ion-button icon-only (click)="confirmar('Finalizar primer tiempo?',indice,'FINALIZAR_PRIMER_TIEMPO')">
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </button>
+          <button *ngIf="partido.descanso()" 
+            ion-button icon-only (click)="confirmar('Iniciar segundo tiempo?',indice,'INICIAR_SEGUNDO_TIEMPO')">
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </button>
+          <button *ngIf="partido.segundoTiempo()" 
+            ion-button icon-only (click)="confirmar('Finalizar partido?',indice,'FINALIZAR_PARTIDO')">
+            <ion-icon name="checkmark-outline"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

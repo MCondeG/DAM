@@ -1,28 +1,6 @@
 {
   "alumnos": [
     {
-      "id": 5,
-      "first_name": "Bertram",
-      "last_name": "Twomey",
-      "email": "btwomey4@xinhuanet.com",
-      "gender": "Male",
-      "avatar": "https://robohash.org/omnisdoloresnam.png?size=50x50&set=set1",
-      "address": "3282 Parkside Court",
-      "city": "Savannah",
-      "postalCode": "31422"
-    },
-    {
-      "id": 6,
-      "first_name": "Zorina",
-      "last_name": "Staniforth",
-      "email": "zstaniforth5@blog.com",
-      "gender": "Female",
-      "avatar": "https://robohash.org/inutipsa.png?size=50x50&set=set1",
-      "address": "2 Jenna Center",
-      "city": "Kurayoshi",
-      "postalCode": "682-0953"
-    },
-    {
       "id": 8,
       "first_name": "Sharline",
       "last_name": "MacDonogh",
@@ -96,16 +74,6 @@
       "avatar": "https://robohash.org/velidsit.bmp?size=50x50&set=set1",
       "address": "17966 Charing Cross Center",
       "city": "Dawusu"
-    },
-    {
-      "id": 17,
-      "first_name": "Raddy",
-      "last_name": "Hathway",
-      "email": "rhathwayg@independent.co.uk",
-      "gender": "Male",
-      "avatar": "https://robohash.org/etethic.jpg?size=50x50&set=set1",
-      "address": "7728 Holmberg Court",
-      "city": "Plandirejo"
     },
     {
       "id": 18,

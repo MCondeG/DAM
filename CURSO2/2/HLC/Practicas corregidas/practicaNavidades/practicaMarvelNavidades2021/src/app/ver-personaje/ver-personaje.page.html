@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" size="small"></ion-back-button>
+     </ion-buttons>
+    <ion-row class="ion-align-items-center">
+      <ion-col size=2>
+        <ion-thumbnail>
+          <img src={{character.thumbnail}}>
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size=1></ion-col>
+      <ion-col >
+        {{character.name}}
+      </ion-col>
+    </ion-row>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let comic of comics; let indice=index;" (click)="comicClick(indice)">
+      <ion-thumbnail slot="start">
+        <img src={{comic.thumbnail}}>
+      </ion-thumbnail>
+      {{comic.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>

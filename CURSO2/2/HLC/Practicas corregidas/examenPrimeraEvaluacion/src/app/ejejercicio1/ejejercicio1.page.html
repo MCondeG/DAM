@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ejercicio1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Apellidos</ion-label>
+      <ion-input type="text" formControlName="apellidos"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Nombre</ion-label>
+      <ion-input type="text" formControlName="nombre"></ion-input>
+    </ion-item>
+      <ion-radio-group formControlName="dniPasaporte" (ionChange)="onChangeDniPasaporte($event)">
+        <ion-item>
+          <ion-label>dni</ion-label>
+          <ion-radio value="dni"></ion-radio>
+          <ion-label>pasaporte</ion-label>
+          <ion-radio value="pasaporte"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    <ion-item *ngIf="formulario.get('dniPasaporte').value=='dni'">
+      <ion-label position="floating" color="primary">dni</ion-label>
+      <ion-input type="text" formControlName="dni"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formulario.get('dniPasaporte').value=='pasaporte'">
+      <ion-label position="floating" color="primary">pasaporte</ion-label>
+      <ion-input type="number" formControlName="pasaporte"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="formulario.get('dniPasaporte').value=='pasaporte'">
+      <ion-label position="floating" color="primary">nacionalidad</ion-label>
+      <ion-input type="text" formControlName="nacionalidad"></ion-input>
+    </ion-item>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formularioValido()">Submit
+      data</ion-button>
+  </form>
+</ion-content>

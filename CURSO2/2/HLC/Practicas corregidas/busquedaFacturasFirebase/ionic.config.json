@@ -1,0 +1,7 @@
+{
+  "name": "busquedaFacturasFirebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

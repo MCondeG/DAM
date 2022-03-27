@@ -1,0 +1,6 @@
+{
+  "appId": "com.practica.app",
+  "appName": "practicaAlumnosExpedientesFirebase",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

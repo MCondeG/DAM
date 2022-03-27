@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      JON file => Firebase
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label position="floating" color="primary">urlFile</ion-label>
+      <ion-input type="text" formControlName="urlFile"></ion-input>
+      <ion-button color="primary" shape="round" size="medium">
+        <input type="file" (change)="documentOnChange($event)" />
+      </ion-button>
+    </ion-item>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Submit data</ion-button>
+  </form>
+</ion-content>

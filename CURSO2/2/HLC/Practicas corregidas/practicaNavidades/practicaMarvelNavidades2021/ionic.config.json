@@ -1,0 +1,7 @@
+{
+  "name": "marvelprueba",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

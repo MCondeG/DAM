@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="searchNameClick()">
+        <ion-icon slot="icon-only" name="search" size='small'></ion-icon>
+      </ion-button>
+      <ion-input placeholder="nombre" [(ngModel)]="characterName"></ion-input>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!primeraPagina" (click)="irPrimeraPagina()">
+        <ion-icon slot="icon-only" name="play-skip-back" size='small'></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="!primeraPagina" (click)="paginaAnterior()">
+        <ion-icon slot="icon-only" name="play-back" size='small'></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="!ultimaPagina" (click)="paginaSiguiente()">
+        <ion-icon slot="icon-only" name="play-forward" size='small'></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="!ultimaPagina" (click)="irUltimaPagina()">
+        <ion-icon slot="icon-only" name="play-skip-forward" size='small'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let character of characters; let indice=index;" (click)="characterClick(indice)">
+      <ion-thumbnail slot="start">
+        <img src={{character.thumbnail}}>
+      </ion-thumbnail>
+      {{character.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

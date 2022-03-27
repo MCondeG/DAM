@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+
+    <ion-item>
+      <ion-label position="floating" color="primary">equipo local</ion-label>
+      <ion-select formControlName="equipoLocal" cancelText="Cancel" okText="OK">
+        <ion-select-option *ngFor="let equipo of equipos" [value]="equipo">{{equipo}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">equipo visitante</ion-label>
+      <ion-select formControlName="equipoVisitante" cancelText="Cancel" okText="OK">
+        <ion-select-option *ngFor="let equipo of equipos" [value]="equipo">{{equipo}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formulario.valid">
+      Enviar
+    </ion-button>
+  </form>
+</ion-content>

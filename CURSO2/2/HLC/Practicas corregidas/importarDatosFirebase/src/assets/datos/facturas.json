@@ -1,0 +1,3628 @@
+{
+    "facturas": [
+        {
+            "id": 1,
+            "cliente": "Yodel",
+            "porcentajeIva": 3,
+            "productos": [
+                {
+                    "descripcion": "Wine - Guy Sage Touraine",
+                    "importeUnitario": 85.0,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Pasta - Tortellini, Fresh",
+                    "importeUnitario": 87.88,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Cheese Cheddar Processed",
+                    "importeUnitario": 99.6,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Dill Weed - Dry",
+                    "importeUnitario": 89.92,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Cake - French Pear Tart",
+                    "importeUnitario": 51.27,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Crackers - Water",
+                    "importeUnitario": 28.95,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Syrup - Monin - Passion Fruit",
+                    "importeUnitario": 65.21,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Beans - Butter Lrg Lima",
+                    "importeUnitario": 34.02,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Pork - Smoked Kassler",
+                    "importeUnitario": 98.65,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Bread - Ciabatta Buns",
+                    "importeUnitario": 92.01,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Bread - Ciabatta Buns",
+                    "importeUnitario": 10.09,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Sauce - Hollandaise",
+                    "importeUnitario": 45.63,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Bols Melon Liqueur",
+                    "importeUnitario": 26.61,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Arizona - Green Tea",
+                    "importeUnitario": 60.4,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Creme De Banane - Marie",
+                    "importeUnitario": 13.44,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Mushroom - Trumpet, Dry",
+                    "importeUnitario": 96.39,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Cheese - Pont Couvert",
+                    "importeUnitario": 55.41,
+                    "unidades": 7
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "cliente": "Dabvine",
+            "porcentajeIva": 21,
+            "productos": [
+                {
+                    "descripcion": "Bread Fig And Almond",
+                    "importeUnitario": 96.79,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Coffee - Decafenated",
+                    "importeUnitario": 79.63,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Cardamon Ground",
+                    "importeUnitario": 35.08,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Bread - 10 Grain",
+                    "importeUnitario": 10.75,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Tuna - Fresh",
+                    "importeUnitario": 94.74,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Lamb Shoulder Boneless Nz",
+                    "importeUnitario": 29.15,
+                    "unidades": 13
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "cliente": "Reallinks",
+            "porcentajeIva": 6,
+            "productos": [
+                {
+                    "descripcion": "Sugar - Monocystal / Rock",
+                    "importeUnitario": 60.89,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Water - Perrier",
+                    "importeUnitario": 66.0,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Mushroom - Morels, Dry",
+                    "importeUnitario": 97.92,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Flour - Strong",
+                    "importeUnitario": 27.03,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Mace Ground",
+                    "importeUnitario": 78.58,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Puree - Strawberry",
+                    "importeUnitario": 93.45,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Evaporated Milk - Skim",
+                    "importeUnitario": 63.81,
+                    "unidades": 2
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "cliente": "Kwideo",
+            "porcentajeIva": 15,
+            "productos": [
+                {
+                    "descripcion": "Squash - Pattypan, Yellow",
+                    "importeUnitario": 31.87,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Cheese - Brick With Pepper",
+                    "importeUnitario": 63.32,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Bread - Raisin Walnut Pull",
+                    "importeUnitario": 40.23,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Sea Bass - Fillets",
+                    "importeUnitario": 77.2,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Beans - Navy, Dry",
+                    "importeUnitario": 54.37,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Beef - Rib Roast, Cap On",
+                    "importeUnitario": 46.66,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Parsley Italian - Fresh",
+                    "importeUnitario": 64.43,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Sobe - Tropical Energy",
+                    "importeUnitario": 48.78,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Hickory Smoke, Liquid",
+                    "importeUnitario": 78.87,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Pear - Halves",
+                    "importeUnitario": 45.01,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Juice - Ocean Spray Kiwi",
+                    "importeUnitario": 91.93,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Pastrami",
+                    "importeUnitario": 78.78,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Huck Towels White",
+                    "importeUnitario": 94.28,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Hickory Smoke, Liquid",
+                    "importeUnitario": 41.18,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Tuna - Bluefin",
+                    "importeUnitario": 7.92,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Aromat Spice / Seasoning",
+                    "importeUnitario": 1.79,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Chocolate - White",
+                    "importeUnitario": 37.86,
+                    "unidades": 13
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "cliente": "Minyx",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Sugar - White Packet",
+                    "importeUnitario": 89.61,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Roe - Flying Fish",
+                    "importeUnitario": 56.3,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Tomato - Peeled Italian Canned",
+                    "importeUnitario": 70.78,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Bread - Rolls, Corn",
+                    "importeUnitario": 32.0,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Jam - Raspberry,jar",
+                    "importeUnitario": 64.46,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Chocolate - Chips Compound",
+                    "importeUnitario": 72.15,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Olives - Kalamata",
+                    "importeUnitario": 51.84,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Dill - Primerba, Paste",
+                    "importeUnitario": 14.15,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Oil - Coconut",
+                    "importeUnitario": 33.43,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Beans - Soya Bean",
+                    "importeUnitario": 52.97,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Cup - Translucent 7 Oz Clear",
+                    "importeUnitario": 17.02,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Coffee Decaf Colombian",
+                    "importeUnitario": 52.91,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Chocolate - Milk, Callets",
+                    "importeUnitario": 31.86,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Yogurt - French Vanilla",
+                    "importeUnitario": 69.74,
+                    "unidades": 19
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "cliente": "Yata",
+            "porcentajeIva": 9,
+            "productos": [
+                {
+                    "descripcion": "Coffee Cup 12oz 5342cd",
+                    "importeUnitario": 40.25,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Chocolate Bar - Coffee Crisp",
+                    "importeUnitario": 20.36,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Rum - Dark, Bacardi, Black",
+                    "importeUnitario": 28.04,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Pizza Pizza Dough",
+                    "importeUnitario": 77.49,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Rabbit - Frozen",
+                    "importeUnitario": 28.62,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Cookie Chocolate Chip With",
+                    "importeUnitario": 47.69,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Gloves - Goldtouch Disposable",
+                    "importeUnitario": 85.23,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Beef - Top Sirloin",
+                    "importeUnitario": 22.64,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Carrots - Purple, Organic",
+                    "importeUnitario": 50.47,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Potatoes - Pei 10 Oz",
+                    "importeUnitario": 64.2,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Stock - Fish",
+                    "importeUnitario": 12.41,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Danishes - Mini Raspberry",
+                    "importeUnitario": 18.74,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Chives - Fresh",
+                    "importeUnitario": 50.39,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Chick Peas - Canned",
+                    "importeUnitario": 62.09,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Beef - Tender Tips",
+                    "importeUnitario": 12.55,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Tea - Lemon Scented",
+                    "importeUnitario": 23.6,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Lamb Tenderloin Nz Fr",
+                    "importeUnitario": 46.62,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Turkey - Breast, Boneless Sk On",
+                    "importeUnitario": 55.9,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Foil - Round Foil",
+                    "importeUnitario": 13.2,
+                    "unidades": 10
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "cliente": "Wikibox",
+            "porcentajeIva": 21,
+            "productos": [
+                {
+                    "descripcion": "Veal - Tenderloin, Untrimmed",
+                    "importeUnitario": 38.76,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Liquid Aminios Acid - Braggs",
+                    "importeUnitario": 27.28,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Wine - Rubyport",
+                    "importeUnitario": 55.5,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Country Roll",
+                    "importeUnitario": 98.13,
+                    "unidades": 20
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "cliente": "Kazio",
+            "porcentajeIva": 4,
+            "productos": [
+                {
+                    "descripcion": "Burger Veggie",
+                    "importeUnitario": 7.08,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Chocolate Bar - Reese Pieces",
+                    "importeUnitario": 11.64,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Wine - Red, Concha Y Toro",
+                    "importeUnitario": 68.09,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Bread - Multigrain Oval",
+                    "importeUnitario": 45.48,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Vinegar - Balsamic, White",
+                    "importeUnitario": 87.18,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Cheese - La Sauvagine",
+                    "importeUnitario": 47.58,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Cheese - Asiago",
+                    "importeUnitario": 53.58,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Sauce - Cranberry",
+                    "importeUnitario": 12.42,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Paste - Black Olive",
+                    "importeUnitario": 38.85,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Pepper - Red Thai",
+                    "importeUnitario": 62.25,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Marsala - Sperone, Fine, D.o.c.",
+                    "importeUnitario": 30.44,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Lamb - Shoulder, Boneless",
+                    "importeUnitario": 18.48,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Coffee - Irish Cream",
+                    "importeUnitario": 20.24,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Cheese - Roquefort Pappillon",
+                    "importeUnitario": 55.94,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Dates",
+                    "importeUnitario": 15.15,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Juice - Cranberry, 341 Ml",
+                    "importeUnitario": 82.01,
+                    "unidades": 19
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "cliente": "Youbridge",
+            "porcentajeIva": 5,
+            "productos": [
+                {
+                    "descripcion": "Radish - Black, Winter, Organic",
+                    "importeUnitario": 63.35,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Muffins - Assorted",
+                    "importeUnitario": 40.25,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Pickle - Dill",
+                    "importeUnitario": 39.39,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Gin - Gilbeys London, Dry",
+                    "importeUnitario": 13.9,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Wine - Casablanca Valley",
+                    "importeUnitario": 73.29,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Water Chestnut - Canned",
+                    "importeUnitario": 53.69,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Butter Balls Salted",
+                    "importeUnitario": 93.44,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Sugar Thermometer",
+                    "importeUnitario": 85.42,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Foil Wrap",
+                    "importeUnitario": 67.58,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Nantucket - Kiwi Berry Cktl.",
+                    "importeUnitario": 77.5,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Carbonated Water - Orange",
+                    "importeUnitario": 57.56,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Ice - Clear, 300 Lb For Carving",
+                    "importeUnitario": 77.3,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Burger Veggie",
+                    "importeUnitario": 65.74,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Spinach - Baby",
+                    "importeUnitario": 52.42,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Liners - Banana, Paper",
+                    "importeUnitario": 85.85,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Soup - Cream Of Broccoli",
+                    "importeUnitario": 58.76,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Jolt Cola - Electric Blue",
+                    "importeUnitario": 30.88,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Tuna - Fresh",
+                    "importeUnitario": 65.32,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Pepper - Black, Crushed",
+                    "importeUnitario": 54.72,
+                    "unidades": 20
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "cliente": "Gabspot",
+            "porcentajeIva": 2,
+            "productos": [
+                {
+                    "descripcion": "Beef - Rib Roast, Cap On",
+                    "importeUnitario": 96.84,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Wine - Magnotta, White",
+                    "importeUnitario": 95.49,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Beer - Muskoka Cream Ale",
+                    "importeUnitario": 83.15,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Pork - Smoked Back Bacon",
+                    "importeUnitario": 50.94,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Gatorade - Orange",
+                    "importeUnitario": 4.35,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Salt - Kosher",
+                    "importeUnitario": 80.79,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Dried Cherries",
+                    "importeUnitario": 87.03,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Pasta - Cannelloni, Sheets, Fresh",
+                    "importeUnitario": 46.06,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Pail - 15l White, With Handle",
+                    "importeUnitario": 82.73,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Tamarind Paste",
+                    "importeUnitario": 81.47,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Pastry - Banana Tea Loaf",
+                    "importeUnitario": 93.48,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Lid Coffee Cup 8oz Blk",
+                    "importeUnitario": 20.98,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Cheese - Parmigiano Reggiano",
+                    "importeUnitario": 57.13,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Red Currants",
+                    "importeUnitario": 82.12,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Cranberries - Dry",
+                    "importeUnitario": 38.75,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Mushroom - Porcini Frozen",
+                    "importeUnitario": 63.94,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Rice - Sushi",
+                    "importeUnitario": 78.17,
+                    "unidades": 5
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "cliente": "Oyondu",
+            "porcentajeIva": 17,
+            "productos": [
+                {
+                    "descripcion": "Wine - Puligny Montrachet A.",
+                    "importeUnitario": 23.57,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Nantucket Pine Orangebanana",
+                    "importeUnitario": 69.49,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Wine - Acient Coast Caberne",
+                    "importeUnitario": 81.8,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Cookies - Englishbay Wht",
+                    "importeUnitario": 25.85,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Tequila - Sauza Silver",
+                    "importeUnitario": 77.41,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Apricots - Dried",
+                    "importeUnitario": 33.31,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Latex Rubber Gloves Size 9",
+                    "importeUnitario": 95.77,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Muffin Mix - Oatmeal",
+                    "importeUnitario": 83.81,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Veal - Brisket, Provimi,bnls",
+                    "importeUnitario": 69.93,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Sprite, Diet - 355ml",
+                    "importeUnitario": 77.55,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Lettuce - Boston Bib - Organic",
+                    "importeUnitario": 28.8,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Pasta - Ravioli",
+                    "importeUnitario": 56.93,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Wiberg Super Cure",
+                    "importeUnitario": 83.82,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Scallops - In Shell",
+                    "importeUnitario": 71.73,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Bread - Hamburger Buns",
+                    "importeUnitario": 19.49,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Jam - Raspberry,jar",
+                    "importeUnitario": 20.84,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Petit Baguette",
+                    "importeUnitario": 66.78,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Beer - Heinekin",
+                    "importeUnitario": 39.08,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Relish",
+                    "importeUnitario": 94.51,
+                    "unidades": 12
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "cliente": "Camido",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Sardines",
+                    "importeUnitario": 77.73,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Blackberries",
+                    "importeUnitario": 61.51,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Wine - Rosso Toscano Igt",
+                    "importeUnitario": 61.43,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Pasta - Linguini, Dry",
+                    "importeUnitario": 55.03,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Crackers - Melba Toast",
+                    "importeUnitario": 40.69,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Toamtoes 6x7 Select",
+                    "importeUnitario": 65.57,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Red Cod Fillets - 225g",
+                    "importeUnitario": 88.14,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Pork - Back Ribs",
+                    "importeUnitario": 42.11,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Mushroom Morel Fresh",
+                    "importeUnitario": 60.06,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Wiberg Super Cure",
+                    "importeUnitario": 20.17,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Appetizer - Southwestern",
+                    "importeUnitario": 33.91,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Tendrils - Baby Pea, Organic",
+                    "importeUnitario": 10.79,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Bread - Sour Sticks With Onion",
+                    "importeUnitario": 75.2,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Flour - Rye",
+                    "importeUnitario": 13.17,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Wine - Magnotta - Cab Sauv",
+                    "importeUnitario": 86.46,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Syrup - Monin - Blue Curacao",
+                    "importeUnitario": 10.66,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Bowl 12 Oz - Showcase 92012",
+                    "importeUnitario": 87.97,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Muffin Mix - Morning Glory",
+                    "importeUnitario": 34.29,
+                    "unidades": 8
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "cliente": "Kaymbo",
+            "porcentajeIva": 19,
+            "productos": [
+                {
+                    "descripcion": "Bar - Granola Trail Mix Fruit Nut",
+                    "importeUnitario": 75.1,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Cheese - Cheddar With Claret",
+                    "importeUnitario": 58.0,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Napkin White",
+                    "importeUnitario": 28.4,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Pasta - Fettuccine, Egg, Fresh",
+                    "importeUnitario": 57.01,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Cookie Dough - Oatmeal Rasin",
+                    "importeUnitario": 83.6,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Papayas",
+                    "importeUnitario": 29.69,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Oregano - Fresh",
+                    "importeUnitario": 14.95,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Miso - Soy Bean Paste",
+                    "importeUnitario": 89.04,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Ham - Virginia",
+                    "importeUnitario": 96.06,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Wine - Kwv Chenin Blanc South",
+                    "importeUnitario": 69.71,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Wine - Zinfandel California 2002",
+                    "importeUnitario": 74.66,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Curry Powder",
+                    "importeUnitario": 88.75,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Cheese - Bakers Cream Cheese",
+                    "importeUnitario": 75.98,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Chicken - Wings, Tip Off",
+                    "importeUnitario": 71.22,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Cheese - Mix",
+                    "importeUnitario": 19.76,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Bagelers - Cinn / Brown",
+                    "importeUnitario": 33.64,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Wine - Riesling Dr. Pauly",
+                    "importeUnitario": 42.21,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Sauce - Fish 25 Ozf Bottle",
+                    "importeUnitario": 14.1,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Canada Dry",
+                    "importeUnitario": 21.81,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Aspic - Amber",
+                    "importeUnitario": 74.54,
+                    "unidades": 11
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "cliente": "Twinte",
+            "porcentajeIva": 8,
+            "productos": [
+                {
+                    "descripcion": "Coffee - French Vanilla Frothy",
+                    "importeUnitario": 70.5,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Bread - White, Sliced",
+                    "importeUnitario": 14.54,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Turkey - Oven Roast Breast",
+                    "importeUnitario": 75.11,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Ecolab - Mikroklene 4/4 L",
+                    "importeUnitario": 43.42,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Appetizer - Smoked Salmon / Dill",
+                    "importeUnitario": 27.33,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Paper Cocktail Umberlla 80 - 180",
+                    "importeUnitario": 59.6,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Crab Brie In Phyllo",
+                    "importeUnitario": 68.58,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Carbonated Water - Wildberry",
+                    "importeUnitario": 74.64,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Bread - Corn Muffaletta",
+                    "importeUnitario": 16.2,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Juice - Tomato, 48 Oz",
+                    "importeUnitario": 18.77,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Ecolab - Hobart Washarm End Cap",
+                    "importeUnitario": 58.85,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Cake Circle, Foil, Scallop",
+                    "importeUnitario": 16.37,
+                    "unidades": 5
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "cliente": "Roomm",
+            "porcentajeIva": 15,
+            "productos": [
+                {
+                    "descripcion": "Carbonated Water - Peach",
+                    "importeUnitario": 33.39,
+                    "unidades": 8
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "cliente": "Zoovu",
+            "porcentajeIva": 3,
+            "productos": [
+                {
+                    "descripcion": "Beer - Blue Light",
+                    "importeUnitario": 17.96,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Appetizer - Seafood Assortment",
+                    "importeUnitario": 87.33,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Mushroom - Oyster, Fresh",
+                    "importeUnitario": 59.32,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Sauce Bbq Smokey",
+                    "importeUnitario": 37.31,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Sausage - Meat",
+                    "importeUnitario": 46.14,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Pastry - Banana Muffin - Mini",
+                    "importeUnitario": 23.27,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Bagel - Ched Chs Presliced",
+                    "importeUnitario": 4.05,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Turkey - Breast, Boneless Sk On",
+                    "importeUnitario": 45.7,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Pork - Back Ribs",
+                    "importeUnitario": 33.57,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Sambuca - Ramazzotti",
+                    "importeUnitario": 51.82,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Mikes Hard Lemonade",
+                    "importeUnitario": 64.03,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Crackers - Melba Toast",
+                    "importeUnitario": 41.95,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Kaffir Lime Leaves",
+                    "importeUnitario": 45.54,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Bread - Onion Focaccia",
+                    "importeUnitario": 33.63,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Strawberries - California",
+                    "importeUnitario": 86.13,
+                    "unidades": 17
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "cliente": "LiveZ",
+            "porcentajeIva": 10,
+            "productos": [
+                {
+                    "descripcion": "Cheese - Stilton",
+                    "importeUnitario": 30.31,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Sauce - Soy Low Sodium - 3.87l",
+                    "importeUnitario": 47.68,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Gatorade - Cool Blue Raspberry",
+                    "importeUnitario": 19.62,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Squash - Butternut",
+                    "importeUnitario": 81.51,
+                    "unidades": 7
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "cliente": "Wikido",
+            "porcentajeIva": 8,
+            "productos": [
+                {
+                    "descripcion": "Yeast - Fresh, Fleischman",
+                    "importeUnitario": 56.26,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Mushroom - Shitake, Dry",
+                    "importeUnitario": 69.63,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Frangelico",
+                    "importeUnitario": 16.51,
+                    "unidades": 12
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "cliente": "Bubblebox",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Beef - Ox Tongue",
+                    "importeUnitario": 65.32,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Nacho Chips",
+                    "importeUnitario": 53.87,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Yogurt - Assorted Pack",
+                    "importeUnitario": 15.12,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Napkin White",
+                    "importeUnitario": 28.91,
+                    "unidades": 16
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "cliente": "Buzzshare",
+            "porcentajeIva": 5,
+            "productos": [
+                {
+                    "descripcion": "Wild Boar - Tenderloin",
+                    "importeUnitario": 62.38,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Remy Red",
+                    "importeUnitario": 32.13,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Snapple - Iced Tea Peach",
+                    "importeUnitario": 91.93,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Lettuce - Arugula",
+                    "importeUnitario": 8.19,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Bread Crumbs - Panko",
+                    "importeUnitario": 95.96,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Pepper - Chili Powder",
+                    "importeUnitario": 1.54,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Pear - Prickly",
+                    "importeUnitario": 95.4,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Wine - Riesling Dr. Pauly",
+                    "importeUnitario": 72.94,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Clam Nectar",
+                    "importeUnitario": 37.14,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Salt - Rock, Course",
+                    "importeUnitario": 59.29,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Pepper - Pablano",
+                    "importeUnitario": 58.51,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Ice Cream - Strawberry",
+                    "importeUnitario": 65.6,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Cheese - Gouda Smoked",
+                    "importeUnitario": 41.24,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Macaroons - Homestyle Two Bit",
+                    "importeUnitario": 8.55,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Pie Filling - Cherry",
+                    "importeUnitario": 96.79,
+                    "unidades": 4
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "cliente": "Oyope",
+            "porcentajeIva": 13,
+            "productos": [
+                {
+                    "descripcion": "Wine - Domaine Boyar Royal",
+                    "importeUnitario": 59.83,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Wine - Wyndham Estate Bin 777",
+                    "importeUnitario": 31.63,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Compound - Mocha",
+                    "importeUnitario": 59.96,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Sardines",
+                    "importeUnitario": 22.75,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Yeast Dry - Fermipan",
+                    "importeUnitario": 40.44,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Lid Tray - 12in Dome",
+                    "importeUnitario": 54.05,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Wine - Casillero Deldiablo",
+                    "importeUnitario": 22.68,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Crackers - Trio",
+                    "importeUnitario": 52.13,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Flower - Carnations",
+                    "importeUnitario": 9.31,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Parsnip",
+                    "importeUnitario": 72.85,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Bread - Ciabatta Buns",
+                    "importeUnitario": 50.98,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Coffee - French Vanilla Frothy",
+                    "importeUnitario": 31.83,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Milkettes - 2%",
+                    "importeUnitario": 50.67,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Lamb - Racks, Frenched",
+                    "importeUnitario": 70.34,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Raspberries - Frozen",
+                    "importeUnitario": 62.15,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Wine - Lou Black Shiraz",
+                    "importeUnitario": 30.37,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Beef - Rib Roast, Capless",
+                    "importeUnitario": 95.6,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Bread - White Epi Baguette",
+                    "importeUnitario": 66.07,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Chef Hat 20cm",
+                    "importeUnitario": 48.72,
+                    "unidades": 19
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "cliente": "Kwilith",
+            "porcentajeIva": 10,
+            "productos": [
+                {
+                    "descripcion": "Tea - Decaf Lipton",
+                    "importeUnitario": 77.63,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Pepper - Cayenne",
+                    "importeUnitario": 69.53,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Asparagus - Mexican",
+                    "importeUnitario": 32.97,
+                    "unidades": 17
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "cliente": "Quaxo",
+            "porcentajeIva": 7,
+            "productos": [
+                {
+                    "descripcion": "Longos - Burritos",
+                    "importeUnitario": 91.22,
+                    "unidades": 18
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "cliente": "Zooxo",
+            "porcentajeIva": 13,
+            "productos": [
+                {
+                    "descripcion": "Tomatillo",
+                    "importeUnitario": 77.71,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Cornflakes",
+                    "importeUnitario": 40.96,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Flour - Bread",
+                    "importeUnitario": 76.44,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Ham - Proscuitto",
+                    "importeUnitario": 29.28,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Napkin - Beverage 1 Ply",
+                    "importeUnitario": 7.19,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Soup - French Onion",
+                    "importeUnitario": 33.45,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Wine - Tribal Sauvignon",
+                    "importeUnitario": 23.19,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Carbonated Water - Peach",
+                    "importeUnitario": 16.31,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Juice - Prune",
+                    "importeUnitario": 52.53,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Cardamon Seed / Pod",
+                    "importeUnitario": 36.54,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Dc Hikiage Hira Huba",
+                    "importeUnitario": 32.13,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Eel Fresh",
+                    "importeUnitario": 65.6,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Wasabi Powder",
+                    "importeUnitario": 39.67,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Dish Towel",
+                    "importeUnitario": 28.24,
+                    "unidades": 13
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "cliente": "Tagchat",
+            "porcentajeIva": 7,
+            "productos": [
+                {
+                    "descripcion": "Juice - Tomato, 48 Oz",
+                    "importeUnitario": 28.26,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Seedlings - Buckwheat, Organic",
+                    "importeUnitario": 18.56,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Potatoes - Idaho 100 Count",
+                    "importeUnitario": 44.13,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Tandoori Curry Paste",
+                    "importeUnitario": 49.07,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Sauce - Salsa",
+                    "importeUnitario": 97.84,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Table Cloth 90x90 Colour",
+                    "importeUnitario": 99.4,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Bread - Crusty Italian Poly",
+                    "importeUnitario": 27.05,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Soho Lychee Liqueur",
+                    "importeUnitario": 21.57,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Jolt Cola",
+                    "importeUnitario": 52.77,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Pasta - Spaghetti, Dry",
+                    "importeUnitario": 80.98,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Sweet Pea Sprouts",
+                    "importeUnitario": 88.98,
+                    "unidades": 7
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "cliente": "Yodo",
+            "porcentajeIva": 6,
+            "productos": [
+                {
+                    "descripcion": "Lid - 0090 Clear",
+                    "importeUnitario": 23.11,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Barley - Pearl",
+                    "importeUnitario": 1.16,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Sauce - White, Mix",
+                    "importeUnitario": 8.63,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Asparagus - Frozen",
+                    "importeUnitario": 86.53,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Squash - Pattypan, Yellow",
+                    "importeUnitario": 23.88,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Kale - Red",
+                    "importeUnitario": 1.39,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Parasol Pick Stir Stick",
+                    "importeUnitario": 19.8,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Calypso - Strawberry Lemonade",
+                    "importeUnitario": 84.51,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Cups 10oz Trans",
+                    "importeUnitario": 62.27,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Soup - Campbells Asian Noodle",
+                    "importeUnitario": 84.65,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Bread Roll Foccacia",
+                    "importeUnitario": 3.42,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Potatoes - Yukon Gold 5 Oz",
+                    "importeUnitario": 88.6,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Beef - Rouladin, Sliced",
+                    "importeUnitario": 66.36,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Cookie Dough - Peanut Butter",
+                    "importeUnitario": 46.44,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Salmon Atl.whole 8 - 10 Lb",
+                    "importeUnitario": 10.5,
+                    "unidades": 3
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "cliente": "Fivebridge",
+            "porcentajeIva": 13,
+            "productos": [
+                {
+                    "descripcion": "Bread - Onion Focaccia",
+                    "importeUnitario": 32.8,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Mushroom - Enoki, Fresh",
+                    "importeUnitario": 66.68,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Hold Up Tool Storage Rack",
+                    "importeUnitario": 13.83,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Beef - Roasted, Cooked",
+                    "importeUnitario": 53.03,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Sauce - Hollandaise",
+                    "importeUnitario": 51.58,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Bread Cranberry Foccacia",
+                    "importeUnitario": 67.3,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Jerusalem Artichoke",
+                    "importeUnitario": 4.57,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Salt And Pepper Mix - Black",
+                    "importeUnitario": 39.6,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Pastry - Apple Muffins - Mini",
+                    "importeUnitario": 42.43,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Pastrami",
+                    "importeUnitario": 77.37,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Duck - Legs",
+                    "importeUnitario": 46.94,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Soup - French Can Pea",
+                    "importeUnitario": 81.1,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Wine - Alsace Gewurztraminer",
+                    "importeUnitario": 31.16,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Beets - Pickled",
+                    "importeUnitario": 85.87,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Cornstarch",
+                    "importeUnitario": 61.62,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Wine - Chablis J Moreau Et Fils",
+                    "importeUnitario": 7.26,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Parsley - Dried",
+                    "importeUnitario": 54.91,
+                    "unidades": 8
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "cliente": "Skimia",
+            "porcentajeIva": 5,
+            "productos": [
+                {
+                    "descripcion": "Artichokes - Jerusalem",
+                    "importeUnitario": 57.92,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Sauce - Bernaise, Mix",
+                    "importeUnitario": 4.6,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Sauce - Hollandaise",
+                    "importeUnitario": 60.07,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Melon - Watermelon, Seedless",
+                    "importeUnitario": 79.12,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Chocolate - Dark Callets",
+                    "importeUnitario": 27.01,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Beets - Candy Cane, Organic",
+                    "importeUnitario": 51.22,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Tomatillo",
+                    "importeUnitario": 20.23,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Papayas",
+                    "importeUnitario": 29.08,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Cheese - Woolwich Goat, Log",
+                    "importeUnitario": 87.99,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Peach - Halves",
+                    "importeUnitario": 44.2,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Wine - Cotes Du Rhone",
+                    "importeUnitario": 68.41,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Table Cloth 91x91 Colour",
+                    "importeUnitario": 61.03,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Wine - Champagne Brut Veuve",
+                    "importeUnitario": 1.57,
+                    "unidades": 7
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "cliente": "Linklinks",
+            "porcentajeIva": 3,
+            "productos": [
+                {
+                    "descripcion": "Lobster - Baby, Boiled",
+                    "importeUnitario": 70.59,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Cheese - Victor Et Berthold",
+                    "importeUnitario": 8.98,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Yoplait - Strawbrasp Peac",
+                    "importeUnitario": 36.65,
+                    "unidades": 3
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "cliente": "Lazz",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Lamb Rack Frenched Australian",
+                    "importeUnitario": 59.67,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Tandoori Curry Paste",
+                    "importeUnitario": 50.08,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Kiwi",
+                    "importeUnitario": 13.25,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Bread - Roll, Whole Wheat",
+                    "importeUnitario": 65.07,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Cookie Double Choco",
+                    "importeUnitario": 61.15,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Beans - Wax",
+                    "importeUnitario": 55.64,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Ostrich - Prime Cut",
+                    "importeUnitario": 17.17,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Lobster - Tail, 3 - 4 Oz",
+                    "importeUnitario": 3.16,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Roe - Lump Fish, Red",
+                    "importeUnitario": 98.68,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Pork - Loin, Center Cut",
+                    "importeUnitario": 38.63,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Cotton Wet Mop 16 Oz",
+                    "importeUnitario": 50.36,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Pecan Raisin - Tarts",
+                    "importeUnitario": 87.47,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Flour - Semolina",
+                    "importeUnitario": 73.13,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Lychee",
+                    "importeUnitario": 53.62,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Cheese - Cheddarsliced",
+                    "importeUnitario": 18.7,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Cleaner - Comet",
+                    "importeUnitario": 7.51,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Wine - White, Ej Gallo",
+                    "importeUnitario": 55.46,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Wine - Fat Bastard Merlot",
+                    "importeUnitario": 26.21,
+                    "unidades": 3
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "cliente": "Skinder",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Island Oasis - Ice Cream Mix",
+                    "importeUnitario": 49.72,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Garlic - Primerba, Paste",
+                    "importeUnitario": 45.84,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Venison - Racks Frenched",
+                    "importeUnitario": 92.24,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Wine - Red, Lurton Merlot De",
+                    "importeUnitario": 18.3,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Glucose",
+                    "importeUnitario": 38.75,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Water - Tonic",
+                    "importeUnitario": 66.87,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Wine - Red, Gamay Noir",
+                    "importeUnitario": 76.25,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Tarts Assorted",
+                    "importeUnitario": 6.62,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Appetizer - Spring Roll, Veg",
+                    "importeUnitario": 56.57,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Lychee - Canned",
+                    "importeUnitario": 92.87,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Remy Red",
+                    "importeUnitario": 35.66,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Artichoke - Bottom, Canned",
+                    "importeUnitario": 81.84,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Mayonnaise - Individual Pkg",
+                    "importeUnitario": 47.44,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Cake - Dulce De Leche",
+                    "importeUnitario": 5.98,
+                    "unidades": 4
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "cliente": "Skyvu",
+            "porcentajeIva": 6,
+            "productos": [
+                {
+                    "descripcion": "Syrup - Golden, Lyles",
+                    "importeUnitario": 46.07,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Appetizer - Mango Chevre",
+                    "importeUnitario": 13.15,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Vinegar - Champagne",
+                    "importeUnitario": 75.82,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Pepper - Cubanelle",
+                    "importeUnitario": 20.07,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Beef - Top Butt",
+                    "importeUnitario": 75.75,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Huck Towels White",
+                    "importeUnitario": 26.61,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Chicken - Thigh, Bone In",
+                    "importeUnitario": 25.99,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Tart Shells - Barquettes, Savory",
+                    "importeUnitario": 27.79,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Potatoes - Fingerling 4 Oz",
+                    "importeUnitario": 32.21,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Trueblue - Blueberry Cranberry",
+                    "importeUnitario": 45.82,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Tart Shells - Sweet, 3",
+                    "importeUnitario": 77.36,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Nougat - Paste / Cream",
+                    "importeUnitario": 8.39,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Wine - Rosso Del Veronese Igt",
+                    "importeUnitario": 4.33,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Pepper Squash",
+                    "importeUnitario": 22.27,
+                    "unidades": 14
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "cliente": "Photobug",
+            "porcentajeIva": 2,
+            "productos": [
+                {
+                    "descripcion": "Fish - Bones",
+                    "importeUnitario": 16.36,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Flour - Pastry",
+                    "importeUnitario": 43.21,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Wine - Fontanafredda Barolo",
+                    "importeUnitario": 74.51,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Wasabi Powder",
+                    "importeUnitario": 16.38,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Chicken - Breast, 5 - 7 Oz",
+                    "importeUnitario": 89.76,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Bar - Granola Trail Mix Fruit Nut",
+                    "importeUnitario": 33.47,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Sugar - Splenda Sweetener",
+                    "importeUnitario": 39.69,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Grapes - Green",
+                    "importeUnitario": 98.16,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Beef - Top Sirloin",
+                    "importeUnitario": 98.98,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Tea - Honey Green Tea",
+                    "importeUnitario": 12.72,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Wine - White, Pelee Island",
+                    "importeUnitario": 39.57,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Calypso - Black Cherry Lemonade",
+                    "importeUnitario": 92.96,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Liqueur Banana, Ramazzotti",
+                    "importeUnitario": 91.47,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Eggwhite Frozen",
+                    "importeUnitario": 98.13,
+                    "unidades": 17
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "cliente": "Tazzy",
+            "porcentajeIva": 20,
+            "productos": [
+                {
+                    "descripcion": "Sword Pick Asst",
+                    "importeUnitario": 58.16,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Pork - Bacon, Double Smoked",
+                    "importeUnitario": 66.81,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Isomalt",
+                    "importeUnitario": 67.15,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Beer - Upper Canada Lager",
+                    "importeUnitario": 4.04,
+                    "unidades": 19
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "cliente": "Youspan",
+            "porcentajeIva": 13,
+            "productos": [
+                {
+                    "descripcion": "Bread - Rolls, Rye",
+                    "importeUnitario": 71.81,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Guava",
+                    "importeUnitario": 20.39,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "French Pastry - Mini Chocolate",
+                    "importeUnitario": 21.4,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Myers Planters Punch",
+                    "importeUnitario": 84.1,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Appetizer - Smoked Salmon / Dill",
+                    "importeUnitario": 99.53,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Dragon Fruit",
+                    "importeUnitario": 44.09,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Wine - Red, Gamay Noir",
+                    "importeUnitario": 5.24,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Tea - Honey Green Tea",
+                    "importeUnitario": 81.41,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Yeast - Fresh, Fleischman",
+                    "importeUnitario": 62.05,
+                    "unidades": 7
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "cliente": "Twimbo",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Onions - Dried, Chopped",
+                    "importeUnitario": 3.28,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Gherkin - Sour",
+                    "importeUnitario": 20.8,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "The Pop Shoppe Pinapple",
+                    "importeUnitario": 68.54,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Mushroom - Porcini, Dry",
+                    "importeUnitario": 9.82,
+                    "unidades": 20
+                },
+                {
+                    "descripcion": "Wine - Zinfandel California 2002",
+                    "importeUnitario": 22.97,
+                    "unidades": 9
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "cliente": "Linklinks",
+            "porcentajeIva": 1,
+            "productos": [
+                {
+                    "descripcion": "Cherries - Frozen",
+                    "importeUnitario": 44.93,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Sprouts - Baby Pea Tendrils",
+                    "importeUnitario": 21.42,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Energy Drink",
+                    "importeUnitario": 2.8,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Water - San Pellegrino",
+                    "importeUnitario": 81.81,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Ecolab - Lime - A - Way 4/4 L",
+                    "importeUnitario": 79.17,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Stock - Beef, White",
+                    "importeUnitario": 78.53,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Spice - Peppercorn Melange",
+                    "importeUnitario": 4.93,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Rum - Dark, Bacardi, Black",
+                    "importeUnitario": 96.53,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Sauce - Fish 25 Ozf Bottle",
+                    "importeUnitario": 48.73,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Oil - Peanut",
+                    "importeUnitario": 49.99,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Puree - Mango",
+                    "importeUnitario": 35.61,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Ecolab Silver Fusion",
+                    "importeUnitario": 84.67,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Doilies - 8, Paper",
+                    "importeUnitario": 97.84,
+                    "unidades": 3
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "cliente": "Bubblebox",
+            "porcentajeIva": 5,
+            "productos": [
+                {
+                    "descripcion": "Lettuce - Arugula",
+                    "importeUnitario": 39.98,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Carbonated Water - Orange",
+                    "importeUnitario": 10.55,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Strawberries - California",
+                    "importeUnitario": 75.03,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Clams - Bay",
+                    "importeUnitario": 68.22,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Extract - Rum",
+                    "importeUnitario": 43.35,
+                    "unidades": 4
+                }
+            ]
+        },
+        {
+            "id": 39,
+            "cliente": "Devpoint",
+            "porcentajeIva": 6,
+            "productos": [
+                {
+                    "descripcion": "Appetizer - Asian Shrimp Roll",
+                    "importeUnitario": 11.29,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Beans - Navy, Dry",
+                    "importeUnitario": 52.17,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Jam - Raspberry,jar",
+                    "importeUnitario": 94.62,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Cheese - Ermite Bleu",
+                    "importeUnitario": 5.92,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Bread - Focaccia Quarter",
+                    "importeUnitario": 50.51,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Chestnuts - Whole,canned",
+                    "importeUnitario": 73.51,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Squash - Pattypan, Yellow",
+                    "importeUnitario": 92.9,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Containter - 3oz Microwave Rect.",
+                    "importeUnitario": 59.52,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Juice - Ocean Spray Kiwi",
+                    "importeUnitario": 15.91,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Beer - Mill St Organic",
+                    "importeUnitario": 68.26,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Container - Hngd Cll Blk 7x7x3",
+                    "importeUnitario": 36.52,
+                    "unidades": 9
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "cliente": "Reallinks",
+            "porcentajeIva": 9,
+            "productos": [
+                {
+                    "descripcion": "Bagels Poppyseed",
+                    "importeUnitario": 15.75,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Pear - Asian",
+                    "importeUnitario": 84.17,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Capers - Ox Eye Daisy",
+                    "importeUnitario": 50.97,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Longos - Assorted Sandwich",
+                    "importeUnitario": 58.59,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Muffin Hinge 117n",
+                    "importeUnitario": 4.43,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Soup - French Onion, Dry",
+                    "importeUnitario": 42.86,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Wine - Magnotta - Bel Paese White",
+                    "importeUnitario": 22.64,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Muffin Mix - Blueberry",
+                    "importeUnitario": 68.36,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Vinegar - Sherry",
+                    "importeUnitario": 14.71,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Bag - Regular Kraft 20 Lb",
+                    "importeUnitario": 70.3,
+                    "unidades": 4
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "cliente": "Topicblab",
+            "porcentajeIva": 13,
+            "productos": [
+                {
+                    "descripcion": "Beef - Kindney, Whole",
+                    "importeUnitario": 76.52,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Wine - Red, Marechal Foch",
+                    "importeUnitario": 35.39,
+                    "unidades": 11
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "cliente": "Topicstorm",
+            "porcentajeIva": 10,
+            "productos": [
+                {
+                    "descripcion": "Bread - Onion Focaccia",
+                    "importeUnitario": 50.63,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Oil - Sunflower",
+                    "importeUnitario": 23.15,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Onion - Dried",
+                    "importeUnitario": 81.5,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Wine - Casablanca Valley",
+                    "importeUnitario": 50.29,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Oil - Pumpkinseed",
+                    "importeUnitario": 18.17,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Bread - English Muffin",
+                    "importeUnitario": 14.32,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Onion - Dried",
+                    "importeUnitario": 41.53,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Coffee Cup 16oz Foam",
+                    "importeUnitario": 2.6,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Beer - Steamwhistle",
+                    "importeUnitario": 85.74,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Bagelers - Cinn / Brown Sugar",
+                    "importeUnitario": 89.29,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Carbonated Water - Blackcherry",
+                    "importeUnitario": 98.22,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Carbonated Water - Peach",
+                    "importeUnitario": 32.85,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Creme De Banane - Marie",
+                    "importeUnitario": 19.75,
+                    "unidades": 4
+                },
+                {
+                    "descripcion": "Mountain Dew",
+                    "importeUnitario": 87.65,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Wine - Cahors Ac 2000, Clos",
+                    "importeUnitario": 30.25,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Radish - Black, Winter, Organic",
+                    "importeUnitario": 39.08,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Tea - Orange Pekoe",
+                    "importeUnitario": 20.54,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Table Cloth 54x54 Colour",
+                    "importeUnitario": 61.81,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Nantucket - Orange Mango Cktl",
+                    "importeUnitario": 35.85,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Creme De Cacao Mcguines",
+                    "importeUnitario": 80.36,
+                    "unidades": 13
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "cliente": "Jaxbean",
+            "porcentajeIva": 3,
+            "productos": [
+                {
+                    "descripcion": "Sprouts - Brussel",
+                    "importeUnitario": 84.44,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Yogurt - Strawberry, 175 Gr",
+                    "importeUnitario": 10.81,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Wine - Bouchard La Vignee Pinot",
+                    "importeUnitario": 5.01,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Shrimp - Black Tiger 8 - 12",
+                    "importeUnitario": 73.06,
+                    "unidades": 8
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "cliente": "Yata",
+            "porcentajeIva": 2,
+            "productos": [
+                {
+                    "descripcion": "Beer - Alexander Kieths, Pale Ale",
+                    "importeUnitario": 93.09,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Appetizer - Smoked Salmon / Dill",
+                    "importeUnitario": 16.89,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Bread - White Mini Epi",
+                    "importeUnitario": 26.69,
+                    "unidades": 14
+                }
+            ]
+        },
+        {
+            "id": 45,
+            "cliente": "Twitternation",
+            "porcentajeIva": 18,
+            "productos": [
+                {
+                    "descripcion": "Beer - Original Organic Lager",
+                    "importeUnitario": 22.18,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Plasticforkblack",
+                    "importeUnitario": 54.34,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Fondant - Icing",
+                    "importeUnitario": 29.37,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Wasabi Powder",
+                    "importeUnitario": 49.14,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Wine - Montecillo Rioja Crianza",
+                    "importeUnitario": 70.63,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Pecan Raisin - Tarts",
+                    "importeUnitario": 46.48,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Vaccum Bag - 14x20",
+                    "importeUnitario": 60.08,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Muffin Mix - Chocolate Chip",
+                    "importeUnitario": 28.28,
+                    "unidades": 10
+                },
+                {
+                    "descripcion": "Pike - Frozen Fillet",
+                    "importeUnitario": 99.54,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Cheese - Comtomme",
+                    "importeUnitario": 69.61,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Grenadillo",
+                    "importeUnitario": 79.81,
+                    "unidades": 1
+                },
+                {
+                    "descripcion": "Truffle Cups - White Paper",
+                    "importeUnitario": 25.35,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Cookie Dough - Chocolate Chip",
+                    "importeUnitario": 80.11,
+                    "unidades": 16
+                },
+                {
+                    "descripcion": "Temperature Recording Station",
+                    "importeUnitario": 42.85,
+                    "unidades": 12
+                }
+            ]
+        },
+        {
+            "id": 46,
+            "cliente": "Yoveo",
+            "porcentajeIva": 17,
+            "productos": [
+                {
+                    "descripcion": "Wine - Fontanafredda Barolo",
+                    "importeUnitario": 47.44,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Herb Du Provence - Primerba",
+                    "importeUnitario": 61.63,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Leeks - Large",
+                    "importeUnitario": 80.97,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Chicken - Thigh, Bone In",
+                    "importeUnitario": 80.66,
+                    "unidades": 18
+                }
+            ]
+        },
+        {
+            "id": 47,
+            "cliente": "Wordtune",
+            "porcentajeIva": 3,
+            "productos": [
+                {
+                    "descripcion": "Crab - Dungeness, Whole",
+                    "importeUnitario": 22.4,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Cheese - Goat With Herbs",
+                    "importeUnitario": 41.95,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Shrimp - Black Tiger 16/20",
+                    "importeUnitario": 60.15,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Milk - Chocolate 500ml",
+                    "importeUnitario": 35.86,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Berry Brulee",
+                    "importeUnitario": 90.58,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Cheese - Cottage Cheese",
+                    "importeUnitario": 89.15,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Wine - Puligny Montrachet A.",
+                    "importeUnitario": 67.07,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Beef - Diced",
+                    "importeUnitario": 34.16,
+                    "unidades": 16
+                }
+            ]
+        },
+        {
+            "id": 48,
+            "cliente": "Yambee",
+            "porcentajeIva": 14,
+            "productos": [
+                {
+                    "descripcion": "Milk - Chocolate 250 Ml",
+                    "importeUnitario": 26.44,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Mikes Hard Lemonade",
+                    "importeUnitario": 83.0,
+                    "unidades": 3
+                },
+                {
+                    "descripcion": "Capon - Whole",
+                    "importeUnitario": 24.82,
+                    "unidades": 14
+                },
+                {
+                    "descripcion": "Chicken - Leg, Fresh",
+                    "importeUnitario": 71.96,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Turkey - Breast, Boneless Sk On",
+                    "importeUnitario": 2.41,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Island Oasis - Cappucino Mix",
+                    "importeUnitario": 39.01,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Veal - Bones",
+                    "importeUnitario": 70.41,
+                    "unidades": 11
+                },
+                {
+                    "descripcion": "Tortillas - Flour, 10",
+                    "importeUnitario": 4.38,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Sparkling Wine - Rose, Freixenet",
+                    "importeUnitario": 1.31,
+                    "unidades": 9
+                }
+            ]
+        },
+        {
+            "id": 49,
+            "cliente": "Oloo",
+            "porcentajeIva": 3,
+            "productos": [
+                {
+                    "descripcion": "Bagel - Sesame Seed Presliced",
+                    "importeUnitario": 76.66,
+                    "unidades": 17
+                },
+                {
+                    "descripcion": "Truffle Cups - Red",
+                    "importeUnitario": 75.87,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Country Roll",
+                    "importeUnitario": 4.58,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Stock - Fish",
+                    "importeUnitario": 63.98,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Lobster - Tail 6 Oz",
+                    "importeUnitario": 29.99,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Goat - Whole Cut",
+                    "importeUnitario": 93.65,
+                    "unidades": 6
+                },
+                {
+                    "descripcion": "Bacardi Raspberry",
+                    "importeUnitario": 6.48,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Tea - Apple Green Tea",
+                    "importeUnitario": 36.77,
+                    "unidades": 18
+                },
+                {
+                    "descripcion": "Maintenance Removal Charge",
+                    "importeUnitario": 83.89,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Tea - Black Currant",
+                    "importeUnitario": 53.16,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Wine - White, Antinore Orvieto",
+                    "importeUnitario": 5.52,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Wine - Port Late Bottled Vintage",
+                    "importeUnitario": 43.66,
+                    "unidades": 20
+                }
+            ]
+        },
+        {
+            "id": 50,
+            "cliente": "Dazzlesphere",
+            "porcentajeIva": 13,
+            "productos": [
+                {
+                    "descripcion": "Calypso - Black Cherry Lemonade",
+                    "importeUnitario": 80.83,
+                    "unidades": 8
+                },
+                {
+                    "descripcion": "Lemonade - Natural, 591 Ml",
+                    "importeUnitario": 49.79,
+                    "unidades": 19
+                },
+                {
+                    "descripcion": "Swiss Chard - Red",
+                    "importeUnitario": 77.27,
+                    "unidades": 15
+                },
+                {
+                    "descripcion": "Wine - Pinot Noir Latour",
+                    "importeUnitario": 53.87,
+                    "unidades": 5
+                },
+                {
+                    "descripcion": "Lid - 0090 Clear",
+                    "importeUnitario": 39.69,
+                    "unidades": 2
+                },
+                {
+                    "descripcion": "Carroway Seed",
+                    "importeUnitario": 58.89,
+                    "unidades": 12
+                },
+                {
+                    "descripcion": "Chilli Paste, Ginger Garlic",
+                    "importeUnitario": 95.2,
+                    "unidades": 7
+                },
+                {
+                    "descripcion": "Pork Casing",
+                    "importeUnitario": 13.73,
+                    "unidades": 9
+                },
+                {
+                    "descripcion": "Extract - Rum",
+                    "importeUnitario": 18.66,
+                    "unidades": 13
+                },
+                {
+                    "descripcion": "Melon - Cantaloupe",
+                    "importeUnitario": 82.63,
+                    "unidades": 15
+                }
+            ]
+        }
+    ],
+    "clientes": [
+        {
+            "id": 1,
+            "cliente": "Livetube"
+        },
+        {
+            "id": 2,
+            "cliente": "Cogidoo"
+        },
+        {
+            "id": 3,
+            "cliente": "Vimbo"
+        },
+        {
+            "id": 4,
+            "cliente": "Brainlounge"
+        },
+        {
+            "id": 5,
+            "cliente": "Eire"
+        },
+        {
+            "id": 6,
+            "cliente": "Eimbee"
+        },
+        {
+            "id": 7,
+            "cliente": "Shufflester"
+        },
+        {
+            "id": 8,
+            "cliente": "Buzzdog"
+        },
+        {
+            "id": 9,
+            "cliente": "Trunyx"
+        },
+        {
+            "id": 10,
+            "cliente": "Meeveo"
+        }
+    ],
+    "productos": [
+        {
+            "id": 1,
+            "descripcion": "Pastry - Apple Muffins - Mini",
+            "importeUnitario": 53
+        },
+        {
+            "id": 2,
+            "descripcion": "Wine - Cousino Macul Antiguas",
+            "importeUnitario": 68
+        },
+        {
+            "id": 3,
+            "descripcion": "Appetizer - Spring Roll, Veg",
+            "importeUnitario": 75
+        },
+        {
+            "id": 4,
+            "descripcion": "Bagel - Everything Presliced",
+            "importeUnitario": 17
+        },
+        {
+            "id": 5,
+            "descripcion": "Sage Derby",
+            "importeUnitario": 59
+        },
+        {
+            "id": 6,
+            "descripcion": "Wine - Cotes Du Rhone",
+            "importeUnitario": 24
+        },
+        {
+            "id": 7,
+            "descripcion": "Plasticknivesblack",
+            "importeUnitario": 32
+        },
+        {
+            "id": 8,
+            "descripcion": "Turkey - Ground. Lean",
+            "importeUnitario": 70
+        },
+        {
+            "id": 9,
+            "descripcion": "Cheese - St. Paulin",
+            "importeUnitario": 50
+        },
+        {
+            "id": 10,
+            "descripcion": "Chinese Lemon Pork",
+            "importeUnitario": 9
+        },
+        {
+            "id": 11,
+            "descripcion": "Syrup - Monin - Passion Fruit",
+            "importeUnitario": 66
+        },
+        {
+            "id": 12,
+            "descripcion": "Sambuca - Opal Nera",
+            "importeUnitario": 92
+        },
+        {
+            "id": 13,
+            "descripcion": "Chutney Sauce - Mango",
+            "importeUnitario": 22
+        },
+        {
+            "id": 14,
+            "descripcion": "Soup - Campbells Beef Noodle",
+            "importeUnitario": 39
+        },
+        {
+            "id": 15,
+            "descripcion": "Uniform Linen Charge",
+            "importeUnitario": 98
+        },
+        {
+            "id": 16,
+            "descripcion": "Parsnip",
+            "importeUnitario": 28
+        },
+        {
+            "id": 17,
+            "descripcion": "Pepper - Red Chili",
+            "importeUnitario": 58
+        },
+        {
+            "id": 18,
+            "descripcion": "Bread - Roll, Canadian Dinner",
+            "importeUnitario": 14
+        },
+        {
+            "id": 19,
+            "descripcion": "Pork - Backs - Boneless",
+            "importeUnitario": 54
+        },
+        {
+            "id": 20,
+            "descripcion": "Pastry - Apple Muffins - Mini",
+            "importeUnitario": 52
+        },
+        {
+            "id": 21,
+            "descripcion": "Wine - Casillero Del Diablo",
+            "importeUnitario": 43
+        },
+        {
+            "id": 22,
+            "descripcion": "Muffin - Carrot Individual Wrap",
+            "importeUnitario": 58
+        },
+        {
+            "id": 23,
+            "descripcion": "Soup - Campbells, Lentil",
+            "importeUnitario": 40
+        },
+        {
+            "id": 24,
+            "descripcion": "Wine - Pinot Noir Mondavi Coastal",
+            "importeUnitario": 24
+        },
+        {
+            "id": 25,
+            "descripcion": "Sausage - Andouille",
+            "importeUnitario": 16
+        },
+        {
+            "id": 26,
+            "descripcion": "Pastry - Baked Cinnamon Stick",
+            "importeUnitario": 36
+        },
+        {
+            "id": 27,
+            "descripcion": "Sour Puss Sour Apple",
+            "importeUnitario": 94
+        },
+        {
+            "id": 28,
+            "descripcion": "Bread - Focaccia Quarter",
+            "importeUnitario": 16
+        },
+        {
+            "id": 29,
+            "descripcion": "Salad Dressing",
+            "importeUnitario": 33
+        },
+        {
+            "id": 30,
+            "descripcion": "Wine - Red, Pelee Island Merlot",
+            "importeUnitario": 39
+        },
+        {
+            "id": 31,
+            "descripcion": "Icecream - Dstk Cml And Fdg",
+            "importeUnitario": 19
+        },
+        {
+            "id": 32,
+            "descripcion": "Cleaner - Comet",
+            "importeUnitario": 76
+        },
+        {
+            "id": 33,
+            "descripcion": "Sobe - Lizard Fuel",
+            "importeUnitario": 31
+        },
+        {
+            "id": 34,
+            "descripcion": "Sauce - Plum",
+            "importeUnitario": 92
+        },
+        {
+            "id": 35,
+            "descripcion": "Quail - Whole, Bone - In",
+            "importeUnitario": 29
+        },
+        {
+            "id": 36,
+            "descripcion": "Pasta - Gnocchi, Potato",
+            "importeUnitario": 34
+        },
+        {
+            "id": 37,
+            "descripcion": "Mortadella",
+            "importeUnitario": 3
+        },
+        {
+            "id": 38,
+            "descripcion": "Ketchup - Tomato",
+            "importeUnitario": 9
+        },
+        {
+            "id": 39,
+            "descripcion": "Syrup - Chocolate",
+            "importeUnitario": 52
+        },
+        {
+            "id": 40,
+            "descripcion": "Halibut - Fletches",
+            "importeUnitario": 16
+        },
+        {
+            "id": 41,
+            "descripcion": "Carbonated Water - Cherry",
+            "importeUnitario": 15
+        },
+        {
+            "id": 42,
+            "descripcion": "Juice - Mango",
+            "importeUnitario": 53
+        },
+        {
+            "id": 43,
+            "descripcion": "Cheese - Grana Padano",
+            "importeUnitario": 67
+        },
+        {
+            "id": 44,
+            "descripcion": "Anchovy In Oil",
+            "importeUnitario": 92
+        },
+        {
+            "id": 45,
+            "descripcion": "Tea - Lemon Scented",
+            "importeUnitario": 55
+        },
+        {
+            "id": 46,
+            "descripcion": "Hersey Shakes",
+            "importeUnitario": 5
+        },
+        {
+            "id": 47,
+            "descripcion": "Cucumber - Pickling Ontario",
+            "importeUnitario": 63
+        },
+        {
+            "id": 48,
+            "descripcion": "Mackerel Whole Fresh",
+            "importeUnitario": 38
+        },
+        {
+            "id": 49,
+            "descripcion": "Wine - Barbera Alba Doc 2001",
+            "importeUnitario": 9
+        },
+        {
+            "id": 50,
+            "descripcion": "Water - Mineral, Carbonated",
+            "importeUnitario": 8
+        },
+        {
+            "id": 51,
+            "descripcion": "Flavouring Vanilla Artificial",
+            "importeUnitario": 98
+        },
+        {
+            "id": 52,
+            "descripcion": "Clams - Littleneck, Whole",
+            "importeUnitario": 94
+        },
+        {
+            "id": 53,
+            "descripcion": "Yogurt - Peach, 175 Gr",
+            "importeUnitario": 84
+        },
+        {
+            "id": 54,
+            "descripcion": "Raspberries - Fresh",
+            "importeUnitario": 46
+        },
+        {
+            "id": 55,
+            "descripcion": "Asparagus - White, Canned",
+            "importeUnitario": 81
+        },
+        {
+            "id": 56,
+            "descripcion": "Beans - Butter Lrg Lima",
+            "importeUnitario": 89
+        },
+        {
+            "id": 57,
+            "descripcion": "Pecan Raisin - Tarts",
+            "importeUnitario": 75
+        },
+        {
+            "id": 58,
+            "descripcion": "Butter Balls Salted",
+            "importeUnitario": 1
+        },
+        {
+            "id": 59,
+            "descripcion": "Muffin - Mix - Bran And Maple 15l",
+            "importeUnitario": 67
+        },
+        {
+            "id": 60,
+            "descripcion": "Kellogs Cereal In A Cup",
+            "importeUnitario": 62
+        },
+        {
+            "id": 61,
+            "descripcion": "Pork - Inside",
+            "importeUnitario": 17
+        },
+        {
+            "id": 62,
+            "descripcion": "Beef Flat Iron Steak",
+            "importeUnitario": 11
+        },
+        {
+            "id": 63,
+            "descripcion": "Mangoes",
+            "importeUnitario": 100
+        },
+        {
+            "id": 64,
+            "descripcion": "Rosemary - Primerba, Paste",
+            "importeUnitario": 8
+        },
+        {
+            "id": 65,
+            "descripcion": "Potatoes - Peeled",
+            "importeUnitario": 84
+        },
+        {
+            "id": 66,
+            "descripcion": "Yogurt - Plain",
+            "importeUnitario": 9
+        },
+        {
+            "id": 67,
+            "descripcion": "Beef - Shank",
+            "importeUnitario": 60
+        },
+        {
+            "id": 68,
+            "descripcion": "Cake Circle, Paprus",
+            "importeUnitario": 85
+        },
+        {
+            "id": 69,
+            "descripcion": "Pepper - Chili Powder",
+            "importeUnitario": 92
+        },
+        {
+            "id": 70,
+            "descripcion": "Nectarines",
+            "importeUnitario": 40
+        },
+        {
+            "id": 71,
+            "descripcion": "Wine - Cave Springs Dry Riesling",
+            "importeUnitario": 82
+        },
+        {
+            "id": 72,
+            "descripcion": "Soup - Campbells, Creamy",
+            "importeUnitario": 85
+        },
+        {
+            "id": 73,
+            "descripcion": "Bamboo Shoots - Sliced",
+            "importeUnitario": 100
+        },
+        {
+            "id": 74,
+            "descripcion": "Gin - Gilbeys London, Dry",
+            "importeUnitario": 28
+        },
+        {
+            "id": 75,
+            "descripcion": "Longos - Assorted Sandwich",
+            "importeUnitario": 58
+        },
+        {
+            "id": 76,
+            "descripcion": "Wine - Beringer Founders Estate",
+            "importeUnitario": 76
+        },
+        {
+            "id": 77,
+            "descripcion": "Cheese - Brie Roitelet",
+            "importeUnitario": 50
+        },
+        {
+            "id": 78,
+            "descripcion": "Cognac - Courvaisier",
+            "importeUnitario": 99
+        },
+        {
+            "id": 79,
+            "descripcion": "Chocolate - Milk",
+            "importeUnitario": 94
+        },
+        {
+            "id": 80,
+            "descripcion": "Cheese - Comte",
+            "importeUnitario": 22
+        },
+        {
+            "id": 81,
+            "descripcion": "Wine - Conde De Valdemar",
+            "importeUnitario": 74
+        },
+        {
+            "id": 82,
+            "descripcion": "Containter - 3oz Microwave Rect.",
+            "importeUnitario": 39
+        },
+        {
+            "id": 83,
+            "descripcion": "Salt - Seasoned",
+            "importeUnitario": 75
+        },
+        {
+            "id": 84,
+            "descripcion": "Flour - Whole Wheat",
+            "importeUnitario": 82
+        },
+        {
+            "id": 85,
+            "descripcion": "Dill Weed - Fresh",
+            "importeUnitario": 3
+        },
+        {
+            "id": 86,
+            "descripcion": "Pastry - Choclate Baked",
+            "importeUnitario": 51
+        },
+        {
+            "id": 87,
+            "descripcion": "Soup - Campbells, Minestrone",
+            "importeUnitario": 27
+        },
+        {
+            "id": 88,
+            "descripcion": "Pasta - Fettuccine, Dry",
+            "importeUnitario": 40
+        },
+        {
+            "id": 89,
+            "descripcion": "Fork - Plastic",
+            "importeUnitario": 7
+        },
+        {
+            "id": 90,
+            "descripcion": "Wine - Mondavi Coastal Private",
+            "importeUnitario": 71
+        },
+        {
+            "id": 91,
+            "descripcion": "Longos - Lasagna Beef",
+            "importeUnitario": 49
+        },
+        {
+            "id": 92,
+            "descripcion": "Spice - Pepper Portions",
+            "importeUnitario": 53
+        },
+        {
+            "id": 93,
+            "descripcion": "Water - Spring Water 500ml",
+            "importeUnitario": 94
+        },
+        {
+            "id": 94,
+            "descripcion": "Foil - 4oz Custard Cup",
+            "importeUnitario": 82
+        },
+        {
+            "id": 95,
+            "descripcion": "Ostrich - Prime Cut",
+            "importeUnitario": 39
+        },
+        {
+            "id": 96,
+            "descripcion": "Lamb - Shoulder",
+            "importeUnitario": 46
+        },
+        {
+            "id": 97,
+            "descripcion": "Brandy Cherry - Mcguinness",
+            "importeUnitario": 31
+        },
+        {
+            "id": 98,
+            "descripcion": "Chicken - White Meat, No Tender",
+            "importeUnitario": 27
+        },
+        {
+            "id": 99,
+            "descripcion": "Puree - Blackcurrant",
+            "importeUnitario": 96
+        },
+        {
+            "id": 100,
+            "descripcion": "Nut - Pumpkin Seeds",
+            "importeUnitario": 36
+        }
+    ]
+}

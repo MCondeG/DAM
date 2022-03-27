@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+    <ion-title>Title</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label position="floating" color="primary">first_name</ion-label>
+      <ion-input type="text" formControlName="first_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">last_name</ion-label>
+      <ion-input type="text" formControlName="last_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">address</ion-label>
+      <ion-input type="text" formControlName="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">city</ion-label>
+      <ion-input type="text" formControlName="city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <label>
+        <span> Male</span>
+        <input type="radio" value="Male" formControlName="gender"
+          [checked]="validations_form.get('gender').value == 'Male'">
+      </label>
+      <label>
+        <span> Female</span>
+        <input type="radio" value="Female" formControlName="gender"
+          [checked]="validations_form.get('gender').value == 'Female'">
+      </label>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="primary">avatar</ion-label>
+      <ion-input type="text" formControlName="avatar" hidden></ion-input>
+      <ion-avatar>
+        <img [src]="alumno.avatar">
+      </ion-avatar>      
+      <ion-button color="primary" shape="round" size="medium">
+        <input type="file" (change)="imageOnChange($event.target.files)" />
+      </ion-button>  
+ </ion-item>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Submit data</ion-button>
+  </form>
+</ion-content>

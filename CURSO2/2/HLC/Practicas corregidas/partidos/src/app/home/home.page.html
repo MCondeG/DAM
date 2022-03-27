@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating" color="primary">fecha</ion-label>
+            <ion-input type="date" formControlName="fecha"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <div formGroupName="equiposGroup">
+        <ion-row>
+          <ion-col size="12" size-sm="6">
+            <ion-item>
+              <ion-label position="floating" color="primary">equipo local</ion-label>
+              <ion-select formControlName="equipoLocal" cancelText="Cancel" okText="OK"
+                (ionChange)="onChangeEquipo($event)">
+                <ion-select-option *ngFor="let equipo of equipos" [value]="equipo">{{equipo.equipo}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="6">
+            <ion-item>
+              <ion-label position="floating" color="primary">equipo visitante</ion-label>
+              <ion-select formControlName="equipoVisitante" cancelText="Cancel" okText="OK"
+                (ionChange)="onChangeEquipo($event)">
+                <ion-select-option *ngFor="let equipo of equipos" [value]="equipo">{{equipo.equipo}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="formulario.get('fecha').valid && formulario.get('equiposGroup').valid">
+        <ion-row>
+          <ion-col size="12" size-sm="6" size-md="3">
+            <ion-item>
+              <ion-label position="floating" color="primary">goles local</ion-label>
+              <ion-input type="number" formControlName="golesEquipoLocal"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-md="3">
+
+            <ion-item>
+              <ion-label position="floating" color="primary">goles visitante</ion-label>
+              <ion-input type="number" formControlName="golesEquipoVisitante"></ion-input>
+            </ion-item>
+          </ion-col>
+          <!--
+      {{formulario.get('equiposGroup').get('equipoLocal').value.jugadores}}
+      -->
+          <ion-col size="12" size-sm="6" size-md="3">
+
+            <ion-item>
+              <ion-label position="floating" color="primary">jugadores local</ion-label>
+              <ion-select multiple formControlName="jugadoresEquipoLocal" cancelText="Cancel" okText="OK">
+                <ion-select-option
+                  *ngFor="let jugador of formulario.get('equiposGroup').get('equipoLocal').value.jugadores"
+                  [value]="jugador">{{jugador}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-sm="6" size-md="3">
+
+            <ion-item>
+              <ion-label position="floating" color="primary">jugadores visitante</ion-label>
+              <ion-select multiple formControlName="jugadoresEquipoVisitante" cancelText="Cancel" okText="OK">
+                <ion-select-option
+                  *ngFor="let jugador of formulario.get('equiposGroup').get('equipoVisitante').value.jugadores"
+                  [value]="jugador">{{jugador}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formulario.valid">
+        Enviar</ion-button>
+    </ion-grid>
+  </form>
+</ion-content>

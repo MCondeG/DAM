@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="buscarReservas()">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Hoteles
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let hotel of hoteles; let indice=index;">
+    <ion-grid>
+      <ion-row (click)='nuevaReserva(indice);'>
+        <ion-col size=6>{{hotel.nombre}}</ion-col>
+        <ion-col size=6>{{hotel.ciudad}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  
+</ion-content>

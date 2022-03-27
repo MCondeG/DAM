@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="nuevaFactura()">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Facturas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let factura of facturas; let indice=index;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size=2>{{factura.id}}</ion-col>
+        <ion-col size=5>{{factura.cliente}}</ion-col>
+        <ion-col size=5 class="ion-text-end">{{factura.getStringImporteTotalConIva()}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
