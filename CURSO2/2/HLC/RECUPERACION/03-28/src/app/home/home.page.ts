@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiServiceProvider } from 'src/providers/api-service/api-service';
-import { Pelicula } from '../modelo/Pelicula';
+import { Movie } from '../modelo/Movie';
 
 @Component({
   selector: 'app-home',
@@ -10,37 +10,22 @@ import { Pelicula } from '../modelo/Pelicula';
 
 export class HomePage {
 
-  movies: Pelicula[] = new Array();
+  movies: Movie[] = new Array();
   movieName: string;
 
 
   constructor(private apiService: ApiServiceProvider) {}
 
 
-  getMovies() {
-    this.apiService.getMovies(this.movieName)
-      .then((data: any) => {
-        this.characters = data.characters;
-        this.totalCharacters = data.total;
-        this.offset=data.offset;
-        //si el offset es 0, 10 elementos por página y hay 10 personajes
-        //(0+10) < 10    da falso, por tanto es la última página
-        if ((this.offset + this.elementosPorPagina) < this.totalCharacters) {
-          this.ultimaPagina = false;
-        }
-        else {
-          this.ultimaPagina = true;
-        }
+
+  buscarPelicula(nombre) {
+    console.log(nombre)
+    this.apiService.getMovies(nombre)
+      .then((movie: Movie[]) => {
+        this.movies = movie
       })
       .catch((error: string) => {
         console.log(error);
-        this.characters=new Array();
-        this.offset=0;
       });
-  }
-
-  searchNameClick(){
-    this.offset=0;
-    this.getCharacters();
   }
 }

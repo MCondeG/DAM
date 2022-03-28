@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+      <ion-label position="stacked" color="primary">fecha de nacimiento</ion-label>
+      <ion-input type="text" placeholder="yyyy-mm-dd" formControlName="fechaNacimiento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="primary">dni</ion-label>
+      <ion-input type="text" placeholder="99999999X" formControlName="dni"></ion-input>
+    </ion-item>
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Login</ion-button>
+    </form>
+</ion-content>

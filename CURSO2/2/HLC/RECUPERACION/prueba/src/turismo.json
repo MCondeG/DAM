@@ -1,0 +1,86 @@
+{
+  "ciudades": [
+    {
+      "id": 1,
+      "ciudad": "Sevilla",
+      "coordenada": {"latitud":37.393504,"longitud":-5.983887},
+      "hoteles": [
+		{
+		  "latitud": 37.381499,
+		  "longitud":  -5.992988,
+		  "hotel": "Alfonso XIII",
+		  "descripcion":"El Hotel Alfonso XIII es un edificio histórico situado en la ciudad de Sevilla, entre la Puerta de Jerez, el Palacio de San Telmo y la Fábrica de Tabacos. El hotel es propiedad del Ayuntamiento de Sevilla y actualmente ofrece sus servicios, en régimen de concesión administrativa, a través a la cadena hotelera The Luxury Collection by Starwood.",
+		  "comentarios": [
+					{"fecha":"1-1-2017","comentario":"De viaje romántico y sorpresivo para mi mujer que mejor que hospedarse en este magnífico, ornamentado y céntrico hotel, fundado en 1929 que se encuentra muy cerca del Real Alcázar. Con un trato exquisito y un servicio inigualable, hotel muy recomendable para fin de semana en pareja y disfrutar de la magia de Sevilla."},
+					{"fecha":"2-3-2017","comentario":"Sólo me he tomado un café en su patio, y con eso tengo suficiente. Es trasladarse a otra época, a la Inglaterra Victoriana, al lujo archilujoso, al recochineo de lujo. Te corta entrar de lo lujoso que es..."}
+				]
+		},
+		{
+		  "latitud": 37.390875,
+		  "longitud": -5.998769,
+		  "hotel": "Hotel Colón",
+		  "descripcion":"Ubicado en el centro histórico, la experiencia en este hotel de 5 estrellas ofrece un toque vanguardista del servicio de lujo tradicional perfecto para viajes de ocio y negocios.",
+		  "comentarios": [
+					{"fecha":"1-5-2018","comentario":"En pleno centro de Sevilla se encuentra este maravilloso hotel. Nos alojamos solo una noche porque estábamos de paso por la ciudad y fue una experiencia inolvidable. El check-in lo hicimos con Patricia, una chica adorable que nos asignó una magníficas habitaciones. Como íbamos 2 parejas nos ofreció una copa de cava para amenizar la espera. Las habitaciones eran amplias,muy acogedoras y con mobiliario de diseño. El buffet desayuno de 10, con posibilidad de pedir algunos platos a la carta. A la salida nos atendió Rosana, muy eficiente y sobretodo cordial. Nos invito a volver y sin duda lo haremos. El personal de este lujoso hotel fue sin duda fue lo mejor, siempre atentos y serviciales hicieron que la experiencia fuera única. Muchas gracias por todo y esperamos volver a la mayor brevedad."},
+					{"fecha":"2-7-2018","comentario":"Han sido 2 dias de ensueño y magia. He recibido tantas atenciones y cariño en este magnifico hotel que enumerarlas seria infinito. Significa mucho cada vez que un trabajador de este hotel te saluda con la mano en el corazon, en verdad te estan diciendo que su atencion sera desde el corazon, cosa bellisima. Soy trabajador (pianista) del Melia Benidorm y me siento orgulloso de ser parte de esta familia. Un saludo fraternal para todos ustedes trabajadores del Gran Melia Colon, Sevilla."}
+     				]
+    		}
+	],
+        "monumentos": [
+		{
+		  "latitud": 37.386294,
+		  "longitud":  -5.992710,
+		  "monumento": "Giralda",
+		  "historia":"Reseña histórica de la giralda de sevilla"
+		},
+		{
+		  "latitud": 37.382541,
+		  "longitud": -5.996638,
+		  "monumento": "Torre del oro",
+		  "historia":"Reseña histórica de la torre del oro"
+		}
+     	]
+    },
+    {
+      "id": 2,
+      "ciudad": "Granada",
+      "coordenada": {"latitud":37.176356,"longitud": -3.596520},
+      "hoteles": [
+		{
+		  "latitud": 37.176100,
+		  "longitud":  -3.587099,
+		  "hotel": "Parador de Granada",
+		  "descripcion":"",
+		  "comentarios": [
+					{"fecha":"1-1-2017","comentario":"un lugar excelente y espero que haya sido una experiencia que vuelva a repetir. El lugar es encantador ,las habitaciones muy amplias y silenciosas. El restaurante esta muy bien y a un precio muy bueno. tambien dire que el cafe espresso ha sido lo mas flujo que he encontrado en mi estancia .Gracias y hasta pronto"},
+					{"fecha":"2-3-2017","comentario":"En general todo muy bien, el servicio inmejorable, la única inconveniencia ha sido mi asma que no me perdona una y dadas las características de la construcción, me resiento de los cambios de temperatura."}
+				]
+		},
+		{
+		  "latitud": 37.173194,
+		  "longitud": -3.598288,
+		  "hotel": "Meliá Granada",
+		  "descripcion":"",
+		  "comentarios": [
+					{"fecha":"1-5-2018","comentario":"Hotel muy bien ubicado, puedes ir a pie a todos los rincones de Granada. Buen servicio del personal del hotel y muy limpio. Destacaría los desayunos por su gran variedad y, por decir algo negativo, ya que en líneas generales es un hotel que nos gustó muchísimo, la habitación que nos tocó, era un poco pequeña."},
+					{"fecha":"2-7-2018","comentario":"un hotel un poco antiguo, muy confortable, quizá las ventanas deberían recibir un mejor mantenimiento. Trato bueno, muy céntrico. LO peor el aparcamiento, que no está en el propio hotel y tiene las plazas muy justas de tamaño."}
+     				]
+    		}
+	],
+        "monumentos": [
+		{
+		  "latitud": 37.176840,
+		  "longitud":  -3.590377,
+		  "monumento": "La alhambra",
+		  "historia":"La Alhambra es una ciudad palatina andalusí situada en Granada, en la comunidad autónoma de Andalucía, España. Consiste en un conjunto de palacios, jardines y fortaleza (alcázar) que albergaba una verdadera ciudadela dentro de la propia ciudad de Granada, que servía como alojamiento al monarca y a la corte del Reino nazarí de Granada. "
+		},
+		{
+		  "latitud": 37.176575,
+		  "longitud": -3.599195,
+		  "monumento": "Catedral de Granada",
+		  "historia":"La Santa Iglesia Catedral Metropolitana de la Encarnación de Granada es un templo católico de la ciudad española de Granada, sede de la archidiócesis de la ciudad. El templo es una de las obras cumbres del Renacimiento español."
+		}
+     	]
+     }
+  ]
+}
