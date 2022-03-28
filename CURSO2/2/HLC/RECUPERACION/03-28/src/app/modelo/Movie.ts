@@ -1,12 +1,5 @@
 export class Movie {
 
-
-    private name: string;
-    private date: string;
-    private score: number;
-    private thumbnail: string;
-
-
     constructor(public vote_count: number,
         public id: number,
         public video: boolean,

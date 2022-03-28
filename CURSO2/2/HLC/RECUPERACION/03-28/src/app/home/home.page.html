@@ -11,7 +11,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let movie of movies; let indice=index;" (click)="characterClick(indice)">
+    <ion-item *ngFor = "let movie of movies; let indice = index;">
       <ion-thumbnail slot="start">
         <img src = {{movie.thumbnail}}>
       </ion-thumbnail>
