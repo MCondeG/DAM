@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiServiceProvider } from 'src/providers/api-service/api-service';
+import { ApiService } from 'src/providers/api-service/api-service';
 import { Movie } from '../modelo/Movie';
 
 @Component({
@@ -14,15 +14,13 @@ export class HomePage {
   movieName: string;
 
 
-  constructor(private apiService: ApiServiceProvider) {}
+  constructor(private apiService: ApiService) {}
 
 
-
-  buscarPelicula(nombre) {
-    console.log(nombre)
-    this.apiService.getMovies(nombre)
-      .then((movie: Movie[]) => {
-        this.movies = movie
+  buscarPelicula() {
+    this.apiService.getMovies(this.movieName)
+      .then((busqueda: Movie[]) => {
+        this.movies = busqueda;
       })
       .catch((error: string) => {
         console.log(error);

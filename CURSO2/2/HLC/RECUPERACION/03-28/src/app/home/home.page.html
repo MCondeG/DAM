@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="searchNameClick()">
+      <ion-button (click)="buscarPelicula()">
         <ion-icon slot="icon-only" name="search" size='small'></ion-icon>
       </ion-button>
       <ion-input placeholder="nombre" [(ngModel)]="movieName"></ion-input>
@@ -9,13 +9,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-list>
-    <ion-item *ngFor = "let movie of movies; let indice = index;">
-      <ion-thumbnail slot="start">
-        <img src = {{movie.thumbnail}}>
-      </ion-thumbnail>
-      {{movie.name}}
-    </ion-item>
+    <ion-row>
+      <ion-item *ngFor = "let movie of movies; let indice = index;">
+        <ion-col size=8>{{movie.title}}</ion-col>
+      </ion-item>
+    </ion-row>
   </ion-list>
 </ion-content>
