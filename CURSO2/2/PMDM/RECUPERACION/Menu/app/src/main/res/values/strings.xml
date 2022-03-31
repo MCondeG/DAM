@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Menu</string>
     <string name="item1">Añadir posición</string>
-    <string name="item2">Añadir tramo</string>
+    <string name="item2">Ver posiciones</string>
+    <string name="textView1">Nombre</string>
+    <string name="textView2">Latitud</string>
+    <string name="textView3">Longitud</string>
 </resources>

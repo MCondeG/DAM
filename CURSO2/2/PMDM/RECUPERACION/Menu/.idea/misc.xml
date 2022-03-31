@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2817028985507246" />
+        <entry key="app/src/main/res/layout/activity_posicion.xml" value="0.19010416666666666" />
+        <entry key="app/src/main/res/layout/activity_tramo.xml" value="0.20520833333333333" />
+        <entry key="app/src/main/res/layout/formulario_insertar_posicion.xml" value="0.33" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.2817028985507246" />
         <entry key="app/src/main/res/menu/menu_toolbar.xml" value="0.35625" />
       </map>

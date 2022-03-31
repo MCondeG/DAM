@@ -1,3 +1,6 @@
+package xml;
+
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -10,13 +13,13 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 
-public class DaoXML {
+public class ParserXML {
 
     
     private DefaultHandler handler;
     
     
-    public DaoXML(DefaultHandler handler){
+    public ParserXML(DefaultHandler handler){
         this.handler = handler;
     }
     
