@@ -10,11 +10,17 @@ import { Movie } from '../modelo/Movie';
 
 export class HomePage {
 
-  movies: Movie[] = new Array();
+  movies: Movie[];
   movieName: string;
 
 
   constructor(private apiService: ApiService) {}
+
+
+  ngOnInit() {
+
+    this.movies = new Array<Movie>();
+  }
 
 
   buscarPelicula() {

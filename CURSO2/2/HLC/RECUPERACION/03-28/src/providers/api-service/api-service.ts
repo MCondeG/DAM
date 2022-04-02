@@ -9,6 +9,7 @@ export class ApiService {
     private API_key = "&api_key=5fbddf6b517048e25bc3ac1bbeafb919";
     private URL: string;
 
+    
     constructor(public http: HttpClient) {
     }
 

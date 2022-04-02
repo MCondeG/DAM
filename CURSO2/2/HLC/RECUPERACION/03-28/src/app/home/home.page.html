@@ -12,8 +12,22 @@
 <ion-content>
   <ion-list>
     <ion-row>
-      <ion-item *ngFor = "let movie of movies; let indice = index;">
-        <ion-col size=8>{{movie.title}}</ion-col>
+      <ion-item *ngFor="let movie of movies; let indice=index;">
+        <ion-col size="5">
+          {{movie.title}}
+          {{movie.release_date}}
+          {{movie.vote_average}}
+        </ion-col>
+        <ion-col size="4">
+          <ion-thumbnail>
+            <img src="{{movie.poster_path}}">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button>
+            <ion-icon name="star"></ion-icon>
+          </ion-button>
+        </ion-col>
       </ion-item>
     </ion-row>
   </ion-list>
