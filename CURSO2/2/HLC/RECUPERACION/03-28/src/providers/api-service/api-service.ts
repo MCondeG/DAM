@@ -22,6 +22,7 @@ export class ApiService {
                     let movies: Movie[] = new Array<Movie>();
                     let datos = data['results'];
                     for (let dato of datos) {
+                        console.log(dato);
                         let movie = new Movie(
                             dato['id'],
                             dato['title'],

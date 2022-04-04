@@ -43,14 +43,14 @@ export class HomePage implements OnInit {
         Validators.pattern('[0-9]{8,8}[A-Za-z]'),
         Validators.required
       ])),
-      FECHA: new FormControl('', Validators.required)
-    }, (formGroup: FormGroup) => {
-      return this.FechaValida(formGroup);
+      FECHA: new FormControl('', Validators.compose([
+        this.validDate,
+        Validators.pattern('^([0-9]{4}[-]{1}[0-9]{2}[-]{1}[0-9]{2})+$'),
+        Validators.required
+      ]))
     });
 
-    this.validations_form = this.formBuilder.group({
-      datos: this.datos
-    });
+    this.validations_form = this.formBuilder.group({datos: this.datos});
   }
 
   onSubmit(values) {
@@ -64,23 +64,23 @@ export class HomePage implements OnInit {
   }
 
   validDNI(fc: FormControl) {
+
     var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
     var numeros = fc.value.substring(0, fc.value.length - 1);
     var numero = numeros % 23;
     var letraCorr = letras.charAt(numero);
-    var letra = fc.value.substring(8, 9);
-    if (letraCorr != letra) {
-      return ({ validDNI: true });
-    } else {
-      return (null);
-    }
+    var letra = fc.value.substring(8, 9).toUpperCase();
+
+    if (letraCorr != letra) return ({ validDNI: true });
+    else return (null);
+  
   }
 
-  FechaValida (fg: FormGroup) {
+  validDate(fc: FormControl) {
 
-    var fecha: string = fg.controls['FECHA'].value;
+    var fecha: Date = fc.value;
 
-    if ((moment(fecha).isBefore('2000-01-01')) && (this.validations_form.get('datos').get('DNI').valid)) return null;
-    else return {datos: true};
+    if (moment(fecha).isBefore('2000-01-01')) return null;
+    else return ({ validDate: true })
   }
 }
