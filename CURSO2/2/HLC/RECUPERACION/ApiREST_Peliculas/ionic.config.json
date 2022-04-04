@@ -1,0 +1,7 @@
+{
+  "name": "ApiREST_Peliculas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
