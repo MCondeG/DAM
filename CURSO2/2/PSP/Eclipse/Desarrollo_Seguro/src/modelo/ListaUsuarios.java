@@ -4,26 +4,29 @@ import java.util.ArrayList;
 
 public class ListaUsuarios {
 	
-	private ArrayList<Usuario> Usuarios;
+	private ArrayList<Usuario> usuarios;
 	
 	
 	
 	public ListaUsuarios() {
 		
-		this.Usuarios = new ArrayList<Usuario>();
+		this.usuarios = new ArrayList<Usuario>();
 	}
 
 
 	
 	public ArrayList<Usuario> getUsuarios() {
-		return Usuarios;
+		return usuarios;
 	}
 
 
 	public void setUsuarios(ArrayList<Usuario> usuarios) {
-		this.Usuarios = usuarios;
+		this.usuarios = usuarios;
 	}
 	
 	
-	
+	public void añadirUsuario(String name, String password) {
+		
+		this.usuarios.add(new Usuario(name, password));
+	}
 }

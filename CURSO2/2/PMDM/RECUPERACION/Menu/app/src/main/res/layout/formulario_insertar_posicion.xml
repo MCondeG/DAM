@@ -12,29 +12,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nombre" />
+        android:text="@string/editText1"
+        android:hint="Nombre" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Latitud" />
+        android:text="@string/editText2"
+        android:hint="Latitud" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Longitud" />
+        android:text="@string/editText3"
+        android:hint="Longitud"/>
 
 </LinearLayout>
