@@ -1,5 +1,7 @@
 package modelo;
 
+import controlador.Seguridad;
+
 public class Usuario {
 	
 	private String name;
@@ -13,7 +15,7 @@ public class Usuario {
 	public Usuario (String name, String password) {
 		
 		this.name = name;
-		this.password = password;
+		this.password = Seguridad.codificarPassword(password);
 	}
 	
 
@@ -31,5 +33,12 @@ public class Usuario {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	
+	@Override
+	public String toString() {
+		
+		return ("Usuario [NAME = " + this.name + ", PASSWORD = " + this.password + "]");
 	}
 }

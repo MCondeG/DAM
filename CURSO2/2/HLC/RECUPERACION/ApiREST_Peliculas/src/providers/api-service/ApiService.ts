@@ -32,6 +32,9 @@ export class ApiService {
                             dato['vote_count'],
                             dato['overview'],
                             dato['poster_path']);
+
+                            if(movie.poster_path != null) movie.poster_path = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+
                         movies.push(movie);
                     }
                     resolve(movies);

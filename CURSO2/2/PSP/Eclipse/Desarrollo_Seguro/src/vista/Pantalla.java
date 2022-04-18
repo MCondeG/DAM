@@ -4,15 +4,14 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 
-import modelo.ListaUsuarios;
+import controlador.Ficheros;
+import modelo.Usuario;
 
-import javax.swing.JTextArea;
-import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -23,7 +22,7 @@ public class Pantalla {
 	private JTextField textField;
 	private JPasswordField passwordField;
 	
-	private ListaUsuarios usuarios;
+	private Ficheros fichero;
 
 	/**
 	 * Launch the application.
@@ -53,7 +52,7 @@ public class Pantalla {
 	 */
 	private void initialize() {
 		
-		this.usuarios = new ListaUsuarios();
+		this.fichero = new Ficheros();
 		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
@@ -65,7 +64,14 @@ public class Pantalla {
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				usuarios.añadirUsuario(textField.getText(), passwordField.getText());
+				try {
+					fichero.guardarUsuario(new Usuario(textField.getText(), passwordField.getText()));
+					
+					textField.setText("");
+					passwordField.setText("");
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
 		

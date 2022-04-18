@@ -1,0 +1,4 @@
+Usuario [NAME = manuel, PASSWORD = MGNeC0fZrJ2mNTqeXQAPyQ==]
+Usuario [NAME = pepe, PASSWORD = NENpMhqiypNAtpAhoB9YCg==]
+Usuario [NAME = juan, PASSWORD = P6D/ZccbFS7hfjDu2+2R6A==]
+Usuario [NAME = wregrrgwe, PASSWORD = rZokRVLgKV5a4mDtHtZ7Lw==]
