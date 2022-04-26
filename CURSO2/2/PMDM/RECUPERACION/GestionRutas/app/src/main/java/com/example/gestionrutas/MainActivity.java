@@ -20,6 +20,7 @@ import com.example.gestionrutas.modelo.Posicion;
 import com.example.gestionrutas.modelo.colecciones.ListaGlobal;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -30,11 +31,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private ListaGlobal datos = ListaGlobal.getGlobalData();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //testing
+        datos.getPosiciones().insertar("sevilla", "1", "1");
+        datos.getPosiciones().insertar("cadiz", "2", "2");
+        datos.getPosiciones().insertar("granada", "3", "3");
 
         this.inicializaVariables();
 
@@ -73,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-        parent.setSelection(pos);
     }
 
     @Override
@@ -98,6 +102,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 EditText editText2 = (EditText) view.findViewById(R.id.editText2);
                 EditText editText3 = (EditText) view.findViewById(R.id.editText3);
 
+                ArrayAdapter<Posicion> spinnerAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, datos.getPosiciones().getListaPosiciones());
+
                 builder = new AlertDialog.Builder(this);
                 builder.setTitle("Añadir Posición")
                         .setView(view)
@@ -107,6 +113,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             String longitud = editText3.getText().toString();
 
                             datos.getPosiciones().insertar(nombre, latitud, longitud);
+
+
 
                             editText1.setText("");
                             editText2.setText("");
@@ -119,16 +127,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 2:
                 view = inflater.inflate(R.layout.formulario_tramo, null);
 
-                ArrayList<Posicion> posiciones = datos.getPosiciones().getListaPosiciones();
+
+                spinnerAdapter.notifyDataSetChanged();
+
 
                 Spinner spinner1 = view.findViewById(R.id.spinner1);
                 Spinner spinner2 = view.findViewById(R.id.spinner2);
 
-                ArrayAdapter<Posicion> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, posiciones);
-
-                spinner1.setAdapter(adapter);
+                spinner1.setAdapter(spinnerAdapter);
                 spinner1.setOnItemSelectedListener(this);
-                spinner2.setAdapter(adapter);
+                spinner2.setAdapter(spinnerAdapter);
                 spinner2.setOnItemSelectedListener(this);
 
                 builder = new AlertDialog.Builder(this);

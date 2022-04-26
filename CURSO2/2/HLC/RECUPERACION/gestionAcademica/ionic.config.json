@@ -1,0 +1,7 @@
+{
+  "name": "gestionAcademica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
