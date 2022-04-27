@@ -16,18 +16,16 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.Spinner;
 
-import com.example.gestionrutas.modelo.Posicion;
+import com.example.gestionrutas.modelo.entidades.Posicion;
 import com.example.gestionrutas.modelo.colecciones.ListaGlobal;
-
-import java.util.ArrayList;
-import java.util.stream.Collectors;
+import com.example.gestionrutas.vista.ModoDia;
+import com.example.gestionrutas.vista.ModoNoche;
 
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Toolbar toolbar;
-    private AlertDialog dialogo1;
-    private AlertDialog dialogo2;
+    private AlertDialog dialogo;
 
     private ListaGlobal datos = ListaGlobal.getGlobalData();
 
@@ -36,12 +34,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //testing
-        datos.getPosiciones().insertar("sevilla", "1", "1");
-        datos.getPosiciones().insertar("cadiz", "2", "2");
-        datos.getPosiciones().insertar("granada", "3", "3");
-
         this.inicializaVariables();
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.contenedor, new ModoDia())
+                .commit();
 
         setSupportActionBar(this.toolbar);
     }
@@ -49,8 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void inicializaVariables() {
 
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
-        this.dialogo1 = alertDialogConstructor(1).create();
-        this.dialogo2 = alertDialogConstructor(2).create();
+        this.dialogo = null;
     }
 
 
@@ -62,22 +59,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        switch(item.getItemId()){
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
             case R.id.item1:
-                this.dialogo1.show();
+                this.dialogo = this.alertDialogConstructor(1).create();
                 break;
             case R.id.item2:
-                this.dialogo2.show();
+                this.dialogo = this.alertDialogConstructor(2).create();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + item.getItemId());
         }
+
+        this.dialogo.show();
         return true;
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+
     }
 
     @Override
@@ -91,7 +92,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private AlertDialog.Builder alertDialogConstructor(int caso) {
 
         LayoutInflater inflater = getLayoutInflater();
-        View view;
+        View view = null;
+        ArrayAdapter<Posicion> spinnerAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, datos.getPosiciones().getListaPosiciones());
         AlertDialog.Builder builder = null;
 
         switch (caso) {
@@ -102,8 +104,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 EditText editText2 = (EditText) view.findViewById(R.id.editText2);
                 EditText editText3 = (EditText) view.findViewById(R.id.editText3);
 
-                ArrayAdapter<Posicion> spinnerAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, datos.getPosiciones().getListaPosiciones());
-
                 builder = new AlertDialog.Builder(this);
                 builder.setTitle("Añadir Posición")
                         .setView(view)
@@ -113,8 +113,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             String longitud = editText3.getText().toString();
 
                             datos.getPosiciones().insertar(nombre, latitud, longitud);
-
-
+                            spinnerAdapter.notifyDataSetChanged();
 
                             editText1.setText("");
                             editText2.setText("");
@@ -126,10 +125,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 2:
                 view = inflater.inflate(R.layout.formulario_tramo, null);
-
-
-                spinnerAdapter.notifyDataSetChanged();
-
 
                 Spinner spinner1 = view.findViewById(R.id.spinner1);
                 Spinner spinner2 = view.findViewById(R.id.spinner2);

@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3411458333333333" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/formulario_posicion.xml" value="0.34148550724637683" />
         <entry key="app/src/main/res/layout/formulario_tramo.xml" value="0.34148550724637683" />
+        <entry key="app/src/main/res/layout/fragment_modo_dia.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_modo_noche.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.34148550724637683" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.34148550724637683" />
         <entry key="app/src/main/res/menu/menu_toolbar.xml" value="0.35625" />

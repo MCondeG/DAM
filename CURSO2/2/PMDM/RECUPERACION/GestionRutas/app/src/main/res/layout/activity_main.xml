@@ -8,6 +8,10 @@
     tools:context=".MainActivity">
 
     <include
+        android:id="@+id/contenedor"
+        layout="@layout/content_main" />
+
+    <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"/>
 

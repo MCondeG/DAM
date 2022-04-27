@@ -1,4 +1,4 @@
-package com.example.gestionrutas.modelo;
+package com.example.gestionrutas.modelo.entidades;
 
 import java.io.Serializable;
 

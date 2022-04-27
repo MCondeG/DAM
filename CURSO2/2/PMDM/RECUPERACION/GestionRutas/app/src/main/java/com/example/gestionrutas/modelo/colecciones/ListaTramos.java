@@ -1,7 +1,7 @@
 package com.example.gestionrutas.modelo.colecciones;
 
-import com.example.gestionrutas.modelo.Posicion;
-import com.example.gestionrutas.modelo.Tramo;
+import com.example.gestionrutas.modelo.entidades.Posicion;
+import com.example.gestionrutas.modelo.entidades.Tramo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
