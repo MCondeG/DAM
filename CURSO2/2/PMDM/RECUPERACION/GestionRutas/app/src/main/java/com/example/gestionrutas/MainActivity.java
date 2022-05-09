@@ -154,11 +154,4 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         return builder;
     }
-
-    /*public void verPosiciones(View view) {
-
-        Intent intent = new Intent(this, TramoActivity.class);
-        intent.putExtra("lista posiciones", this.posiciones);
-        startActivityForResult(intent,1);
-    }*/
 }
