@@ -1,4 +1,4 @@
-package texto;
+package pack;
 
 import java.io.*;
 
@@ -54,7 +54,7 @@ public class PruebaFicheros {
 	
 	public static void escribirFichero(String ruta) throws IOException {
 		
-		FileWriter fw = new FileWriter(ruta, true); //el parámetro true determina si el fichero ya ha sido creado y escribe a partir del final. Si no se pone, sobreescribe si existe
+		FileWriter fw = new FileWriter(ruta, true); //el parï¿½metro true determina si el fichero ya ha sido creado y escribe a partir del final. Si no se pone, sobreescribe si existe
 		BufferedWriter bw = new BufferedWriter(fw);
 		
 		bw.newLine();

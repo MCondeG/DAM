@@ -5,10 +5,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Hilo[] tareas = {new Hilo(0), new Hilo(1), new Hilo(2)};
+		int prioridad;
+		Hilo[] tareas = new Hilo[3];
 		
-		tareas[0].start();
-		tareas[1].start();
-		tareas[2].start();
+		
+		for (int i = 0; i < tareas.length; i++) {
+			
+			prioridad = (int) (Math.random() * 10 + 1);
+
+			tareas[i] = new Hilo(i);
+			tareas[i].setPriority(prioridad);
+			tareas[i].start();
+		}
 	}
 }
