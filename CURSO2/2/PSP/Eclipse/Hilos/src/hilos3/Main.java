@@ -4,29 +4,19 @@ package hilos3;
 public class Main {
 
 	public static void main(String[] args) {
+				
 		
-		Hilo[] tareas = new Hilo[3];
+		Hilo1 h1 = new Hilo1();
+		Hilo2 h2 = new Hilo2(h1);
+		Hilo3 h3 = new Hilo3();
 		
+
+		h1.setPriority(Thread.MAX_PRIORITY);
+		h2.setPriority(Thread.MIN_PRIORITY);
+		h3.setDaemon(true);
 		
-		for (int i = 0; i < tareas.length; i++) {
-			
-			tareas[i] = new Hilo(i);
-			
-			switch (i) {
-				case 0:
-					tareas[i].setPriority(Thread.MAX_PRIORITY);
-					break;
-				case 1:
-					tareas[i].setPriority(Thread.MIN_PRIORITY);
-					break;
-				case 2:
-					tareas[i].setDaemon(true);
-					break;
-				default:
-					break;
-			}
-			
-			tareas[i].start();
-		}	
+		h1.start();
+		h2.start();
+		h3.start();
 	}
 }

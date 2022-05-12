@@ -1,8 +1,9 @@
-package controlador;
+package hilos3;
 
-import java.io.*;
-
-import modelo.Usuario;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 public class Ficheros {
@@ -12,9 +13,9 @@ public class Ficheros {
 	private File f;
 	
 
-	public Ficheros() {
+	public Ficheros(String nombreFichero) {
 
-		this.ruta = "src/modelo/usuarios/usuarios.txt";
+		this.ruta = "src/hilos3/ficheros/" + nombreFichero;
 		this.f = new File(ruta);
 		
 		try {
@@ -31,14 +32,15 @@ public class Ficheros {
 	}
 	
 	
-	public void guardarUsuario(Usuario user) throws IOException {
+	public void escribirNum() throws IOException {
 		
 		FileWriter fw = new FileWriter(this.ruta, true);
 		BufferedWriter bw = new BufferedWriter(fw);
 		
-		bw.write(user.toString());
-		bw.newLine();
-		
+		for (int i = 0; i <= 10000; i++) {
+			bw.write(Integer.toString(i) + " ");
+		}
+				
 		bw.flush();
 		
 		fw.close();
