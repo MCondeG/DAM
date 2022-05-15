@@ -34,7 +34,7 @@ public class Ficheros {
 	
 	public void escribirNum() throws IOException {
 		
-		FileWriter fw = new FileWriter(this.ruta, true);
+		FileWriter fw = new FileWriter(this.ruta, false);
 		BufferedWriter bw = new BufferedWriter(fw);
 		
 		for (int i = 0; i <= 10000; i++) {
