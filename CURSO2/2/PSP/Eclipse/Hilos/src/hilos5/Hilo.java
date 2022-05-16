@@ -1,25 +1,23 @@
 package hilos5;
 
-import javax.swing.JTextArea;
-
 
 public class Hilo extends Thread {
 
 private Directorio directorio;
-private JTextArea text;
+private String text;
 	
 	
 	public Hilo(Directorio directorio) {
 		this.directorio = directorio;
-		this.text = new JTextArea();
+		this.text = "";
 	}
 	
 	
-	public JTextArea getText() {
+	public String getText() {
 		return text;
 	}
 	
-	public void setText(JTextArea text) {
+	public void setText(String text) {
 		this.text = text;
 	}
 	
@@ -27,7 +25,7 @@ private JTextArea text;
 	@Override
 	public void run() {
 		
-		this.directorio.scan(this.directorio.getFile().getPath());
+		this.directorio.scan(this.directorio.getRuta());
 		this.text = this.directorio.getText();
 	}
 }

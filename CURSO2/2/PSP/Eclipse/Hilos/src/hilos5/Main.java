@@ -1,15 +1,13 @@
 package hilos5;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JTextArea;
-
-import hilos7.Directorio;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
 
 public class Main {
 
@@ -54,14 +52,24 @@ public class Main {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(104, 12, 224, 141);
+		frame.getContentPane().add(scrollPane);
+		
 		JTextArea textArea = new JTextArea();
-		textArea.setBounds(104, 12, 224, 141);
-		frame.getContentPane().add(textArea);
+		scrollPane.setViewportView(textArea);
 		
 		JButton button1 = new JButton("START");
 		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				h.start();
+				try {
+					h.join();
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+				
+				textArea.setText(h.getText());
 			}
 		});
 		button1.setBounds(51, 201, 117, 25);

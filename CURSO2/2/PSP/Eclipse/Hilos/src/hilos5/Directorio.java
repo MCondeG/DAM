@@ -2,13 +2,12 @@ package hilos5;
 
 import java.io.File;
 
-import javax.swing.JTextArea;
 
 public class Directorio {
 	
 	private String ruta;
 	private File file;
-	private JTextArea text;
+	private String text;
 
 	
 	public Directorio() {
@@ -18,7 +17,7 @@ public class Directorio {
 	public Directorio(String ruta) {
 		this.ruta = ruta;
 		this.file = new File(this.ruta);
-		this.text = new JTextArea();
+		this.text = "";
 	}
 	
 	
@@ -38,11 +37,11 @@ public class Directorio {
 		this.file = file;
 	}
 	
-	public JTextArea getText() {
+	public String getText() {
 		return text;
 	}
 
-	public void setText(JTextArea text) {
+	public void setText(String text) {
 		this.text = text;
 	}
 
@@ -51,17 +50,17 @@ public class Directorio {
 		
 		this.file = new File(rutaActual);
 		
-		for(File f : this.file.listFiles()){
-			
-			if (!f.isDirectory()) {
-				this.text.append(f.getName());
-			}
-			else {
-				rutaActual = rutaActual + "/" + f.getName();
-				this.text.append(rutaActual);
-				this.scan(rutaActual);
-				rutaActual = this.file.getParent();
-			}
-        }
+		if (this.file.listFiles() != null) {
+			for(File f : this.file.listFiles()){
+				
+				if (!f.isDirectory()) this.text = this.text + "\n" + f.getName();
+				else {
+					rutaActual = rutaActual + File.separator + f.getName();
+					this.text = this.text + "\n\n" + rutaActual;
+					this.scan(rutaActual);
+					rutaActual = this.ruta;
+				}
+	        }
+		}
 	}
 }
