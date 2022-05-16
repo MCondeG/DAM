@@ -7,7 +7,7 @@ public class Main {
 		
 		long mayor = 0;
 		long tiempoEjecucion = 0;
-		int size = 100000000;
+		int size = 50000000;
 		
 		Vector v = new Vector(size);
 		Vector m1 = v.dividirVector(1);
