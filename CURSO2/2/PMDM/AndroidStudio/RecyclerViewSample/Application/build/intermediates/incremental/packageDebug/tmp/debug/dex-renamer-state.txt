@@ -1,4 +1,0 @@
-#Tue Feb 01 21:38:50 CET 2022
-base.0=/home/ahbyss/Escritorio/DAM/CURSO2/2/PMDM/AndroidStudio/RecyclerViewSample/Application/build/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

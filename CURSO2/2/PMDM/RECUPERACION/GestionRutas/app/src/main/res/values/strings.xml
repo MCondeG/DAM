@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">GestionRutas</string>
-    <string name="item1">Añadir posición</string>
-    <string name="item2">Añadir Tramo</string>
+    <string name="nav_header_title">Gestion de Rutas</string>
+    <string name="drawer_item1">Posiciones</string>
+    <string name="drawer_item2">Tramos</string>
+    <string name="drawer_item3">Rutas</string>
+    <string name="toolbar_item1">Nueva posición</string>
+    <string name="toolbar_item2">Nuevo tramo</string>
+    <string name="toolbar_item3">Nueva ruta</string>
     <string name="textView1">Nombre</string>
     <string name="textView2">Latitud</string>
     <string name="textView3">Longitud</string>

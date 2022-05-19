@@ -1,34 +1,42 @@
 package com.example.gestionrutas;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.Toast;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-import com.example.gestionrutas.modelo.entidades.Posicion;
 import com.example.gestionrutas.modelo.colecciones.ListaGlobal;
-import com.example.gestionrutas.vista.ModoDia;
-import com.example.gestionrutas.vista.ModoNoche;
+import com.example.gestionrutas.modelo.entidades.Posicion;
+import com.example.gestionrutas.vista.PosicionFragment;
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, PosicionFragment.OnListFragmentInteractionListener {
 
-    private boolean modoDia;
+
     private Toolbar toolbar;
+    private DrawerLayout drawer;
+    private NavigationView navView;
     private AlertDialog dialogo;
 
+    //Base de datos estática
     private ListaGlobal datos = ListaGlobal.getGlobalData();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +45,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         this.inicializaVariables();
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.contenedor, new ModoDia())
-                .commit();
-
         setSupportActionBar(this.toolbar);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_nav_menu);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        this.drawerBuilder();
     }
 
     private void inicializaVariables() {
 
-        this.modoDia = true;
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
+        this.drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        this.navView = (NavigationView) findViewById(R.id.nav_view);
         this.dialogo = null;
     }
 
 
-    // Creación del menu de la toolbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
@@ -64,19 +71,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.item1:
+            case R.id.toolbar_item1:
                 this.dialogo = this.alertDialogConstructor(1).create();
+                this.dialogo.show();
                 break;
-            case R.id.item2:
+            case R.id.toolbar_item2:
                 this.dialogo = this.alertDialogConstructor(2).create();
+                this.dialogo.show();
+                break;
+            case R.id.toolbar_item3:
+                Toast.makeText(this,"no implementado", Toast.LENGTH_SHORT).show();
+                break;
+            case android.R.id.home:
+                this.drawer.openDrawer(GravityCompat.START);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + item.getItemId());
         }
 
-        this.dialogo.show();
         return true;
     }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -87,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
 
     // Creación del alert dialog
     @NonNull
@@ -157,21 +171,50 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return builder;
     }
 
-    public void cambiarVista(View view) {
 
-        if (this.modoDia) {
-            this.modoDia = false;
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.contenedor, new ModoNoche())
-                    .commit();
-        }
-        else {
-            this.modoDia = true;
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.contenedor, new ModoDia())
-                    .commit();
-        }
+    private void drawerBuilder() {
+
+        DrawerLayout drawerLayout = this.drawer;
+
+        this.navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+
+                        boolean fragmentTransaction = false;
+                        Fragment fragment = null;
+
+                        switch (menuItem.getItemId()) {
+                            case R.id.drawer_item1:
+                                fragment = new PosicionFragment();
+                                fragmentTransaction = true;
+                                break;
+                            case R.id.drawer_item2:
+                                break;
+                            case R.id.drawer_item3:
+                                break;
+                            default:
+                                throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
+                        }
+
+                       if(fragmentTransaction) {
+                            getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.contenedor, new PosicionFragment())
+                                    .commit();
+
+                            menuItem.setChecked(true);
+                            getSupportActionBar().setTitle(menuItem.getTitle());
+                        }
+
+                        drawerLayout.closeDrawers();
+
+                        return true;
+                    }
+                });
+    }
+
+    @Override
+    public void onListFragmentInteraction(Posicion item) {
+        Toast.makeText(this, item.getNombre(),Toast.LENGTH_LONG).show();
     }
 }

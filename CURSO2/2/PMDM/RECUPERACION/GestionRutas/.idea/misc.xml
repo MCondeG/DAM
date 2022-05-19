@@ -3,9 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/content_main.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28306159420289856" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.28306159420289856" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.28306159420289856" />
+        <entry key="app/src/main/res/layout/drawer.xml" value="0.17274569402228976" />
+        <entry key="app/src/main/res/layout/drawer_header.xml" value="0.2871376811594203" />
+        <entry key="app/src/main/res/layout/formulario_posicion.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/formulario_tramo.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28804347826086957" />
+        <entry key="app/src/main/res/layout/fragment_posicion.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_posicion_list.xml" value="0.35520833333333335" />
+        <entry key="app/src/main/res/layout/fragment_prueba.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_prueba2.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/header_drawer.xml" value="0.28804347826086957" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/spinner_item.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/menu_drawer.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/menu_toolbar.xml" value="0.35625" />
       </map>
     </option>
   </component>
