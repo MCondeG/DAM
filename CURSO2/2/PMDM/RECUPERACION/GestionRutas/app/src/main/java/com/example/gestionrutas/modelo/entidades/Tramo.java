@@ -8,6 +8,14 @@ public class Tramo implements Serializable {
     private Posicion pos1;
     private Posicion pos2;
 
+    private double distanciaT;
+    private double tiempoT;
+    private double velocidadT;
+
+    private double distanciaR;
+    private double tiempoR;
+    private double velocidadR;
+
 
     public Tramo() {
 
@@ -33,5 +41,53 @@ public class Tramo implements Serializable {
 
     public void setPos2(Posicion pos2) {
         this.pos2 = pos2;
+    }
+
+    public double getDistanciaT() {
+        return distanciaT;
+    }
+
+    public void setDistanciaT(double distanciaT) {
+        this.distanciaT = distanciaT;
+    }
+
+    public double getTiempoT() {
+        return tiempoT;
+    }
+
+    public void setTiempoT(double tiempoT) {
+        this.tiempoT = tiempoT;
+    }
+
+    public double getVelocidadT() {
+        return velocidadT;
+    }
+
+    public void setVelocidadT(double velocidadT) {
+        this.velocidadT = velocidadT;
+    }
+
+    public double getDistanciaR() {
+        return distanciaR;
+    }
+
+    public void setDistanciaR(double distanciaR) {
+        this.distanciaR = distanciaR;
+    }
+
+    public double getTiempoR() {
+        return tiempoR;
+    }
+
+    public void setTiempoR(double tiempoR) {
+        this.tiempoR = tiempoR;
+    }
+
+    public double getVelocidadR() {
+        return velocidadR;
+    }
+
+    public void setVelocidadR(double velocidadR) {
+        this.velocidadR = velocidadR;
     }
 }
