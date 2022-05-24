@@ -16,4 +16,19 @@
             android:title="@string/drawer_item3" />
     </group>
 
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Posicionamiento">
+        <menu>
+            <item
+                android:id="@+id/drawer_item4"
+                android:icon="@drawable/ic_menu"
+                android:title="@string/drawer_item4"/>
+            <item
+                android:id="@+id/drawer_item5"
+                android:icon="@drawable/ic_menu"
+                android:title="2"/>
+        </menu>
+    </item>
+
 </menu>

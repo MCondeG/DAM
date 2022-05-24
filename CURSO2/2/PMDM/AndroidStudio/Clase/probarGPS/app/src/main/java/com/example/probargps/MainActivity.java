@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public void onLocationChanged(@NonNull Location location) {
         double lat = location.getLatitude();
         double lng = location.getLongitude();
-        Geocoder geocoder=new Geocoder(getApplicationContext(), Locale.getDefault());
+        //Geocoder geocoder=new Geocoder(getApplicationContext(), Locale.getDefault());
        /*
         List<Address> direccion=null;
         try {

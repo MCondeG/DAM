@@ -41,7 +41,6 @@ public class PosicionFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -87,7 +86,6 @@ public class PosicionFragment extends Fragment {
         super.onDetach();
         this.mListener = null;
     }
-
 
 
     public interface OnListFragmentInteractionListener {
