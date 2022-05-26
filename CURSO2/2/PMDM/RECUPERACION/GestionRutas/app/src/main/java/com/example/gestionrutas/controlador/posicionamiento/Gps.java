@@ -1,4 +1,4 @@
-package com.example.gestionrutas.posicionamiento;
+package com.example.gestionrutas.controlador.posicionamiento;
 
 
 import android.Manifest;
@@ -22,6 +22,7 @@ import java.util.Locale;
 public class Gps implements LocationListener {
 
     private LocationManager locationManager;
+    private String provider;
     private Geocoder geocoder;
     private Location location;
 
@@ -34,7 +35,7 @@ public class Gps implements LocationListener {
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
 
-        String provider = this.locationManager.getBestProvider(criteria, false);
+        this.provider = this.locationManager.getBestProvider(criteria, false);
 
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions((Activity) context, new String[]{
@@ -42,7 +43,7 @@ public class Gps implements LocationListener {
             );
         }
 
-        this.location = this.locationManager.getLastKnownLocation(provider);
+        this.location = this.locationManager.getLastKnownLocation(this.provider);
     }
 
 
@@ -52,6 +53,14 @@ public class Gps implements LocationListener {
 
     public void setLocationManager(LocationManager locationManager) {
         this.locationManager = locationManager;
+    }
+
+    public String getProvider() {
+        return provider;
+    }
+
+    public void setProvider(String provider) {
+        this.provider = provider;
     }
 
     public Geocoder getGeocoder() {
@@ -73,17 +82,18 @@ public class Gps implements LocationListener {
 
     @Override
     public void onLocationChanged(@NonNull Location location) {
+        this.location = location;
 
-        double lat = location.getLatitude();
-        double lng = location.getLongitude();
-       /*
-        List<Address> direccion=null;
+
+        /*List<Address> direccion = null;
+
         try {
             direccion = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        */
+        }*/
+        //txtSrc.setText(direccion.get(0).getAddressLine(0));
+
     }
 
     @Override
@@ -99,6 +109,8 @@ public class Gps implements LocationListener {
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
         LocationListener.super.onStatusChanged(provider, status, extras);
+
+        this.provider = provider;
     }
 
     @Override

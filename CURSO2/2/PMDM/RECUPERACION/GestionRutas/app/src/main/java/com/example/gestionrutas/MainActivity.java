@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.gestionrutas.modelo.colecciones.ListaGlobal;
 import com.example.gestionrutas.modelo.entidades.Posicion;
+import com.example.gestionrutas.vista.GpsFragment;
+import com.example.gestionrutas.vista.MapsFragment;
 import com.example.gestionrutas.vista.PosicionFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -192,6 +194,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 break;
                             case R.id.drawer_item3:
                                 break;
+                            case R.id.drawer_item4:
+                                fragment = new GpsFragment();
+                                fragmentTransaction = true;
+                                break;
+                            case R.id.drawer_item5:
+                                fragment = new MapsFragment();
+                                fragmentTransaction = true;
+                                break;
                             default:
                                 throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
                         }
@@ -199,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                        if(fragmentTransaction) {
                             getSupportFragmentManager()
                                     .beginTransaction()
-                                    .replace(R.id.contenedor, new PosicionFragment())
+                                    .replace(R.id.contenedor, fragment)
                                     .commit();
 
                             menuItem.setChecked(true);
