@@ -33,14 +33,14 @@ public class GpsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.gps = new Gps(getContext());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_gps, container, false);
-
-        this.gps = new Gps(getContext());
 
         this.txtLatitud = view.findViewById(R.id.txt_latitud);
         this.txtLongitud = view.findViewById(R.id.txt_longitud);

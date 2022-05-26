@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.gestionrutas.controlador.posicionamiento.Gps;
 import com.example.gestionrutas.modelo.colecciones.ListaGlobal;
 import com.example.gestionrutas.modelo.entidades.Posicion;
 import com.example.gestionrutas.vista.GpsFragment;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private DrawerLayout drawer;
     private NavigationView navView;
     private AlertDialog dialogo;
+
+    private Gps gps;
 
     //Base de datos estática
     private ListaGlobal datos = ListaGlobal.getGlobalData();
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         this.drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         this.navView = (NavigationView) findViewById(R.id.nav_view);
         this.dialogo = null;
+        this.gps = new Gps(this);
     }
 
 

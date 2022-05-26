@@ -1,5 +1,6 @@
 package com.example.gestionrutas.modelo.entidades;
 
+
 import java.io.Serializable;
 
 
@@ -24,6 +25,10 @@ public class Tramo implements Serializable {
     public Tramo(Posicion pos1, Posicion pos2) {
         this.pos1 = pos1;
         this.pos2 = pos2;
+
+        final double cateto1 = (pos2.getLatitud() - pos1.getLatitud());
+        final double cateto2 = (pos2.getLongitud() - pos1.getLongitud());
+        this.distanciaT = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
     }
 
 
