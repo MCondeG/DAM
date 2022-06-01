@@ -11,31 +11,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.gestionrutas.R;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
+import com.example.gestionrutas.controlador.posicionamiento.Mapa;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 
 public class MapsFragment extends Fragment {
 
-    private OnMapReadyCallback callback = new OnMapReadyCallback() {
+    private Mapa map;
 
-        @Override
-        public void onMapReady(GoogleMap googleMap) {
-            LatLng sevilla = new LatLng(37.4, -6);
-            googleMap.addMarker(new MarkerOptions().position(sevilla).title("Sevilla"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sevilla));
-        }
-    };
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
+        this.map = new Mapa();
+        this.map.start();
+
         return inflater.inflate(R.layout.fragment_maps, container, false);
     }
 
@@ -45,7 +38,7 @@ public class MapsFragment extends Fragment {
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
-            mapFragment.getMapAsync(callback);
+            mapFragment.getMapAsync(this.map.getCallback());
         }
     }
 }
