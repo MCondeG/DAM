@@ -5,6 +5,7 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Mensaje m = new Mensaje();
+		//Mensaje m2 = new Mensaje();
 		
 		Thread t1 = new Thread(m);
 		Thread t2 = new Thread(m);

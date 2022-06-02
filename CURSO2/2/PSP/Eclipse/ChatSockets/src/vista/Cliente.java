@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.*;
 
@@ -70,7 +71,10 @@ public class Cliente {
 		public void actionPerformed(ActionEvent e) {
 			
 			try {
-				Socket s = new Socket("127.0.0.1", 5000);
+				Socket s = new Socket("127.0.0.1", 9999);
+				
+				DataOutputStream flujo_salida = new DataOutputStream(s.getOutputStream());
+				flujo_salida.writeUTF(textField.getText());
 			} catch (UnknownHostException e1) {
 				System.out.println(e1.getMessage());
 			} catch (IOException e1) {
