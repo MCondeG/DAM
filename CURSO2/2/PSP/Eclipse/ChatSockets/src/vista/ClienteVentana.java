@@ -43,7 +43,7 @@ public class ClienteVentana implements Runnable {
 	private Paquete datosEnvio;
 	private Paquete datosRecepcion;
 	
-	private final String IPSERVIDOR = "192.168.1.133";
+	private final String IPSERVIDOR = "172.25.9.240";	//CAMBIAR!! PONER IP DE EQUIPO DONDE SE EJECUTE SERVIDORVENTANA
 	
 	
 	public static void main(String[] args) {
