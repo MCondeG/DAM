@@ -1,4 +1,4 @@
-package controlador.sockets;
+package controlador;
 
 
 import java.io.DataInputStream;
@@ -14,16 +14,30 @@ import java.util.logging.Logger;
 
 public class Servidor extends ConexionSockets {
 
-	public Servidor() {
+	public Servidor(int puerto) {
 		
-		super("servidor");
-		
+		this.puerto = puerto;
+				
 		try {
+			this.ip = Network.getFirstNonLoopbackAddress(true, false).getHostAddress();
+
+			this.socketServidor = new ServerSocket(this.puerto);		//Se crea el socket para el servidor en puerto 9999
+		} catch (IOException ex) {
+			Logger.getLogger(ConexionSockets.class.getName()).log(Level.SEVERE,null,ex);
+		}
+	}
+	
+	
+	public void abrir() {
+		try {
+			this.socketCliente = this.socketServidor.accept();			//Socket para comunicarse con el cliente
+			
 			this.flujoEntrada = new DataInputStream(this.socketCliente.getInputStream());
 			this.flujoSalida = new DataOutputStream(this.socketCliente.getOutputStream());
 			
-			//this.objetoEntrada = new ObjectInputStream(this.socketCliente.getInputStream());
-			//this.objetoSalida = new ObjectOutputStream(this.socketCliente.getOutputStream());
+			this.objetoEntrada = new ObjectInputStream(this.flujoEntrada);
+			this.objetoSalida = new ObjectOutputStream(this.flujoSalida);
+			
 		} catch (IOException ex) {
 			Logger.getLogger(ConexionSockets.class.getName()).log(Level.SEVERE,null,ex);
 		}
@@ -77,8 +91,20 @@ public class Servidor extends ConexionSockets {
 	public void setObjetoSalida(ObjectOutputStream objetoSalida) {
 		this.objetoSalida = objetoSalida;
 	}
+	
+	public int getPuerto() {
+		return puerto;
+	}
 
-	public int getPUERTO() {
-		return PUERTO;
+	public void setPuerto(int puerto) {
+		this.puerto = puerto;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
 }

@@ -1,4 +1,4 @@
-package controlador.sockets;
+package controlador;
 
 
 import java.io.DataInputStream;
@@ -15,21 +15,44 @@ import java.util.logging.Logger;
 public class Cliente extends ConexionSockets {
 
 	public Cliente() {
-		
-		super("cliente");
+
+		this.puerto = 9999;
 
 		try {
+			this.ip = Network.getFirstNonLoopbackAddress(true, false).getHostAddress();
+
+			this.socketCliente = new Socket(this.ip, this.puerto);			//Socket para el cliente en localhost en puerto determinado
+
 			this.flujoEntrada = new DataInputStream(this.socketCliente.getInputStream());
 			this.flujoSalida = new DataOutputStream(this.socketCliente.getOutputStream());
-			
-			//this.objetoEntrada = new ObjectInputStream(this.socketCliente.getInputStream());
-			//this.objetoSalida = new ObjectOutputStream(this.socketCliente.getOutputStream());
+
+			this.objetoEntrada = null;
+			this.objetoSalida = new ObjectOutputStream(this.flujoSalida);
 		} catch (IOException ex) {
 			Logger.getLogger(ConexionSockets.class.getName()).log(Level.SEVERE,null,ex);
 		}
 	}
-	
-	
+
+	public Cliente(String ip) {
+
+		this.puerto = 9999;
+
+		try {
+			this.ip = ip;
+
+			this.socketCliente = new Socket(this.ip, this.puerto);			//Socket para el cliente en ip y puerto determinado
+
+			this.flujoEntrada = new DataInputStream(this.socketCliente.getInputStream());
+			this.flujoSalida = new DataOutputStream(this.socketCliente.getOutputStream());
+
+			this.objetoEntrada = null;
+			this.objetoSalida = new ObjectOutputStream(this.flujoSalida);
+		} catch (IOException ex) {
+			Logger.getLogger(ConexionSockets.class.getName()).log(Level.SEVERE,null,ex);
+		}
+	}
+
+
 	public ServerSocket getSocketServidor() {
 		return socketServidor;
 	}
@@ -77,12 +100,20 @@ public class Cliente extends ConexionSockets {
 	public void setObjetoSalida(ObjectOutputStream objetoSalida) {
 		this.objetoSalida = objetoSalida;
 	}
-
-	public int getPUERTO() {
-		return PUERTO;
+	
+	public int getPuerto() {
+		return puerto;
 	}
 
-	public String getHOST() {
-		return HOST;
+	public void setPuerto(int puerto) {
+		this.puerto = puerto;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
 }
