@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="nuevoPartido()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Partidos
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let partido of partidos; let indice=index;">
+      <ion-item>
+        <ion-grid>
+          <ion-row (click)="gestionPartido(partido)">
+            <ion-col size=9>{{partido.equipoLocal}} - {{partido.equipoVisitante}}</ion-col>
+            <ion-col size=3>{{partido.puntosLocal}} - {{partido.puntosVisitante}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item-options slot="end">
+        <ion-button color="danger" (click)="borrarPartido(partido)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
