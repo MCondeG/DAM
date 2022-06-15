@@ -21,7 +21,6 @@ public class Mapa extends Thread {
         return this.callback;
     }
 
-
     @Override
     public void run() {
 

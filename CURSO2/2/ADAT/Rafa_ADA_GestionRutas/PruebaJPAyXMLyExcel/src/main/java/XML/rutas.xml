@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+<Gestion_rutas>
+    <posiciones>
+        <posicion nombre="Sevilla" long="1" lat="2">
+            <descripcion>     SE    </descripcion>
+        </posicion>
+        <posicion nombre="Huelva" long="3" lat="4">
+            <descripcion>  HU       </descripcion>
+        </posicion>
+        <posicion nombre="Cádiz" long="5" lat="6">
+            <descripcion>     CA      </descripcion>
+        </posicion>
+        <posicion nombre="Málaga" long="7" lat="8">
+            <descripcion>     MA   </descripcion>
+        </posicion>
+        <posicion nombre="Granada" long="9" lat="10">
+            <descripcion>   GR       </descripcion>
+        </posicion>
+        <posicion nombre="Almería" long="11" lat="12">
+            <descripcion>  AL     </descripcion>
+        </posicion>
+        <posicion nombre="Jaén" long="13" lat="14">
+            <descripcion>      J   </descripcion>
+        </posicion>
+        <posicion nombre="Córdoba" long="15" lat="16">
+            <descripcion>      CO   </descripcion>
+        </posicion>
+</posiciones>
+
+ <rutas>
+        <ruta nombre="ruta de la playa">
+            
+                <tramo inicio="Sevilla" fin="Cádiz" distancia="100"/>
+                <tramo inicio="Cádiz" fin="Málaga" distancia="100"/>
+                <tramo inicio="Málaga" fin="Almería" distancia="100"/>
+            
+       </ruta>
+
+        <ruta nombre="ruta del interior">
+            
+                <tramo inicio="Sevilla" fin="Córdoba" distancia="200"/>
+                <tramo inicio="Córdoba" fin="Jaén" distancia="200"/>
+                <tramo inicio="Jaén" fin="Granada" distancia="200"/>
+            
+       </ruta>
+  </rutas>
+</Gestion_rutas>
+
+
+
+

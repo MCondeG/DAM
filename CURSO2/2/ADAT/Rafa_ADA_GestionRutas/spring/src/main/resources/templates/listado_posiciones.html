@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+       <title>Estás en ver posiciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+             
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Longitud</th>
+          <th scope="col">Latitud</th>
+          <th scope="col">Descripcion</th>
+          
+        </tr>
+      </thead>
+      
+       <tbody>
+               
+        <div th:each="posicion:${posiciones}">
+            <tr>
+              <th scope="row" th:text="${posicion.idposicion}"></th>
+              <td th:text="${posicion.longitud}"></td>
+              <td th:text="${posicion.latitud}"></td>
+              <td th:text="${posicion.descripcion}"></td>
+              
+            </tr>
+        </div>
+  
+  </tbody>
+      
+  </table>
+    </body>
+</html>

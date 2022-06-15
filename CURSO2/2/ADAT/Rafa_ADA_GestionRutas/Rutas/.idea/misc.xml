@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_ruta.xml" value="0.15" />
+        <entry key="app/src/main/res/drawable/ruta.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_reclycer.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.12318840579710146" />
+        <entry key="app/src/main/res/layout/drawer.xml" value="0.12318840579710146" />
+        <entry key="app/src/main/res/layout/fragment_modo_dia.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_modo_noche.xml" value="0.12318840579710146" />
+        <entry key="app/src/main/res/layout/fragment_posicion.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_ruta.xml" value="0.12318840579710146" />
+        <entry key="app/src/main/res/layout/gps_activity.xml" value="0.1287037037037037" />
+        <entry key="app/src/main/res/layout/header_drawer.xml" value="0.12318840579710146" />
+        <entry key="app/src/main/res/layout/list_element.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.12318840579710146" />
+        <entry key="app/src/main/res/layout/posicion_activity.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/ruta_activity.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/tramo_activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/tramodialog.xml" value="0.2" />
+        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.19322916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

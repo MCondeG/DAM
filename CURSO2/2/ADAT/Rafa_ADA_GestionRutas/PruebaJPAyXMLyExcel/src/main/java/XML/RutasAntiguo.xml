@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rutas>
+    <posicion>
+        <longitud>125</longitud>
+        <latitud>200</latitud>
+        <descripcionP>Madrid</descripcionP>
+    </posicion>
+    
+     <posicion>
+        <longitud>25</longitud>
+        <latitud>40</latitud>
+        <descripcionP>Barcelona</descripcionP>
+    </posicion>
+    
+    <posicion>
+        <longitud>345</longitud>
+        <latitud>329</latitud>
+        <descripcionP>Santander</descripcionP>
+    </posicion>
+    
+        <posicion>
+        <longitud>45</longitud>
+        <latitud>241</latitud>
+        <descripcionP>Valencia</descripcionP>
+    </posicion>
+
+
+    <tramo>
+        <nodoinicial>1</nodoinicial>
+        <nodofinal>2</nodofinal>
+        <descripcionT>Tramo 1 (Madrid-Barcelona)</descripcionT>
+    </tramo>
+    
+        <tramo>
+        <nodoinicial>3</nodoinicial>
+        <nodofinal>4</nodofinal>
+        <descripcionT>Tramo 2 (Santander-Valencia</descripcionT>
+    </tramo>
+
+    <tramo>
+        <nodoinicial>2</nodoinicial>
+        <nodofinal>3</nodofinal>
+        <descripcionT>Tramo 3 (Barcelona-Santander)</descripcionT>
+    </tramo>
+    
+    <tramo>
+        <nodoinicial>1</nodoinicial>
+        <nodofinal>4</nodofinal>
+        <descripcionT>Tramo 4 (Madrid-Valencia)</descripcionT>
+    </tramo>
+    
+    <ruta>
+        <distanciareal>450</distanciareal>
+        <descripcionR>Ruta 1 (Madrid-Barcelona)</descripcionR>
+    </ruta>
+    
+        <ruta>
+        <distanciareal>412</distanciareal>
+        <descripcionR>Ruta 2 (Santander-Valencia)</descripcionR>
+    </ruta>
+    
+        <ruta>
+        <distanciareal>874</distanciareal>
+        <descripcionR>Ruta 3 (Madrid-Santander-Barcelona)</descripcionR>
+    </ruta>
+
+</rutas>
+

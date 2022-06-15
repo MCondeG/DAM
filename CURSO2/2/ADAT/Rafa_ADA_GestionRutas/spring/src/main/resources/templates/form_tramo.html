@@ -1,0 +1,30 @@
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Creación de una posicion</title>
+  </head>
+  <body>
+    <h1>Creación de una posicion</h1>
+    
+    <form method="post" th:action="@{/guardartramo}" th:object="${tramo}">
+          
+          <div class="mb-3">
+            <label for="nodo_inicial" class="form-label">Nodo Inicial</label>
+            <input type="text" class="form-control" id="nodo_inicial" th:field="*{nodoInicial}">
+          </div>
+          <div class="mb-3">
+            <label for="nodo_final" class="form-label">Nodo Final</label>
+            <input type="text" class="form-control" id="nodo_final" th:field="*{nodoFinal}">
+           </div>
+ 
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+  </body>
+</html>

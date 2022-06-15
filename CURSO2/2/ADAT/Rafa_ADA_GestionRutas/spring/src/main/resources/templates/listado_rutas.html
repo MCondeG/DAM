@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+       <title>Estás en ver posiciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+             
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Distancia Real</th>
+          <th scope="col">Velocidad Real</th>
+          
+        </tr>
+      </thead>
+      
+       <tbody>
+               
+        <div th:each="ruta:${rutas}">
+            <tr>
+              <th scope="row" th:text="${ruta.idruta}"></th>
+              <td th:text="${ruta.descripcion}"></td>
+              <td th:text="${ruta.distanciaReal}"></td>
+              <td th:text="${ruta.velocidadReal}"></td>
+              
+            </tr>
+        </div>
+  
+  </tbody>
+      
+  </table>
+    </body>
+</html>

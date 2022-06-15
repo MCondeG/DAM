@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MainActivity">
+
+
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/inicio"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Ir a inicio" />
+
+    <item
+        android:id="@+id/posicion"
+        android:icon="@drawable/posicion"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Añadir Posicion" />
+
+    <item
+        android:id="@+id/tramo"
+        android:icon="@drawable/tramo"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Añadir Tramo" />
+
+    <item
+        android:id="@+id/ruta"
+        android:icon="@drawable/ruta"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Añadir Ruta" />
+
+    <item
+        android:id="@+id/recycler"
+        android:icon="@drawable/recycler"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:title="Ver Recycler" />
+</menu>
