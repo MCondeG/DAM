@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Práctica 17
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="form-content">
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+
+    <!-- apellidos y nombre -->
+    <ion-item>
+      <ion-label position="floating" color="primary">apellidos y nombre</ion-label>
+      <ion-input type="text" formControlName="apellidosNombre"></ion-input>
+    </ion-item>
+
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.apellidosNombre">
+        <div class="error-message" *ngIf="validations_form.get('apellidosNombre').hasError(validation.type)
+                && (validations_form.get('apellidosNombre').dirty
+                || validations_form.get('apellidosNombre').touched)">
+          <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    <!-- fin apellidos y nombre -->
+
+    <div formGroupName="formGroupFechaNacimientoDni">
+
+      <!-- fechaNacimiento -->
+      <ion-item>
+        <ion-label position="floating" color="primary">fecha nacimiento</ion-label>
+        <ion-input type="date" formControlName="fechaNacimiento"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <!--validación de errores para la fecha de nacimiento-->
+        <ng-container *ngFor="let validation of validation_messages.fechaNacimiento">
+          <div class="error-message" *ngIf="validations_form.get('formGroupFechaNacimientoDni').get('fechaNacimiento').hasError(validation.type) 
+                  && (validations_form.get('formGroupFechaNacimientoDni').get('fechaNacimiento').dirty 
+                  || validations_form.get('formGroupFechaNacimientoDni').get('fechaNacimiento').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+      <!-- fin fechaNacimiento -->
+
+      <!-- dni -->
+      <ion-item>
+        <ion-label position="floating" color="primary">dni</ion-label>
+        <ion-input type="text" formControlName="dni"></ion-input>
+      </ion-item>
+
+      <div class="validation-errors">
+        <!--validación de errores para el dni-->
+        <ng-container *ngFor="let validation of validation_messages.dni">
+          <div class="error-message"
+            *ngIf="validations_form.get('formGroupFechaNacimientoDni').get('dni').hasError(validation.type)
+                    && (validations_form.get('formGroupFechaNacimientoDni').get('dni').dirty 
+                    || validations_form.get('formGroupFechaNacimientoDni').get('dni').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+      <!-- fin dni -->
+
+      <div class="validation-errors">
+        <!--validación de errores para el dni-->
+        <ng-container *ngFor="let validation of validation_messages.formGroupFechaNacimientoDni">
+          <div class="error-message"
+            *ngIf="validations_form.get('formGroupFechaNacimientoDni').hasError(validation.type)">
+            <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+    <!--cierre del div del formGroup -->
+
+    <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">
+      Enviar</ion-button>
+  </form>
+</ion-content>

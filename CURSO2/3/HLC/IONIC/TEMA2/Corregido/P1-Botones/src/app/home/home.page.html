@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Input 1</ion-label>
+    <ion-input placeholder="Input 1" id="input1"></ion-input>
+    <ion-button id="boton1" (click)="clickBoton1()">Boton 1</ion-button>
+  </ion-item>
+  <ion-item *ngIf="pulsadoBoton1">
+    <ion-label position="floating">Input 2</ion-label>
+    <ion-input placeholder="Input 2" id="input2"></ion-input>
+    <ion-button id="boton2" (click)="clickBoton2()">Boton 2</ion-button>
+  </ion-item>
+  <ion-item *ngIf="pulsadoBoton2">
+    <ion-label position="floating">Input 3</ion-label>
+    <ion-input placeholder="Input 3" id="input3"></ion-input>
+    <ion-button id="boton3" (click)="clickBoton3()">Boton 3</ion-button>
+  </ion-item>
+</ion-content>

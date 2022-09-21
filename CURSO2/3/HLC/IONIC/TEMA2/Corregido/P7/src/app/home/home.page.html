@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Practica 7
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Practica 7</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <ion-radio-group [(ngModel)]="curso"> 
+    <ion-item>
+      <ion-label>ESO</ion-label>
+      <ion-radio value="eso"></ion-radio>
+      <ion-label>Ciclo</ion-label>
+      <ion-radio value="ciclo"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-item *ngIf="curso!='ciclo'
+  && curso!=''">
+
+    <ion-radio-group [(ngModel)]="curso_eso">
+      <ion-item>
+        <ion-label>1º ESO</ion-label>
+        <ion-radio value="1eso"></ion-radio>
+        <ion-label>2º ESO</ion-label>
+        <ion-radio value="2eso"></ion-radio>
+        <ion-label>3º ESO</ion-label>
+        <ion-radio value="3eso"></ion-radio>
+        <ion-label>4º ESO</ion-label>
+        <ion-radio value="4eso"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-label position="floating">repite eso</ion-label>
+    <ion-checkbox [(ngModel)]="repite"></ion-checkbox>
+
+    <ion-button [disabled]="!(curso.trim()!=''
+                            && curso_eso.trim()!=''
+                            
+                          )"
+  id="boton1" (click)="clickBoton1()">Aceptar</ion-button>
+
+  </ion-item> 
+
+  <ion-item *ngIf="curso!='eso'
+  && curso!=''">
+
+  <ion-label>ciclos</ion-label>
+      <ion-select [(ngModel)]="ciclos">
+        <ion-select-option *ngFor="let ciclo of ciclos">
+            {{ciclo}}
+        </ion-select-option>
+        
+      </ion-select>
+
+          <ion-button [disabled]="!(curso.trim()!=''
+                                    
+                            
+                            
+                          )"
+  id="boton1" (click)="clickBoton1()">Aceptar</ion-button>
+
+</ion-item>
+  
+</ion-content>

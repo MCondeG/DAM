@@ -1,0 +1,24 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { IonicModule } from '@ionic/angular';
+
+import { DatosPage } from './datos.page';
+
+describe('DatosPage', () => {
+  let component: DatosPage;
+  let fixture: ComponentFixture<DatosPage>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ DatosPage ],
+      imports: [IonicModule.forRoot()]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(DatosPage);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  }));
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

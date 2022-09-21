@@ -1,0 +1,7 @@
+{
+  "name": "P1-Botones",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

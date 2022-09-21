@@ -1,0 +1,7 @@
+{
+  "name": "P15-Formulario_Validacion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
