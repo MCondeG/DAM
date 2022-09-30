@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void escribeNum(View v) {
 
+        if(this.textView.getText().toString().equals("ERROR")) this.textView.setText("");
+
         String id = getResources().getResourceEntryName(v.getId());
         id = id.substring(5);
 
@@ -93,8 +95,12 @@ public class MainActivity extends AppCompatActivity {
         String[] partes = this.textView.getText().toString().split("\n");
 
         if (this.p) this.textView.setText(partes[0] + "\n" + partes[1] + "\n-" + partes[2]);
-        else this.textView.setText("-" + this.textView.getText());
-        this.cont++;
+        else {
+            if (Double.parseDouble(this.textView.getText().toString()) > 0) {
+                this.textView.setText("-" + this.textView.getText());
+                this.cont++;
+            }
+        }
     }
 
     public void operacion(View v) {
@@ -102,32 +108,38 @@ public class MainActivity extends AppCompatActivity {
         String id = getResources().getResourceEntryName(v.getId());
         id = id.substring(5);
 
-        this.cont = this.textView.getText().toString().length();
-        this.n1 = Double.parseDouble(this.textView.getText().toString());
 
-        switch (id) {
-            case "Suma":
-                this.textView.append("\n+\n");
-                this.op = 1;
-                break;
-            case "Resta":
-                this.textView.append("\n-\n");
-                this.op = 2;
-                break;
-            case "X":
-                this.textView.append("\nx\n");
-                this.op = 3;
-                break;
-            case "Div":
-                this.textView.append("\n/\n");
-                this.op = 4;
-                break;
-            default:
-                break;
+        try{
+            this.cont = this.textView.getText().toString().length();
+            this.n1 = Double.parseDouble(this.textView.getText().toString());
+
+            switch (id) {
+                case "Suma":
+                    this.textView.append("\n+\n");
+                    this.op = 1;
+                    break;
+                case "Resta":
+                    this.textView.append("\n-\n");
+                    this.op = 2;
+                    break;
+                case "X":
+                    this.textView.append("\nx\n");
+                    this.op = 3;
+                    break;
+                case "Div":
+                    this.textView.append("\n/\n");
+                    this.op = 4;
+                    break;
+                default:
+                    break;
+            }
+
+            this.p = true;
+            this.cont++;
         }
-
-        this.p = true;
-        this.cont++;
+        catch (Exception e){
+            this.error();
+        }
     }
 
     public void borrar(View v) {
@@ -141,27 +153,41 @@ public class MainActivity extends AppCompatActivity {
 
     public void resultado(View v) {
 
-        this.n2 = Double.parseDouble(this.textView.getText().toString().substring(this.cont+1));
+        try {
+            this.n2 = Double.parseDouble(this.textView.getText().toString().substring(this.cont+1));
 
-        switch (this.op) {
-            case 1:
-                this.result = n1 + n2;
-                break;
-            case 2:
-                this.result = n1 - n2;
-                break;
-            case 3:
-                this.result = n1 * n2;
-                break;
-            case 4:
-                this.result = n1 / n2;
-                break;
-            default:
-                break;
+            switch (this.op) {
+                case 1:
+                    this.result = n1 + n2;
+                    break;
+                case 2:
+                    this.result = n1 - n2;
+                    break;
+                case 3:
+                    this.result = n1 * n2;
+                    break;
+                case 4:
+                    this.result = n1 / n2;
+                    break;
+                default:
+                    break;
+            }
+
+            this.textView.setText(Double.toString(result));
+            this.cont = 0;
+            this.p = false;
         }
+        catch (Exception e) {
+            this.error();
+        }
+    }
 
-        this.textView.setText(Double.toString(result));
+
+    public void error() {
+        this.textView.setText("ERROR");
         this.cont = 0;
-        this.p = false;
+        this.n1 = 0;
+        this.n2 = 0;
+        this.result = 0;
     }
 }
