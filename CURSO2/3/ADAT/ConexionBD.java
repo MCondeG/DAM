@@ -49,7 +49,7 @@ public class ConexionBD {
             
             try{
                 Class.forName(this.drivermysql);
-                this.conexion=DriverManager.getConnection(this.url, this.usuario, this.pass);
+                this.conexion = DriverManager.getConnection(this.url, this.usuario, this.pass);
                 System.out.println("Conexión ejecutada con éxito");
             }catch(Exception e){
                 System.err.println("ERROR");

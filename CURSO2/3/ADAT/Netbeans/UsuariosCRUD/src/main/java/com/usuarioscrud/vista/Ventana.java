@@ -16,7 +16,8 @@ public class Ventana extends javax.swing.JFrame {
      * Creates new form Ventana
      */
     public Ventana() {
-        initComponents();
+        
+        this.initComponents();        
     }
 
     /**
@@ -141,9 +142,9 @@ public class Ventana extends javax.swing.JFrame {
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
 
-        Modelo.añadir(this.nombre.getText().toString(),
-                      this.apellido.getText().toString(),
-                      this.direccion.getText().toString());
+        Modelo.añadir(this.nombre.getText(),
+                this.apellido.getText(),
+                this.direccion.getText());
     }//GEN-LAST:event_aceptarActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
@@ -161,7 +162,7 @@ public class Ventana extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void iniciar() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

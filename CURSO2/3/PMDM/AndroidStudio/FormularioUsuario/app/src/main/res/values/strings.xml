@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FormularioUsuario</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="checkbox2">No</string>
+    <string name="label">Mayor edad</string>
+    <string name="radio1">Hombre</string>
+    <string name="radio2">Mujer</string>
+    <string name="radio3">NS / NC</string>
+    <string name="checkbox1">Si</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="ver">Ver</string>
+    <string name="volver">Volver</string>
+</resources>

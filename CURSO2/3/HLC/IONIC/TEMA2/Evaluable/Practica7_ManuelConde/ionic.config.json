@@ -1,0 +1,7 @@
+{
+  "name": "Practica7_ManuelConde",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
