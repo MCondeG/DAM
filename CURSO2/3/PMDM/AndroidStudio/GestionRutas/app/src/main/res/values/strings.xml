@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GestionRutas</string>
+    <string name="MAPS_API_KEY">AIzaSyDuP_D7-Nr6sN9OsNTAYyqOX2-g6DmGxeo</string>
+    <string name="nav_header_title">Gestion de Rutas</string>
+    <string name="drawer_item1">Posiciones</string>
+    <string name="drawer_item2">Tramos</string>
+    <string name="drawer_item3">Rutas</string>
+    <string name="drawer_item4">GPS</string>
+    <string name="drawer_item5">Mapa</string>
+    <string name="toolbar_item1">Nueva posición</string>
+    <string name="toolbar_item2">Nuevo tramo</string>
+    <string name="toolbar_item3">Nueva ruta</string>
+    <string name="textView1">Nombre</string>
+    <string name="textView2">Latitud</string>
+    <string name="textView3">Longitud</string>
+    <string name="editText1" />
+    <string name="editText2" />
+    <string name="editText3" />
+</resources>

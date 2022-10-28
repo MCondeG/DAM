@@ -8,27 +8,15 @@ package com.usuarioscrud.controlador;
  *
  * @author manuelconde
  */
-public class Sql {
+public abstract class Sql {
     
-    private ConexionBD conexion;
-    private String sql;
+    private static final ConexionBD conexion = new ConexionBD("mysql", "UsuariosBD", "root", "root");
+    private static String sql = "";
     
     
-    public Sql() {
+    public static void añadir(String nombre, String apellido, String direccion) {
         
-        this.conexion = new ConexionBD("mysql", "UsuariosBD", "root", "root");
-        this.sql = "";
-    }
-    
-
-    public ConexionBD getConexion() {
-        return conexion;
-    }
-    
-    
-    public void añadir(String nombre, String apellido, String direccion) {
-        
-        this.sql = "insert into usuario (nombre, apellido, direccion) values('"+nombre+"', '"+apellido+"', '"+direccion+"')";
-        this.conexion.ejecutarUpdate(this.sql);
+        Sql.sql = "insert into usuario (nombre, apellido, direccion) values('"+nombre+"', '"+apellido+"', '"+direccion+"')";
+        Sql.conexion.ejecutarUpdate(Sql.sql);
     }
 }

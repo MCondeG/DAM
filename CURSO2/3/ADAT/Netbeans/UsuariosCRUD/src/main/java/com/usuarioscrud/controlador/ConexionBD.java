@@ -46,10 +46,12 @@ public class ConexionBD {
     public void abrirConexion() {
         
         try {
-            if((this.tipo.equals("mysql"))) {
-                Class.forName(this.drivermysql);
-                this.conexion = DriverManager.getConnection(this.url, this.usuario, this.pass);
-                System.out.println("Conexión ejecutada con éxito");
+            if ((this.conexion == null) || (this.conexion.isClosed())) {
+                if((this.tipo.equals("mysql"))) {
+                    Class.forName(this.drivermysql);
+                    this.conexion = DriverManager.getConnection(this.url, this.usuario, this.pass);
+                    System.out.println("Conexión ejecutada con éxito");
+                }
             }
         } catch (Exception ex) {
             System.err.println("ERROR");

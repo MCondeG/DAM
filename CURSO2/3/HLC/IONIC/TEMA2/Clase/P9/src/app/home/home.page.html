@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Práctica 9
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div>
+    <ion-item>
+      <ion-label>Productos</ion-label>
+      <ion-select [(ngModel)]="Producto">
+        <ion-select-option *ngFor="let Producto of Productos">
+          {{Producto}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+</ion-content>

@@ -1,5 +1,4 @@
-package ;
-
+package com.alumnoscrud.modelo.utilidades;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,47 +44,59 @@ public class ConexionBD {
     
     public void abrirConexion() {
         
-        if(this.tipo.equals("mysql")) {
-            
-            try{
-                Class.forName(this.drivermysql);
-                this.conexion = DriverManager.getConnection(this.url, this.usuario, this.pass);
-                System.out.println("Conexión ejecutada con éxito");
-            }catch(Exception e){
-                System.err.println("ERROR");
+        try {
+            if ((this.conexion == null) || (this.conexion.isClosed())) {
+                if((this.tipo.equals("mysql"))) {
+                    Class.forName(this.drivermysql);
+                    this.conexion = DriverManager.getConnection(this.url, this.usuario, this.pass);
+                    System.out.println("Conexión ejecutada con éxito");
+                }
             }
+        } catch (Exception ex) {
+            System.err.println("ERROR");
+            System.err.println(ex);
         }
     }
     
     public void cerrarConexion() {
         
         try {
-            if(this.registros != null) this.registros.close();
-            if(this.sentencia != null) this.sentencia.close();
-            this.conexion.close();
-            System.out.println("Conexión cerrada");
+            if (!this.conexion.isClosed()) {
+                if(this.registros != null) this.registros.close();
+                if(this.sentencia != null) this.sentencia.close();
+                this.conexion.close();
+                System.out.println("Conexión cerrada\n");
+            }
         } catch (SQLException ex) {
             System.err.println("ERROR");
+            System.err.println(ex);
         }
     }
     
-    public boolean ejecutarUpdate(String sql) {
+    public boolean ejecutarUpdate(String sql) {     // para añadir, borrar o modificar
         
         try {
+            this.abrirConexion();
+            
             this.sentencia = this.conexion.prepareStatement(sql);
             this.sentencia.executeUpdate();
             System.out.println("Sentencia ejecutada con éxito");
             
             return true;
-        } catch (SQLException ex) {
+        }catch (SQLException ex) {
             System.err.println("ERROR");
+            System.err.println(ex);
             return false;
-        }     
+        }finally {
+            this.cerrarConexion();
+        }
     }
     
-    public ResultSet ejecutarSQL(String sql) {
+    public ResultSet ejecutarSQL(String sql) {      // para buscar
         
         try {
+            this.abrirConexion();
+            
             this.sentencia = this.conexion.prepareStatement(sql);
             this.registros = this.sentencia.executeQuery();
             this.metadatos = this.registros.getMetaData();
@@ -93,8 +104,9 @@ public class ConexionBD {
             this.nombreColumnas();
             System.out.println("Sentencia ejecutada con éxito");
             return this.registros;
-        } catch (SQLException ex) {
+        }catch (SQLException ex) {
             System.err.println("ERROR");
+            System.err.println(ex);
             return null;
         }
     }
@@ -104,17 +116,18 @@ public class ConexionBD {
         try {
             return this.metadatos.getColumnCount();
         } catch (SQLException ex) {
-           return 0;
+            System.err.println(ex);
+            return 0;
         }
     }
     
-    private  void nombreColumnas() {
+    private void nombreColumnas() {
         
        this.columnas = new String[this.numeroColumnas];
        for(int i = 0; i < this.columnas.length; i++){
             try {
                this.columnas[i] = this.metadatos.getColumnName(i);
-            } catch (SQLException ex) {   }
+            } catch (SQLException ex) {}
        }
     }
     
@@ -160,7 +173,9 @@ public class ConexionBD {
             }
             
             this.registros.beforeFirst();
-        } catch (SQLException ex) {}
+        } catch (SQLException ex) {
+            System.err.println(ex);
+        }
         
         return num;
     }
@@ -177,7 +192,9 @@ public class ConexionBD {
             }
             
             this.registros.beforeFirst();
-        } catch (SQLException ex) {}
+        } catch (SQLException ex) {
+            System.err.println(ex);
+        }
         
         return tabla;
     }

@@ -1,0 +1,7 @@
+{
+  "name": "P9",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

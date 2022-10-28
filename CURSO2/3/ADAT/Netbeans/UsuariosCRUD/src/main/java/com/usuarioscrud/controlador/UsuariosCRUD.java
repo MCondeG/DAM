@@ -10,11 +10,16 @@ public class UsuariosCRUD {
 
     public static void main(String[] args) {
         
-        Ventana ventana = new Ventana();
-        Sql sql = new Sql();
+        /* pruebas */
         
-        ventana.iniciar();
+        Sql.añadir("nombre", "apellido", "direccion");
+        Sql.añadir("nombre2", "apellido2", "direccion2");
+
+        /* ------ */
         
-        sql.getConexion().abrirConexion();
+        
+        //Ventana ventana = new Ventana();
+        
+        //ventana.iniciar();
     }
 }
