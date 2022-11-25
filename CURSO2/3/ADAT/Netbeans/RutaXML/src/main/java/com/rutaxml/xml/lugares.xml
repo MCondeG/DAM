@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lugares>
+    <lugar>
+        <nombre>Madrid</nombre>
+    </lugar>
+    <lugar caracteristicas="toallas">
+        <nombre>Lisboa</nombre>
+    </lugar>
+</lugares>

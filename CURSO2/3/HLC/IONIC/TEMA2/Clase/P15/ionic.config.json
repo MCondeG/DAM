@@ -1,0 +1,7 @@
+{
+  "name": "P15",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

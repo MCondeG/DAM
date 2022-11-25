@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Manuel_Conde_Gonzalez_examen1</string>
+    <string name="toolbar_item1">Ajustes</string>>
+    <string name="toolbar_item2">Calcular</string>>
+    <string name="toolbar_item3">Borrar</string>
+    <string name="textview1">DISTANCIA</string>
+    <string name="textview2">TIEMPO</string>
+    <string name="radiobutton1">m/s</string>
+    <string name="radiobutton2">m/min</string>
+    <string name="radiobutton3">km/h</string>
+    <string name="radiobutton4">km/min</string>>
+</resources>
