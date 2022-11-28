@@ -5,7 +5,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler; 
 
 
-// Crear un manejador SAX para procesar el documento
+// Manejador SAX para procesar el documento
 public class SAXHandler extends DefaultHandler {
     
     private StringBuilder cadena;
@@ -20,17 +20,20 @@ public class SAXHandler extends DefaultHandler {
     
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("startDocument");
+        System.out.println("----- START DOCUMENT -----\n");
     }
 	
     @Override
     public void endDocument() throws SAXException {
-        System.out.println("endDocument");
+        System.out.println("\n----- END DOCUMENT -----");
     }
-	
+    
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
-	System.out.println("caracteres: " + this.cadena); 
+    public void characters(char[] chars, int start, int length) throws SAXException {
+        
+        this.cadena.append(chars, start, length);
+        
+	if (this.cadena.toString().trim().length() > 0) System.out.println("Caracteres: " + this.cadena); 
     }
     
     @Override
@@ -49,7 +52,8 @@ public class SAXHandler extends DefaultHandler {
     public void endElement(String nameSpaceURI, String localName, String qName) throws SAXException {
 	System.out.println("endElement: " + qName);
     }
-	
+    
+    
     /*
     @Override
     public void ignorableWhitespace(char[] ch, int start, int length) throws SAXException {

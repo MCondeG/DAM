@@ -4,10 +4,18 @@
  */
 package com.ejemplogeneraljpa.modelo.daos;
 
+import com.ejemplogeneraljpa.modelo.entidades.Asignatura;
+import java.util.List;
+
 /**
  *
  * @author manuelconde
  */
 public interface IDaoAsignatura {
     
+    public Asignatura verAsignatura(int idAsignatura);
+    public List<Asignatura> verAsignaturas();
+    public void crearAsignatura(Asignatura asignatura);
+    public void actualizarAsignatura(int idAsignatura, Asignatura asignatura);
+    public void borrarAsignatura(int idAsignatura);
 }

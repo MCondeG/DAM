@@ -10,7 +10,8 @@ package com.rutaxml.modelo;
  */
 public class Lugar {
     
-    private static int idLugar = 0;
+    private static int cont = 0;
+    private int idLugar;
     private String nombre;
     private String caracteristicas;
     
@@ -19,16 +20,17 @@ public class Lugar {
         
         this.nombre = null;
         this.caracteristicas = null;
-        Lugar.idLugar++;
+        Lugar.cont++;
+        this.idLugar = Lugar.cont;
     }
 
     
-    public static int getIdLugar() {
+    public int getIdLugar() {
         return idLugar;
     }
 
-    public static void setIdLugar(int idLugar) {
-        Lugar.idLugar = idLugar;
+    public void setIdLugar(int idLugar) {
+        this.idLugar = idLugar;
     }
 
     public String getNombre() {
@@ -45,5 +47,11 @@ public class Lugar {
 
     public void setCaracteristicas(String caracteristicas) {
         this.caracteristicas = caracteristicas;
+    }
+
+    
+    @Override
+    public String toString() {
+        return "Lugar {" + "ID = " + this.idLugar + ", nombre = " + this.nombre + ", caracteristicas = " + this.caracteristicas + '}';
     }
 }

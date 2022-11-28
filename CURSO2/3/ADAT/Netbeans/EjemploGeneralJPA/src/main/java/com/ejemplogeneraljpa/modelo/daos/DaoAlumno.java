@@ -6,6 +6,7 @@ package com.ejemplogeneraljpa.modelo.daos;
 
 import com.ejemplogeneraljpa.modelo.entidades.Alumno;
 import java.util.List;
+import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 
@@ -16,36 +17,107 @@ import javax.persistence.TypedQuery;
 public class DaoAlumno extends Dao implements IDaoAlumno {
     
     
-    public DaoAlumno(EntityManagerFactory emf) {
-        super(emf);
+    public DaoAlumno() {
+        super();
     }
 
     
     @Override
     public Alumno verAlumno(int idAlumno) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        EntityManager em = this.getEntityManager();
+        Alumno a = null;
+       
+        try {
+            em = this.getEntityManager();
+            em.getTransaction().begin();
+            a = em.find(Alumno.class, idAlumno);
+            em.getTransaction().commit();
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            em.close();
+        }
+        
+        return a;
     }
 
     @Override
     public List<Alumno> verAlumnos() {
         
-        TypedQuery <Alumno> consulta = this.em.createNamedQuery("Alumno.findAll", Alumno.class);
+        EntityManager em = this.getEntityManager();
+        
+        TypedQuery <Alumno> consulta = em.createNamedQuery("Alumno.findAll", Alumno.class);
         
         return (List<Alumno>)consulta.getResultList();
     }
 
     @Override
     public void crearAlumno(Alumno alumno) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        EntityManager em = null;
+        
+        try {
+            em = this.getEntityManager();
+            em.getTransaction().begin();
+            em.persist(alumno);
+            em.getTransaction().commit();
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            em.close();
+        }
     }
 
     @Override
     public void actualizarAlumno(int idAlumno, Alumno alumno) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        EntityManager em = null;
+        
+        try {
+            em = this.getEntityManager();
+            
+            em.getTransaction().begin();
+            
+            Alumno a = em.find(Alumno.class, idAlumno);
+            a.setNombre(alumno.getNombre());
+            a.setObservaciones(alumno.getObservaciones());
+            
+            em.merge(a);
+            em.getTransaction().commit();
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            em.close();
+        }
     }
 
     @Override
     public void borrarAlumno(int idAlumno) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        EntityManager em = null;
+        
+        try {
+            em = this.getEntityManager();
+            
+            em.getTransaction().begin();
+            
+            Alumno a = em.find(Alumno.class, idAlumno);
+            
+            em.remove(a);
+            em.getTransaction().commit();
+        }
+        catch(Exception ex) {
+            ex.printStackTrace();
+        }
+        finally {
+            em.close();
+        }
     }
 }

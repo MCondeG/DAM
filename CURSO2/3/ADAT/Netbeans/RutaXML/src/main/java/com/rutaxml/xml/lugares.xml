@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <lugares>
+    <lugar caracteristicas="musho calóh">
+        <nombre>Sevilla</nombre>
+    </lugar>
     <lugar>
         <nombre>Madrid</nombre>
     </lugar>

@@ -115,7 +115,6 @@ public class Alumno implements Serializable {
 
     @Override
     public String toString() {
-        return "com.ejemplogeneraljpa.modelo.entidades.Alumno[ idAlumno=" + idAlumno + " ]";
-    }
-    
+        return "[ idAlumno = " + idAlumno + ", nombre = " + nombre + ", observaciones = " + observaciones +" ]";
+    }   
 }

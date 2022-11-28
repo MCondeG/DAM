@@ -4,10 +4,18 @@
  */
 package com.ejemplogeneraljpa.modelo.daos;
 
+import com.ejemplogeneraljpa.modelo.entidades.Matricula;
+import java.util.List;
+
 /**
  *
  * @author manuelconde
  */
 public interface IDaoMatricula {
     
+    public Matricula verMatricula(int idMatricula);
+    public List<Matricula> verMatricula();
+    public void crearMatricula(Matricula matricula);
+    public void actualizarMatricula(int idMatricula, Matricula matricula);
+    public void borrarMatricula(int idMatricula);
 }

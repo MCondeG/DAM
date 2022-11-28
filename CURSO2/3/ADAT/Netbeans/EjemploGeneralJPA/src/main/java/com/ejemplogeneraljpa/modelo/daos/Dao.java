@@ -6,6 +6,7 @@ package com.ejemplogeneraljpa.modelo.daos;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 /**
  *
@@ -15,12 +16,10 @@ import javax.persistence.EntityManagerFactory;
 public class Dao {
     
     protected EntityManagerFactory emf;
-    protected EntityManager em;
     
     
-    public Dao(EntityManagerFactory emf) {
-        this.emf = emf;
-        this.em = this.emf.createEntityManager();
+    public Dao() {
+        this.emf = Persistence.createEntityManagerFactory("EjemploGeneralJPA_PU");
     }
     
 
@@ -32,11 +31,8 @@ public class Dao {
         this.emf = emf;
     }
 
-    public EntityManager getEm() {
-        return em;
-    }
-
-    public void setEm(EntityManager em) {
-        this.em = em;
+    public EntityManager getEntityManager() {
+        
+        return this.emf.createEntityManager(); 
     }
 }
