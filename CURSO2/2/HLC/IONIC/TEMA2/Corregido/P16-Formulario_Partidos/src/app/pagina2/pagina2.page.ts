@@ -7,6 +7,7 @@ import { Partido } from '../modelo/Partido';
   templateUrl: './pagina2.page.html',
   styleUrls: ['./pagina2.page.scss'],
 })
+
 export class Pagina2Page implements OnInit {
 
   partido:Partido;
@@ -20,5 +21,4 @@ export class Pagina2Page implements OnInit {
 
   ngOnInit() {
   }
-
 }

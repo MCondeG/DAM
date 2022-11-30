@@ -1,0 +1,7 @@
+{
+  "name": "practica14Unidad2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

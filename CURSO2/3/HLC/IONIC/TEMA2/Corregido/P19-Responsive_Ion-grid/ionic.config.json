@@ -1,7 +1,0 @@
-{
-  "name": "P19-Responsive_Ion-grid",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

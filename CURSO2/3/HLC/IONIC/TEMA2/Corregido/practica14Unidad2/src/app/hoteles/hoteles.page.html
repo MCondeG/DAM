@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>hoteles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Ciudad: {{ciudad.ciudad}}</h1>
+  <ion-list *ngFor="let hotel of ciudad.hoteles">
+    <ion-item (click)="hotelClick(hotel)">
+      <ion-label>{{hotel.nombre}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

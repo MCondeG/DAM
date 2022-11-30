@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="!alumnosAsignaturas">
+    <ion-item>
+      <ion-select placeholder="Seleccione asignatura" [(ngModel)]='asignaturaSeleccionada'
+        (ionChange)="cambiaAsignatura($event)">
+        <span *ngFor="let asignatura of asignaturas">
+          <ion-select-option value='{{asignatura}}'>{{asignatura}}</ion-select-option>
+        </span>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="asignaturaSeleccionada && !alumnosAsignaturas">
+    <ion-item>
+      <ion-select placeholder="Seleccionar alumnos" [(ngModel)]='alumnosSeleccionados' [multiple]="true"
+        (ionChange)="seleccionadosAlumnos($event)">
+        <span *ngFor="let alumno of alumnos">
+          <ion-select-option value='{{alumno}}'>{{alumno}}</ion-select-option>
+        </span>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="alumnosAsignaturas">
+    <ion-item *ngFor="let alumnoAsignatura of alumnosAsignaturas">
+        <ion-text>
+          <h6>{{alumnoAsignatura.alumno}}</h6>
+          <h6>{{alumnoAsignatura.asignatura}}</h6>
+        </ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>

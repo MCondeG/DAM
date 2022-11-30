@@ -1,0 +1,7 @@
+{
+  "name": "practica8-ion-select",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

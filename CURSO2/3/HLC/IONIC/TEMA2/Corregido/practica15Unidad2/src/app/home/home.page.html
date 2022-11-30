@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input [(ngModel)]="alumno.nombre" placeholder="Nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="alumno.apellidos" placeholder="Apellidos"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="alumno.edad" type="number" placeholder="Edad" (ionChange)="cambiaEdad()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-radio-group [(ngModel)]="alumno.sexo">
+      <ion-item>
+        <ion-label>Hombre</ion-label>
+        <ion-radio slot="end" value="Hombre"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mujer</ion-label>
+        <ion-radio slot="end" value="Mujer"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-item>
+
+  <div *ngIf="alumno.edad>=18">
+    <ion-item>
+      <ion-input [(ngModel)]="alumno.dni" placeholder="DNI"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Trabaja</ion-label>
+      <ion-radio-group value="alumno.trabaja" [(ngModel)]="alumno.trabaja">
+        <ion-item>
+          <ion-label>Si</ion-label>
+          <ion-radio slot="end" value="Si trabaja"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio slot="end" value="No trabaja"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado civil</ion-label>
+      <ion-radio-group value="alumno.estadoCivil" [(ngModel)]="alumno.estadoCivil">
+        <ion-item>
+          <ion-label>Casado</ion-label>
+          <ion-radio slot="end" value="Casado"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Divorciado</ion-label>
+          <ion-radio slot="end" value="Divorciado"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Soltero</ion-label>
+          <ion-radio slot="end" value="Soltero"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Viudo</ion-label>
+          <ion-radio slot="end" value="Viudo"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item>
+
+  </div>
+
+  <div *ngIf="alumno.edad<18">
+    <ion-item>
+      <ion-input [(ngModel)]="alumno.apellidosPadre" placeholder="Apellidos Padre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="alumno.apellidosMadre" placeholder="Apellidos Madre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="alumno.dniPadre" placeholder="DNI Padre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="alumno.dniMadre" placeholder="DNI Madre"></ion-input>
+    </ion-item>
+  </div>
+  <ion-button *ngIf="datosCorrectos()" (click)="enviarDatos()">Ver Datos</ion-button>
+</ion-content>

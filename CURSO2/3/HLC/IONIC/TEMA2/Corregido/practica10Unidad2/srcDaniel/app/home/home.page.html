@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-select *ngIf="ciclos">
+      <span *ngFor="let tipoCiclo of tiposCiclos" [(ngModel)]="resultList" (ionChange)="cicloElegido()">
+        <ion-select-option value='{{tipoCiclo}}'>{{tipoCiclo}}</ion-select-option>
+      </span>
+    </ion-select>
+  </ion-item>
+</ion-content>

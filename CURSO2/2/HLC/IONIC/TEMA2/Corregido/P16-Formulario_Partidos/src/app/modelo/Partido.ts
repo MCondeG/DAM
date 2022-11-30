@@ -10,6 +10,4 @@ export class Partido implements InterfacePartido{
         public jugadoresEquipoLocal: string[],
         public jugadoresEquipoVisitante: string[]){
     }
-    
-
 }

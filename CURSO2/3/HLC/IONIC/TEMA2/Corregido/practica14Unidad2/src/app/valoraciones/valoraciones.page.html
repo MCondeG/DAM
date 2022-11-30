@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>valoraciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Hotel: {{hotel.nombre}}</h1>
+  <ion-list *ngFor="let valoracion of hotel.valoraciones">
+    <ion-item>
+      <ion-label>{{valoracion.usuario}}</ion-label>
+      <ion-label>{{valoracion.comentario}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

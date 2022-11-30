@@ -1,7 +1,0 @@
-{
-  "name": "P6-Ion-list",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

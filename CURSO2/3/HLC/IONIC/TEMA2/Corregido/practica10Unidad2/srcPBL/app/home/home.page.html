@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ejercicio 10
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="escogidoCiclo">
+    <ion-item>
+      <ion-select placeholder="Seleccione curso" [(ngModel)]='cicloSeleccionado'
+        (ionChange)="seEscogeCiclo($event)">
+        <span *ngFor="let ciclo of ciclos">
+          <ion-select-option value='{{ciclo}}'>{{ciclo}}</ion-select-option>
+        </span>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

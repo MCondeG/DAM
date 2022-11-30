@@ -1,7 +1,0 @@
-{
-  "name": "responsive_grid",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

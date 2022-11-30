@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pr
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button [(ngModel)]='claseSeleccionada' (click)="escogerTipo()">Clase</ion-button>
+  <ion-button *ngIf="claseSeleccionada=='eso'" [(ngModel)]='grupoEso' (click)="Eso()">Clase de Eso</ion-button>
+  <ion-button *ngIf="grupoEso!=null" [(ngModel)]='repitiendo' (click)="repite()">Repite?</ion-button>
+  <ion-button *ngIf="repitiendo!=null" (click)="comprobarEso()">Comprobar</ion-button>
+  
+
+
+</ion-content>

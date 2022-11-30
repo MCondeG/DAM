@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ciudades
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let ciudad of ciudades">
+    <ion-item (click)="ciudadClick(ciudad)">
+      <ion-label>{{ciudad.ciudad}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
