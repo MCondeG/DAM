@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#081508"
+    tools:context=".ui.DifFragments.fragment_diferentesFragments">
+
+    <Button
+        android:id="@+id/navegacion"
+        android:layout_width="169dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="243dp"
+        android:text="Navegacion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventos" />
+
+    <Button
+        android:id="@+id/eventos"
+        android:layout_width="178dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="61dp"
+        android:text="Eventos"
+        app:layout_constraintBottom_toTopOf="@+id/navegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clasico" />
+
+    <Button
+        android:id="@+id/clasico"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginBottom="63dp"
+
+        android:text="Clásico"
+        app:layout_constraintBottom_toTopOf="@+id/eventos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

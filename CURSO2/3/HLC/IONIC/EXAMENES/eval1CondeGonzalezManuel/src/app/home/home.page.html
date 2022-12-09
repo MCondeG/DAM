@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Eval 1 - Manuel Conde
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div *ngIf="!checked && !marcador">
+    <ion-list>
+      <ion-item *ngFor="let partido of partidos; let i = index" (click)="clickEditarMarcador(i)">
+        {{partido.equipoLocal}} - {{partido.puntosLocal}}
+        <br>
+        {{partido.equipoVisitante}} - {{partido.puntosVisitante}}
+      </ion-item>
+    </ion-list>
+    <br>
+  </div>
+
+
+  <div *ngIf="!marcador">
+    <ion-item position="floating">
+      <ion-label>Nuevo partido</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="checked" onclick="checkBoxNuevoPartido()"></ion-checkbox>
+    </ion-item>
+    <br>
+  </div>
+
+
+  <div *ngIf="checked && !marcador">
+    placeholder
+  </div>
+
+
+  <div *ngIf="marcador">
+    <ion-item>
+      <ion-col size="5">
+        {{partidoSeleccionado.equipoLocal}} - {{partidoSeleccionado.puntosLocal}}
+      </ion-col>
+      <ion-col size="7">
+        <ion-button (click)="suma(true, 1)" *ngIf="!edit1" [disabled]="edit2">+1</ion-button>
+        <ion-button (click)="suma(true, 2)" *ngIf="!edit1" [disabled]="edit2">+2</ion-button>
+        <ion-button (click)="suma(true, 3)" *ngIf="!edit1" [disabled]="edit2">+3</ion-button>
+        <ion-button (click)="editar(true)" [disabled]="edit2">editar</ion-button>
+      </ion-col>
+    </ion-item>
+    <ion-item *ngIf="edit1">
+      <ion-input type="number" [(ngModel)]="partidoSeleccionado.puntosLocal"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-col size="5">
+        {{partidoSeleccionado.equipoVisitante}} - {{partidoSeleccionado.puntosVisitante}}
+      </ion-col>
+      <ion-col size="7">
+        <ion-button (click)="suma(false, 1)" *ngIf="!edit2" [disabled]="edit1">+1</ion-button>
+        <ion-button (click)="suma(false, 2)" *ngIf="!edit2" [disabled]="edit1">+2</ion-button>
+        <ion-button (click)="suma(false, 3)" *ngIf="!edit2" [disabled]="edit1">+3</ion-button>
+        <ion-button (click)="editar(false)" [disabled]="edit1">editar</ion-button>
+      </ion-col>
+    </ion-item>
+    <ion-item *ngIf="edit2">
+      <ion-input type="number" [(ngModel)]="partidoSeleccionado.puntosVisitante"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button (click)="volver()">volver</ion-button>
+  </div>
+
+</ion-content>
