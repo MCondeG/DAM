@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragmentMain">
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.example.examenada2.ui.FragmentMain"
+        android:label="Main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentYellow"
+            app:destination="@id/fragmentYellow" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentRed"
+            app:destination="@id/fragmentRed" />
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentBlue"
+            app:destination="@id/fragmentBlue" />
+        <action
+            android:id="@+id/action_fragmentMain_to_alumnosFragment"
+            app:destination="@id/alumnosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentYellow"
+        android:name="com.example.examenada2.ui.FragmentYellow"
+        android:label="fragment yellow"
+        tools:layout="@layout/fragment_yellow" >
+        <action
+            android:id="@+id/action_fragmentYellow_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRed"
+        android:name="com.example.examenada2.ui.FragmentRed"
+        android:label="fragment red"
+        tools:layout="@layout/fragment_red" >
+        <action
+            android:id="@+id/action_fragmentRed_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBlue"
+        android:name="com.example.examenada2.ui.FragmentBlue"
+        android:label="fragment blue"
+        tools:layout="@layout/fragment_blue" >
+        <action
+            android:id="@+id/action_fragmentBlue_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+        <action
+            android:id="@+id/action_fragmentBlue_to_fragmentPurple"
+            app:destination="@id/fragmentPurple" />
+        <action
+            android:id="@+id/action_fragmentBlue_to_fragmentGreen"
+            app:destination="@id/fragmentGreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPurple"
+        android:name="com.example.examenada2.ui.PurpleFragment"
+        android:label="fragment purple"
+        tools:layout="@layout/fragment_purple" >
+        <action
+            android:id="@+id/action_fragmentPurple_to_fragmentBlue"
+            app:destination="@id/fragmentBlue" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGreen"
+        android:name="com.example.examenada2.ui.GreenFragment"
+        android:label="fragment green"
+        tools:layout="@layout/fragment_green" >
+        <action
+            android:id="@+id/action_fragmentGreen_to_fragmentBlue"
+            app:destination="@id/fragmentBlue" />
+    </fragment>
+    <fragment
+        android:id="@+id/alumnosFragment"
+        android:name="com.example.examenada2.ui.AlumnosFragment"
+        android:label="fragment_alumnos"
+        tools:layout="@layout/fragment_alumnos" >
+        <action
+            android:id="@+id/action_alumnosFragment_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+        <action
+            android:id="@+id/action_alumnosFragment_to_addAlumnoFragment"
+            app:destination="@id/addAlumnoFragment" />
+        <action
+            android:id="@+id/action_alumnosFragment_to_verAlumnosFragment"
+            app:destination="@id/verAlumnosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAlumnoFragment"
+        android:name="com.example.examenada2.ui.AddAlumnoFragment"
+        android:label="fragment_add_alumno"
+        tools:layout="@layout/fragment_add_alumno" >
+        <action
+            android:id="@+id/action_addAlumnoFragment_to_alumnosFragment"
+            app:destination="@id/alumnosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verAlumnosFragment"
+        android:name="com.example.examenada2.ui.VerAlumnosFragment"
+        android:label="fragment_ver_alumnos"
+        tools:layout="@layout/fragment_ver_alumnos" >
+        <action
+            android:id="@+id/action_verAlumnosFragment_to_alumnosFragment"
+            app:destination="@id/alumnosFragment" />
+        <action
+            android:id="@+id/action_verAlumnosFragment_self"
+            app:destination="@id/verAlumnosFragment" />
+    </fragment>
+</navigation>

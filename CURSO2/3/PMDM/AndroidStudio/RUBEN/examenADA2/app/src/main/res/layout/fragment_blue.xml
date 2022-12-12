@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.FragmentBlue">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="ESTE ES EL FRAGMENT AZUL"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/green_btn"
+        android:layout_width="310dp"
+        android:layout_height="73dp"
+        android:text="Green" />
+
+    <Button
+        android:id="@+id/purple_btn"
+        android:layout_width="310dp"
+        android:layout_height="75dp"
+        android:text="Purple" />
+
+</LinearLayout>

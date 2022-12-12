@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/drawer_layout_btn"
+        android:title="Drawer Layout" />
+    <item
+        android:id="@+id/button_layout_btn"
+        android:title="Button Layout" />
+    <item
+        android:id="@+id/tabbed_layout_btn"
+        android:title="Tabbed Layout" />
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentMain"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="Home" />
+    <item
+        android:id="@+id/fragmentBlue"
+        android:icon="@android:drawable/ic_media_pause"
+        android:title="Blue" />
+    <item
+        android:id="@+id/fragmentRed"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Rojo" />
+    <item
+        android:id="@+id/fragmentYellow"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Amarillo" />
+    <item
+        android:id="@+id/alumnosFragment"
+        android:icon="@android:drawable/stat_sys_data_bluetooth"
+        android:title="Alumnos" />
+
+</menu>
