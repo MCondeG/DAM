@@ -94,9 +94,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
     // Creación del alert dialog
     @NonNull
     private AlertDialog.Builder alertDialogConstructor() {

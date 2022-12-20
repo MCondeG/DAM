@@ -12,7 +12,6 @@ import com.manuelconde_examenada1.modelo.entidades.Ingrediente;
 import com.manuelconde_examenada1.modelo.entidades.Receta;
 import com.manuelconde_examenada1.modelo.xml.ParserXML;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
